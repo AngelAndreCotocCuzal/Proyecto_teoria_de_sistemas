@@ -100,8 +100,10 @@ class Ui_segunda(object):
         if self.puesto == "Gerente" and self.codigo_gerente == "1202":
             d.crear_cuenta(self.correo, self.contrasena, self.codigo, self.puesto, self.nombre)
             print("Se ha guardado")
+            return str(self.Puesto.currentText())
         elif self.puesto == "Empleado" and self.codigo_gerente == "1234":
             d.crear_cuenta(self.correo, self.contrasena, self.codigo, self.puesto, self.nombre)
             print("Se ha guardado")
+            return str(self.Puesto.currentText())
         else:
             print("Ingrese un codigo correcto")

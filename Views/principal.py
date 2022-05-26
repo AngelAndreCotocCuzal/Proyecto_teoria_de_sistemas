@@ -6,6 +6,7 @@ sys.path.append(myDir)
 from controladores.PrincipalController import PrincipalController
 from Views.crear_producto import Ui_CreateProduct
 from PyQt5 import QtCore, QtGui, QtWidgets
+from segunda import Ui_segunda, d
 
 
 class Ui_Principal(object):
@@ -129,9 +130,9 @@ class Ui_Principal(object):
         item = self.table_product.horizontalHeaderItem(0)
         item.setText(_translate("Principal", "CODIGO"))
         item = self.table_product.horizontalHeaderItem(1)
-        item.setText(_translate("Principal", "DESCRIBCION"))
+        item.setText(_translate("Principal", "DESCRIPCION"))
         item = self.table_product.horizontalHeaderItem(2)
-        item.setText(_translate("Principal", "CODMEDIDAINV"))
+        item.setText(_translate("Principal", "CANTIDAD"))
         item = self.table_product.horizontalHeaderItem(3)
         item.setText(_translate("Principal", "EXISTENCIA"))
         item = self.table_product.horizontalHeaderItem(4)
@@ -144,7 +145,7 @@ class Ui_Principal(object):
         self.btn_create.setText(_translate("Principal", "Crear"))
         self.btn_read.setText(_translate("Principal", "Seleccionar"))
         self.btn_delete.setText(_translate("Principal", "Eliminar"))
-        self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_6), _translate("Principal", "Tab 1"))
-        self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_8), _translate("Principal", "Tab 2"))
+        self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_6), _translate("Principal", "INVENTARIO"))
+        self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_8), _translate("Principal", "FINANCIERO"))
 
 

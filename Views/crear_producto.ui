@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-10</y>
      <width>531</width>
      <height>401</height>
     </rect>
@@ -180,7 +180,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Describcion :</string>
+    <string>Descripcion :</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_name">
@@ -218,7 +218,7 @@
     </font>
    </property>
    <property name="text">
-    <string>CODMEDIDAINV: </string>
+    <string>Medida: </string>
    </property>
   </widget>
   <widget class="QLineEdit" name="input_price">
@@ -301,7 +301,16 @@
    </property>
   </widget>
   <zorder>label_6</zorder>
-  <zorder>layoutWidget</zorder>
+  <zorder>label_2</zorder>
+  <zorder>input_cod</zorder>
+  <zorder>label</zorder>
+  <zorder>label_3</zorder>
+  <zorder>input_name</zorder>
+  <zorder>label_4</zorder>
+  <zorder>input_price</zorder>
+  <zorder>label_5</zorder>
+  <zorder>input_category</zorder>
+  <zorder>btn_create</zorder>
   <zorder>label_7</zorder>
   <zorder>label_8</zorder>
   <zorder>input_precio_costo</zorder>
