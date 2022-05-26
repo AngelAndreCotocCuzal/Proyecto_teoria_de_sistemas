@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
@@ -245,6 +245,16 @@
      <zorder>btn_create</zorder>
      <zorder>btn_read</zorder>
      <zorder>btn_delete</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Ventas</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Recursos Humanos</string>
+     </attribute>
     </widget>
     <widget class="QWidget" name="tab_8">
      <attribute name="title">
