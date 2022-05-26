@@ -46,7 +46,7 @@ class PrincipalController():
 
                 msg.setStandardButtons(QMessageBox.Ok)
                 msg.setDefaultButton(QMessageBox.Ok)
-                msg.setInformativeText(f"Codigo: {product[0]} \nDescribcion: {product[1]} \nCodmediddainv: {product[2]}"
+                msg.setInformativeText(f"Codigo: {product[0]} \nDescripcion: {product[1]} \nMedia: {product[2]}"
                                        f" \nExistencia {product[3]} \nPrecio(cosoto) {product[4]}"
                                        f" \nPrecio(publico) {product[5]}")
 

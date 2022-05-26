@@ -9,6 +9,7 @@ from datos_de_login import Main_principal
 from segunda import Ui_segunda, d
 from .principal import Ui_Principal
 from PyQt5 import uic
+from Views import MainView_principal
 
 
 class MainView_login(QMainWindow):
@@ -20,14 +21,16 @@ class MainView_login(QMainWindow):
 
         self.Login_button.clicked.connect(self.abrir)
         self.Create_Account_Button.clicked.connect(self.crear)
+        self.ventana = MainView_principal()
 
 
     def abrir(self):
         if self.email.text() == d.search_correo(self.email.text()) and self.contrasenia.text() == \
                 d.search_contra(self.contrasenia.text()):
-            self.ventana = QtWidgets.QMainWindow()
-            self.ui = Ui_Principal()
-            self.ui.setupUi(self.ventana)
+            # self.ventana = QtWidgets.QMainWindow()
+            # self.ui = MainView_principal()
+            # self.ui.setupUi(self.ventana)
+            # self.ventana.show()
             self.ventana.show()
         else:
             print("No coincide")

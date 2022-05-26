@@ -33,9 +33,9 @@ background-color: rgb(36, 214, 202);</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>10</x>
        <y>30</y>
-       <width>361</width>
+       <width>431</width>
        <height>51</height>
       </rect>
      </property>
@@ -47,7 +47,7 @@ background-color: rgb(36, 214, 202);</string>
       </font>
      </property>
      <property name="text">
-      <string>Empresa de Diana</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;CORPOAGRIMA S.A LA ESPERANZA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -65,7 +65,7 @@ background-color: rgb(36, 214, 202);</string>
       </font>
      </property>
      <property name="text">
-      <string>Cochito Seguro</string>
+      <string/>
      </property>
     </widget>
    </widget>

@@ -28,7 +28,7 @@
     </property>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Inventario</string>
      </attribute>
      <widget class="QTableWidget" name="table_product">
       <property name="geometry">
@@ -62,12 +62,12 @@
       </column>
       <column>
        <property name="text">
-        <string>Nueva columna</string>
+        <string>DESCRIPCION</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>CODMEDIDAINV</string>
+        <string>MEDIA</string>
        </property>
       </column>
       <column>
@@ -248,7 +248,7 @@
     </widget>
     <widget class="QWidget" name="tab_8">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Financiero </string>
      </attribute>
     </widget>
    </widget>
