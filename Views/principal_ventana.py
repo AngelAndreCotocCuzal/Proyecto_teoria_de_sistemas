@@ -39,7 +39,5 @@ class MainView_principal(QMainWindow):
         else:
             pass
 
-
-
-
-
+    def ventas_inicio(self):
+        pass

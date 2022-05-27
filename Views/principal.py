@@ -147,5 +147,3 @@ class Ui_Principal(object):
         self.btn_delete.setText(_translate("Principal", "Eliminar"))
         self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_6), _translate("Principal", "INVENTARIO"))
         self.base_datos_ventana.setTabText(self.base_datos_ventana.indexOf(self.tab_8), _translate("Principal", "FINANCIERO"))
-
-
