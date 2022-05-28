@@ -21,17 +21,16 @@ class MainView_login(QMainWindow):
 
         self.Login_button.clicked.connect(self.abrir)
         self.Create_Account_Button.clicked.connect(self.crear)
-        # self.ventana_principal = MainView_principal()
-
+        self.ventana_principal = MainView_principal()
 
     def abrir(self):
         if self.email.text() == d.search_correo(self.email.text()) and self.contrasenia.text() == \
                 d.search_contra(self.contrasenia.text()):
-            self.ventana = QtWidgets.QMainWindow()
-            self.ui = Ui_Principal()
-            self.ui.setupUi(self.ventana)
-            self.ventana.show()
+            # self.ventana = QtWidgets.QMainWindow()
+            # self.ui = Ui_Principal()
+            # self.ui.setupUi(self.ventana)
             # self.ventana.show()
+            self.ventana_principal.show()
         else:
             print("No coincide")
             print(self.email.text())
