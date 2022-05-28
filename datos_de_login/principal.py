@@ -3,9 +3,9 @@ from PyQt5 import uic
 
 
 class Main_principal(QMainWindow):
-    def __init__(self) -> None:
 
+    def __init__(self) -> None:
         super(Main_principal, self).__init__()
         print("Hola funciono")
 #        Load Ui
-        uic.loadUi('views_principal/principal.ui', self)
+        uic.loadUi('Views/principal.ui', self)
