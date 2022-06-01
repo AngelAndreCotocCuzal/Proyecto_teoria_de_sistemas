@@ -84,8 +84,20 @@ background-color: rgb(36, 214, 202);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(214, 208, 36);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">QPushButton#pushButton{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
+    color:rgba(255, 255, 255, 210);
+    border-radius:5px;
+}
+QPushButton#pushButton:hover{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
+}
+
+QPushButton#pushButton:pressed{
+    padding-left:5px;
+    padding-top:5px;
+    background-color:rgba(150, 123, 111, 255);
+}</string>
     </property>
     <property name="text">
      <string>Entrar</string>
@@ -122,6 +134,13 @@ color: rgb(255, 255, 255);</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+border: none;
+border-bottom: 2px solid rgba(46,82, 101, 200);
+color: rgba(0,0,0,240);
+padding-bottom: 7px; </string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -129,7 +148,7 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
     <property name="placeholderText">
-     <string>Correo Electronico</string>
+     <string>Usuario</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="contrasenia">
@@ -140,6 +159,13 @@ color: rgb(255, 255, 255);</string>
       <width>341</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);
+border: none;
+border-bottom: 2px solid rgba(46,82, 101, 200);
+color: rgba(0,0,0,240);
+padding-bottom: 7px; </string>
     </property>
     <property name="text">
      <string/>
@@ -167,7 +193,7 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512, y1:0, x2:0.532, y2:1, stop:0.174129 rgba(36, 214, 202), stop:1 rgba(255, 255, 255, 255));</string>
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.512, y1:0, x2:0.532, y2:1, stop:0.174129 rgba(255,255,255), stop:1 rgba(255,255,255,0.5));</string>
     </property>
     <property name="text">
      <string/>
@@ -213,6 +239,42 @@ color: rgb(255, 255, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>530</y>
+      <width>190</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#pushButton{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
+    color:rgba(255, 255, 255, 210);
+    border-radius:5px;
+}
+QPushButton#pushButton:hover{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
+}
+
+QPushButton#pushButton:pressed{
+    padding-left:5px;
+    padding-top:5px;
+    background-color:rgba(150, 123, 111, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>L o g  I n</string>
+    </property>
+   </widget>
    <zorder>label_4</zorder>
    <zorder>groupBox</zorder>
    <zorder>Login_button</zorder>
@@ -221,6 +283,7 @@ color: rgb(255, 255, 255);</string>
    <zorder>contrasenia</zorder>
    <zorder>label_5</zorder>
    <zorder>Alerta_Login</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
