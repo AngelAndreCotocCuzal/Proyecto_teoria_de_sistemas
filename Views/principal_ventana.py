@@ -28,6 +28,7 @@ class MainView_principal(QMainWindow):
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
+        self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
 
     def deshabilitar(self):
         if self.puesto == 'Gerente':
@@ -66,3 +67,17 @@ class MainView_principal(QMainWindow):
             for j in range(len(df.columns)):
                 self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
 
+    def elimina_compras(self):
+        df = pd.read_csv('inver.csv')
+        filas = len(df.index)
+        df.drop(df.index[[filas - 1]], inplace=True)
+        df.to_csv('inver.csv')
+
+    def eliminar_producto(self):
+        table = self.principal.tabla
+        if table.currentItem() is not None:
+            cod = table.currentItem().text()
+            product = self.product.getProduct(cod)
+            if product:
+                self.product.eliminar_producto(cod)
+        self.listar_productos()
