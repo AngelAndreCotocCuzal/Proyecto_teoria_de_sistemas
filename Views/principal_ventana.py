@@ -44,7 +44,7 @@ class MainView_principal(QMainWindow):
 
     def compras_inicio(self):
 
-        df = pd.read_csv('inver.csv')
+        df = pd.read_csv('E:\Anderson\Tareas\Ciclo 3\Investigacion\Proyecto_teoria_de_sistemas\inver.csc')
         codigo = self.text_codigo_compra.text()
         descripcion = self.text_descripcion_compra.text()
         media = self.text_media_compra.text()
@@ -54,21 +54,14 @@ class MainView_principal(QMainWindow):
 
         registro = [(codigo, descripcion, media, existencia, precio_costo, precio_publico)]
 
-        df1 = pd.DataFrame(registro, columns=["Codigo", "Descripcion", "Cantidad", "Existencias", "Costo", "Publico"])
-        df = df.append(df1, ignore_index=True)
-        print('guardado')
-
+        df1 = pd.DataFrame(registro, columns=['Codigo', 'Descripcion', 'Cantidad', 'Existencias', 'Costo', 'Publico'])
+        df = pd.concat([df1], ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
-        df.to_csv('inver.csv')
-        print('Gua')
-
+        df.to_csv('E:\Anderson\Tareas\Ciclo 3\Investigacion\Proyecto_teoria_de_sistemas\inver.csc')
         self.tabla.setColumnCount(len(df.columns))
-        print('guardad')
         self.tabla.setRowCount(len(df))
-        print('guarda')
         self.tabla.setHorizontalHeaderLabels(df.columns)
-        print('guardado 2')
         for i in range(len(df)):
             for j in range(len(df.columns)):
                 self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
