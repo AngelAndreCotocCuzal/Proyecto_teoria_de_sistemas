@@ -7,7 +7,7 @@ from controladores.PrincipalController import PrincipalController
 from Views.crear_producto import Ui_CreateProduct
 from PyQt5 import QtCore, QtGui, QtWidgets
 from segunda import Ui_segunda, d
-
+import pandas as pd
 myDir = os.getcwd()
 
 
@@ -43,4 +43,32 @@ class MainView_principal(QMainWindow):
         pass
 
     def compras_inicio(self):
-        pass
+
+        df = pd.read_csv('inver.csv')
+        codigo = self.text_codigo_compra.text()
+        descripcion = self.text_descripcion_compra.text()
+        media = self.text_media_compra.text()
+        existencia = self.text_existencia_compra.text()
+        precio_costo = self.text_precio_costo_compra.text()
+        precio_publico = self.text_precio_publico_compra.text()
+
+        registro = [(codigo, descripcion, media, existencia, precio_costo, precio_publico)]
+
+        df1 = pd.DataFrame(registro, columns=["Codigo", "Descripcion", "Cantidad", "Existencias", "Costo", "Publico"])
+        df = df.append(df1, ignore_index=True)
+        print('guardado')
+
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('inver.csv')
+        print('Gua')
+
+        self.tabla.setColumnCount(len(df.columns))
+        print('guardad')
+        self.tabla.setRowCount(len(df))
+        print('guarda')
+        self.tabla.setHorizontalHeaderLabels(df.columns)
+        print('guardado 2')
+        for i in range(len(df)):
+            for j in range(len(df.columns)):
+                self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
