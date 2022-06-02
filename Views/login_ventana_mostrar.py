@@ -10,6 +10,7 @@ from segunda import Ui_segunda, d
 from .principal import Ui_Principal
 from PyQt5 import uic
 from Views import MainView_principal
+from imagenes import imagenes
 
 
 class MainView_login(QMainWindow):
@@ -17,11 +18,15 @@ class MainView_login(QMainWindow):
         super(MainView_login, self).__init__()
 
         # Load Ui
-        uic.loadUi('Views/login_ventana.ui', self)
+        self.transaparente = uic.loadUi('Views/nuevo_login.ui', self)
 
-        self.Login_button.clicked.connect(self.abrir)
-        self.Create_Account_Button.clicked.connect(self.crear)
+        self.label.setStyleSheet("border-image: url(:/fondo_imagen/background.png);\n""border-radius:20px;")
+        self.btn_login.clicked.connect(self.abrir)
+        self.btn_crear.clicked.connect(self.crear)
         self.ventana_principal = MainView_principal()
+        self.transaparente.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.transaparente.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
 
     def abrir(self):
         if self.email.text() == d.search_correo(self.email.text()) and self.contrasenia.text() == \

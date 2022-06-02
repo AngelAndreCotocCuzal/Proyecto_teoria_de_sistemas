@@ -84,20 +84,11 @@ background-color: rgb(36, 214, 202);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#pushButton{
+     <string notr="true">
     background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11, 131, 120, 219), stop:1 rgba(85, 98, 112, 226));
     color:rgba(255, 255, 255, 210);
     border-radius:5px;
-}
-QPushButton#pushButton:hover{
-    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150, 123, 111, 219), stop:1 rgba(85, 81, 84, 226));
-}
-
-QPushButton#pushButton:pressed{
-    padding-left:5px;
-    padding-top:5px;
-    background-color:rgba(150, 123, 111, 255);
-}</string>
+</string>
     </property>
     <property name="text">
      <string>Entrar</string>
@@ -119,7 +110,7 @@ QPushButton#pushButton:pressed{
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(214, 208, 36);
-color: rgb(255, 255, 255);</string>
+</string>
     </property>
     <property name="text">
      <string>Crear cuenta</string>
@@ -239,7 +230,7 @@ padding-bottom: 7px; </string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_login">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -283,7 +274,7 @@ QPushButton#pushButton:pressed{
    <zorder>contrasenia</zorder>
    <zorder>label_5</zorder>
    <zorder>Alerta_Login</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>btn_login</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

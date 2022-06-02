@@ -78,3 +78,9 @@ class PrincipalController():
             if product:
                 self.product.eliminar_producto(cod)
         self.listar_productos()
+
+    def openCreate(self, Ui_CreateProduct):
+        self.ventana = Ui_CreateProduct
+        self.ventana.show()
+
+
