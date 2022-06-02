@@ -28,7 +28,7 @@ class MainView_principal(QMainWindow):
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
-  #      self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
+        self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
         # eliminar datos
    #     self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
    #     self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
