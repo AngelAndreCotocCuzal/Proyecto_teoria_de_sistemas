@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5 import uic
 from controladores.PrincipalController import PrincipalController
@@ -29,7 +29,11 @@ class MainView_principal(QMainWindow):
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
+        # eliminar datos
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
+        self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
+        # ver sobre consummo
+        #self.btn_op.clicked.connect(self.opc)
         self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
         #self.calendarDateChanged()
 
@@ -44,17 +48,23 @@ class MainView_principal(QMainWindow):
             pass
 
     def ventas_inicio(self):
+
         df = pd.read_csv('factura.csv')
         nombre = self.text_nombre_venta.text()
         codigo = self.text_codigo_venta.text()
         nit = self.text_nit_venta.text()
         mayoreo = self.cb_ma.currentText()
         monto = self.text_monto_venta.text()
+        cantidad = self.text_cantidad_venta.text()
         fecha = self.text_fecha_venta.text()
+        a = int(self.text_monto_venta.text())
+        b = int(self.text_cantidad_venta.text())
+        total = a * b
 
-        registro_2 = [(nombre, codigo, nit, mayoreo, monto, fecha)]
+        registro_2 = [(nombre, codigo, nit, mayoreo, monto, cantidad, fecha, total)]
 
-        df1 = pd.DataFrame(registro_2, columns=['Nombre', 'Codigo', 'NIT', 'Mayoreo', 'Monto', 'Fecha'])
+        df1 = pd.DataFrame(registro_2, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
+                                                'Total'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -65,6 +75,9 @@ class MainView_principal(QMainWindow):
         for i in range(len(df)):
             for j in range(len(df.columns)):
                 self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+        QMessageBox.about(self, 'Aviso', 'Vendido')
+
+
 
     def compras_inicio(self):
         df = pd.read_csv('inver.csv')
@@ -94,6 +107,12 @@ class MainView_principal(QMainWindow):
         filas = len(df.index)
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('inver.csv')
+
+    def elimina_ventas(self):
+        df = pd.read_csv('factura.csv')
+        filas = len(df.index)
+        df.drop(df.index[[filas - 1]], inplace=True)
+        df.to_csv('factura.csv')
 
     def eliminar_producto(self):
         table = self.principal.tabla
