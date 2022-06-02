@@ -28,7 +28,10 @@ class MainView_principal(QMainWindow):
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
+        self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
+        self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
+        #self.calendarDateChanged()
 
     def deshabilitar(self):
         if self.puesto == 'Gerente':
@@ -41,10 +44,29 @@ class MainView_principal(QMainWindow):
             pass
 
     def ventas_inicio(self):
-        pass
+        df = pd.read_csv('factura.csv')
+        nombre = self.text_nombre_venta.text()
+        codigo = self.text_codigo_venta.text()
+        nit = self.text_nit_venta.text()
+        mayoreo = self.cb_ma.currentText()
+        monto = self.text_monto_venta.text()
+        fecha = self.text_fecha_venta.text()
+
+        registro_2 = [(nombre, codigo, nit, mayoreo, monto, fecha)]
+
+        df1 = pd.DataFrame(registro_2, columns=['Nombre', 'Codigo', 'NIT', 'Mayoreo', 'Monto', 'Fecha'])
+        df = df.append(df1, ignore_index=True)
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('factura.csv')
+        self.tabla_ventas.setColumnCount(len(df.columns))
+        self.tabla_ventas.setRowCount(len(df))
+        self.tabla_ventas.setHorizontalHeaderLabels(df.columns)
+        for i in range(len(df)):
+            for j in range(len(df.columns)):
+                self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
 
     def compras_inicio(self):
-
         df = pd.read_csv('inver.csv')
         codigo = self.text_codigo_compra.text()
         descripcion = self.text_descripcion_compra.text()
@@ -81,3 +103,9 @@ class MainView_principal(QMainWindow):
             if product:
                 self.product.eliminar_producto(cod)
         self.listar_productos()
+
+    def calendarDateChanged(self):
+        print("The calendar date was changed.")
+        dateSelected = self.calendarWidget.selectedDate().toPyDate()
+        print("Date selected:", dateSelected)
+        # self.updateTaskList(dateSelected)
