@@ -239,7 +239,7 @@ padding-bottom: 7px; </string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_login">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -283,7 +283,7 @@ QPushButton#pushButton:pressed{
    <zorder>contrasenia</zorder>
    <zorder>label_5</zorder>
    <zorder>Alerta_Login</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>btn_login</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

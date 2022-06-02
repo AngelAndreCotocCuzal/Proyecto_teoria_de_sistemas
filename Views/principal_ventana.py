@@ -5,6 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5 import uic
 from controladores.PrincipalController import PrincipalController
 from Views.crear_producto import Ui_CreateProduct
+from Views.crear_ventana import Ventana_crear
 from PyQt5 import QtCore, QtGui, QtWidgets
 from segunda import Ui_segunda, d
 import pandas as pd
@@ -28,6 +29,7 @@ class MainView_principal(QMainWindow):
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
+        self.c = self.btn_create.clicked.connect(lambda: self.principal_controller.openCreate(Ventana_crear()))
 
     def deshabilitar(self):
         if self.puesto == 'Gerente':
@@ -65,4 +67,3 @@ class MainView_principal(QMainWindow):
         for i in range(len(df)):
             for j in range(len(df.columns)):
                 self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
-
