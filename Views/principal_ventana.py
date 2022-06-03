@@ -30,12 +30,13 @@ class MainView_principal(QMainWindow):
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
         # eliminar datos
-   #     self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
-   #     self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
+        self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
+        self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
         # ver sobre consummo
-        #self.btn_op.clicked.connect(self.opc)
-   #     self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
-        #self.calendarDateChanged()
+        self.btn_cotizar_ventas.clicked.connect(self.ver_datos)
+        # self.btn_op.clicked.connect(self.opc)
+        # self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
+        # self.calendarDateChanged()
 
     def deshabilitar(self):
         if self.puesto == 'Gerente':
@@ -47,8 +48,31 @@ class MainView_principal(QMainWindow):
         else:
             pass
 
-    def ventas_inicio(self):
+    def ver_datos(self):
+        # https://www.youtube.com/watch?v=HDjc3w1W9oA
+        codigo_ver = self.text_codigo_venta.text()
 
+        df = pd.read_csv('inver.csv')
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('inver.csv')
+        # para monstrar el codigo de solo codigo
+        # problemas con el str
+        # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
+        # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
+        var = df[(df['Codigo'] == codigo_ver)]
+        # df2 = df.copy()
+        # var = df2['Codigo'] = ['ACA0009']
+        self.tabla_ventas_2.setColumnCount(len(var.columns))
+        self.tabla_ventas_2.setRowCount(len(var))
+        self.tabla_ventas_2.setHorizontalHeaderLabels(var.columns)
+        for i in range(len(var)):
+            for j in range(len(var.columns)):
+                self.tabla_ventas_2.setItem(i, j, QtWidgets.QTableWidgetItem(str(var.iat[i, j])))
+
+        # df.loc[1111:11111, ['codigo']]
+
+    def ventas_inicio(self):
         df = pd.read_csv('factura.csv')
         nombre = self.text_nombre_venta.text()
         codigo = self.text_codigo_venta.text()
@@ -79,9 +103,12 @@ class MainView_principal(QMainWindow):
 
     def compras_inicio(self):
         df = pd.read_csv('inver.csv')
+
         codigo = self.text_codigo_compra.text()
         descripcion = self.text_descripcion_compra.text()
         media = self.text_media_compra.text()
+        # x = int(self.text_existencia_compra.text())
+        # y = int(self.text_cantidad_venta.text())
         existencia = self.text_existencia_compra.text()
         precio_costo = self.text_precio_costo_compra.text()
         precio_publico = self.text_precio_publico_compra.text()
