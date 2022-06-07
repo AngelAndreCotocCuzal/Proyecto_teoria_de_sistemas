@@ -50,8 +50,8 @@ class MainView_principal(QMainWindow):
 
     def ver_datos(self):
         # https://www.youtube.com/watch?v=HDjc3w1W9oA
+        # codigo_ver = int(self.text_codigo_venta.text())
         codigo_ver = self.text_codigo_venta.text()
-
         df = pd.read_csv('inver.csv')
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -59,7 +59,7 @@ class MainView_principal(QMainWindow):
         # para monstrar el codigo de solo codigo
         # problemas con el str
         # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
-        # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
+        # var = df.loc[[codigo_ver], ['Codigo', 'Costo', 'Existencias', 'Publico']]
         var = df[(df['Codigo'] == codigo_ver)]
         # df2 = df.copy()
         # var = df2['Codigo'] = ['ACA0009']

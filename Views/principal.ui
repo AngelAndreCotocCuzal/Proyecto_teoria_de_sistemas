@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -1130,7 +1130,7 @@ p, li { white-space: pre-wrap; }
          <string>Eliminar</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_19">
+       <widget class="QLabel" name="label_22">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -1361,7 +1361,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <zorder>label_19</zorder>
+       <zorder>label_22</zorder>
        <zorder>btn_guardar_compra</zorder>
        <zorder>label_5</zorder>
        <zorder>text_codigo_compra</zorder>
@@ -1387,6 +1387,128 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Recursos Humanos</string>
      </attribute>
+     <widget class="QTabWidget" name="base_de_compras_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1071</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="Ventas_2">
+       <attribute name="title">
+        <string>Contratacion</string>
+       </attribute>
+       <widget class="QLineEdit" name="text_nombre_venta_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>90</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Nombre</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>341</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Reference Sans Serif</family>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ventas de Productos</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Compras_2">
+       <attribute name="title">
+        <string>Nonima</string>
+       </attribute>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Codigo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>381</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Reference Sans Serif</family>
+          <pointsize>24</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Compras de Productos</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_media_compra_2">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>90</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_8">
      <attribute name="title">
