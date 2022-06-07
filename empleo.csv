@@ -1,2 +1,6 @@
-,Codigo,Descripcion,Cantidad,Existencias,Costo,Publico
-0,16,asd,asd,51,21,31
+,",Nombre_Empleado,Edad,Nacimiento,Genero,Dpi,Nit_Empleado,Direccion,Telefono,Sangre,Alergico,Puesto,Sueldo,Emergencia,Labor",Nombre_Empleado,Edad,Nacimiento,Genero,Dpi,Nit_Empleado,Direccion,Telefono,Sangre,Alergico,Puesto,Sueldo,Emergencia,Labor
+0,,diana,18,27/12/2003,Femenino,6644622649,66949462562,quetzaltenango,<built-in method text of QLineEdit object at 0x000001D4B668D040>,O+,nada,gerente,9000,31921507,07/06/2022
+1,,diana,18,27/12/2003,Femenino,6644622649,66949462562,quetzaltenango,<built-in method text of QLineEdit object at 0x000001D4B668D040>,O+,nada,gerente,9000,31921507,07/06/2022
+2,,Diana Melissa Morales Ruano,18,27/12/2003,Femenino,16446322648,32097786,Quetzaltenango,<built-in method text of QLineEdit object at 0x000001F6918F1EE0>,O+,Insectos,Gerente,15000,31921507,07/06/2022
+3,,diana,18,27/12/2003,Femenino,4166565225269,dwdrf4tf,quetzaltenango,<built-in method text of QLineEdit object at 0x0000021E29501EE0>,O+,nada,vendedor,9000,16414416,06/06/2022
+4,,diana,18,27/12/2003,Femenino,4166565225269,dwdrf4tf,quetzaltenango,<built-in method text of QLineEdit object at 0x0000021E29501EE0>,O+,nada,vendedor,9000,16414416,06/06/2022
