@@ -50,8 +50,8 @@ class MainView_principal(QMainWindow):
 
     def ver_datos(self):
         # https://www.youtube.com/watch?v=HDjc3w1W9oA
-        # codigo_ver = int(self.text_codigo_venta.text())
         codigo_ver = self.text_codigo_venta.text()
+
         df = pd.read_csv('inver.csv')
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -59,7 +59,7 @@ class MainView_principal(QMainWindow):
         # para monstrar el codigo de solo codigo
         # problemas con el str
         # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
-        # var = df.loc[[codigo_ver], ['Codigo', 'Costo', 'Existencias', 'Publico']]
+        # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
         var = df[(df['Codigo'] == codigo_ver)]
         # df2 = df.copy()
         # var = df2['Codigo'] = ['ACA0009']
@@ -126,6 +126,40 @@ class MainView_principal(QMainWindow):
         for i in range(len(df)):
             for j in range(len(df.columns)):
                 self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+
+
+    def contrataciones(self):
+        df = pd.read_csv('empleo.csv')
+        nombre_empleado = self.text_nombre_venta.text()
+        edad = self.text_codigo_venta.text()
+        nacimiento = self.text_nit_venta.text()
+        genero= self.cb_ma.currentText()
+        dpi = self.text_monto_venta.text()
+        nit_empleado = self.text_cantidad_venta.text()
+        direccion= self.text_fecha_venta.text()
+        telefono = self.text_fecha_venta.text
+        sangre = self.text_fecha_venta.text
+        alergico = self.text_fecha_venta.text
+        puesto = self.text_fecha_venta.text
+        sueldo= self.text_fecha_venta.text
+        emergencia= self.text_fecha_venta.text
+        labor = self.text_fecha_venta.text
+
+        registro_empleados = [(nombre_empleado,edad ,nacimiento,genero,dpi,nit_empleado,direccion,telefono,sangre, alergico,puesto,sueldo,emergencia,labor)]
+
+        df1 = pd.DataFrame(registro_empleados, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
+                                                'Total'])
+        df = df.append(df1, ignore_index=True)
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('factura.csv')
+        self.tabla_ventas.setColumnCount(len(df.columns))
+        self.tabla_ventas.setRowCount(len(df))
+        self.tabla_ventas.setHorizontalHeaderLabels(df.columns)
+        for i in range(len(df)):
+            for j in range(len(df.columns)):
+                self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+        QMessageBox.about(self, 'Aviso', 'Vendido')
 
     def elimina_compras(self):
         df = pd.read_csv('inver.csv')
