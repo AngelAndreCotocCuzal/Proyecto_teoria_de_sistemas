@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -2042,6 +2042,19 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="text">
          <string>Contratar</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_eliminar_empleo">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>230</y>
+          <width>201</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Despedida de empleado</string>
         </property>
        </widget>
       </widget>

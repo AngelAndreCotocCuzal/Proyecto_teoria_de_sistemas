@@ -37,6 +37,7 @@ class MainView_principal(QMainWindow):
         # eliminar datos
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
+        self.btn_eliminar_empleo.clicked.connect(self.elimina_empleado)
         # ver sobre consummo
         self.btn_cotizar_ventas.clicked.connect(self.ver_datos)
         # recursos humanos
@@ -149,18 +150,18 @@ class MainView_principal(QMainWindow):
     def contrataciones(self):
         df = pd.read_csv('empleo.csv')
         nombre_empleado = self.nombre_empleado.text()
-        edad = self.edad.text()
+        edad = int(self.edad.text())
         nacimiento = self.nacimiento.text()
         genero= self.genero.currentText()
-        dpi = self.dpi.text()
+        dpi = int(self.dpi.text())
         nit_empleado = self.nit_empleado.text()
         direccion= self.direccion.text()
-        telefono = self.cel_empleado.text
+        telefono = int(self.cel_empleado.text())
         sangre = self.sangre.text()
         alergico = self.alergico.text()
         puesto = self.puesto_2.text()
-        sueldo= self.sueldo.text()
-        emergencia= self.contacto.text()
+        sueldo = int(self.sueldo.text())
+        emergencia = int(self.contacto.text())
         labor = self.inicio_laboral.text()
 
         registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono, sangre, alergico, puesto, sueldo, emergencia, labor)]
@@ -210,10 +211,16 @@ class MainView_principal(QMainWindow):
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
         df.to_csv('empleo.csv')
-        var = df.loc[[0, 100], ['Nombre_Empleado', 'Sueldo', 'Puesto']]
+        var = df.loc[[1], ['Nombre_Empleado', 'Sueldo', 'Puesto']]
         self.tabla_planilla.setColumnCount(len(var.columns))
         self.tabla_planilla.setRowCount(len(var))
         self.tabla_planilla.setHorizontalHeaderLabels(var.columns)
         for i in range(len(var)):
             for j in range(len(var.columns)):
                 self.tabla_planilla.setItem(i, j, QtWidgets.QTableWidgetItem(str(var.iat[i, j])))
+
+    def elimina_empleado(self):
+        df = pd.read_csv('empleo.csv')
+        filas = len(df.index)
+        df.drop(df.index[[filas - 1]], inplace=True)
+        df.to_csv('empleo.csv')
