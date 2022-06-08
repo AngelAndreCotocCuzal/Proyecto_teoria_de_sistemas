@@ -119,7 +119,6 @@ class MainView_principal(QMainWindow):
 
         root.mainloop()
 
-
     def compras_inicio(self):
         df = pd.read_csv('inver.csv')
 
