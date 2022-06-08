@@ -817,6 +817,29 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_cal">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>250</y>
+          <width>31</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>.</string>
+        </property>
+       </widget>
        <zorder>label_20</zorder>
        <zorder>btn_guardar_venta</zorder>
        <zorder>text_nombre_venta</zorder>
@@ -838,6 +861,7 @@ p, li { white-space: pre-wrap; }
        <zorder>label_21</zorder>
        <zorder>btn_cotizar_ventas</zorder>
        <zorder>tabla_ventas_2</zorder>
+       <zorder>btn_cal</zorder>
       </widget>
       <widget class="QWidget" name="Compras">
        <attribute name="title">
