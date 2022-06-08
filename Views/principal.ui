@@ -268,7 +268,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Ventas">
        <attribute name="title">
@@ -1387,7 +1387,7 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Recursos Humanos</string>
      </attribute>
-     <widget class="QTabWidget" name="contratacion">
+     <widget class="QTabWidget" name="ingreso">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1420,8 +1420,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>170</red>
-            <green>170</green>
+            <red>198</red>
+            <green>190</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -1458,8 +1458,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>170</red>
-            <green>170</green>
+            <red>198</red>
+            <green>190</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -1487,8 +1487,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>170</red>
-            <green>170</green>
+            <red>198</red>
+            <green>190</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -1496,8 +1496,8 @@ p, li { white-space: pre-wrap; }
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>170</red>
-            <green>170</green>
+            <red>198</red>
+            <green>190</green>
             <blue>255</blue>
            </color>
           </brush>
@@ -2007,16 +2007,29 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_contratar">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>520</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Contratar</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Compras_2">
        <attribute name="title">
-        <string>Nonima</string>
+        <string>Nomina</string>
        </attribute>
        <widget class="QLabel" name="label_29">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>100</y>
+          <x>600</x>
+          <y>80</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -2028,7 +2041,7 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="text">
-         <string>Codigo</string>
+         <string>Iggs</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_30">
@@ -2047,17 +2060,137 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="text">
-         <string>Compras de Productos</string>
+         <string>Planilla</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="text_media_compra_2">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>90</y>
+          <x>820</x>
+          <y>80</y>
           <width>161</width>
           <height>31</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>421</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>170</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Horas Extras</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>240</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Anticipo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>350</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Total liquido</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_media_compra_3">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>170</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_media_compra_4">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>240</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_media_compra_5">
+        <property name="geometry">
+         <rect>
+          <x>810</x>
+          <y>350</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>340</y>
+          <width>431</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ingreso_planilla">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>530</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ingreso</string>
         </property>
        </widget>
       </widget>
@@ -2068,29 +2201,6 @@ p, li { white-space: pre-wrap; }
       <string>Financiero </string>
      </attribute>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="btn_contratar">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>630</y>
-      <width>141</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="text">
-     <string>Contratar</string>
-    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
