@@ -38,6 +38,8 @@ class MainView_principal(QMainWindow):
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
         # ver sobre consummo
         self.btn_cotizar_ventas.clicked.connect(self.ver_datos)
+        # recursos humanos
+        self.btn_contratar.clicked.connect(self.contrataciones)
         # self.btn_op.clicked.connect(self.opc)
         # self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
         # self.calendarDateChanged()
@@ -146,25 +148,24 @@ class MainView_principal(QMainWindow):
 
     def contrataciones(self):
         df = pd.read_csv('empleo.csv')
-        nombre_empleado = self.text_nombre_venta.text()
-        edad = self.text_codigo_venta.text()
-        nacimiento = self.text_nit_venta.text()
-        genero= self.cb_ma.currentText()
-        dpi = self.text_monto_venta.text()
-        nit_empleado = self.text_cantidad_venta.text()
-        direccion= self.text_fecha_venta.text()
-        telefono = self.text_fecha_venta.text
-        sangre = self.text_fecha_venta.text
-        alergico = self.text_fecha_venta.text
-        puesto = self.text_fecha_venta.text
-        sueldo= self.text_fecha_venta.text
-        emergencia= self.text_fecha_venta.text
-        labor = self.text_fecha_venta.text
+        nombre_empleado = self.nombre_empleado.text()
+        edad = self.edad.text()
+        nacimiento = self.nacimiento.text()
+        genero= self.genero.currentText()
+        dpi = self.dpi.text()
+        nit_empleado = self.nit_empleado.text()
+        direccion= self.direccion.text()
+        telefono = self.cel_empleado.text
+        sangre = self.sangre.text()
+        alergico = self.alergico.text()
+        puesto = self.puesto_2.text()
+        sueldo= self.sueldo.text()
+        emergencia= self.contacto.text()
+        labor = self.inicio_laboral.text()
 
         registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono, sangre, alergico, puesto, sueldo, emergencia, labor)]
 
-        df1 = pd.DataFrame(registro_empleados, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
-                                                'Total'])
+        df1 = pd.DataFrame(registro_empleados, columns=['Nombre_Empleado', 'Edad', 'Nacimiento', 'Genero', 'Dpi', 'Nit_Empleado', 'Direccion', 'Telefono', 'Sangre','Alergico','Puesto','Sueldo','Emergencia','Labor'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
