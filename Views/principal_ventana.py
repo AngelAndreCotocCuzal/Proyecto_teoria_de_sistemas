@@ -33,6 +33,7 @@ class MainView_principal(QMainWindow):
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
         self.btn_contratar.clicked.connect(self.contrataciones)
         self.btn_cal.clicked.connect(self.total)
+        self.ingreso_planilla.clicked.connect(self.ver_planilla)
         # eliminar datos
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
@@ -203,3 +204,16 @@ class MainView_principal(QMainWindow):
         dateSelected = self.calendarWidget.selectedDate().toPyDate()
         print("Date selected:", dateSelected)
         # self.updateTaskList
+
+    def ver_planilla(self):
+        df = pd.read_csv('empleo.csv')
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('empleo.csv')
+        var = df.loc[[0, 100], ['Nombre_Empleado', 'Sueldo', 'Puesto']]
+        self.tabla_planilla.setColumnCount(len(var.columns))
+        self.tabla_planilla.setRowCount(len(var))
+        self.tabla_planilla.setHorizontalHeaderLabels(var.columns)
+        for i in range(len(var)):
+            for j in range(len(var.columns)):
+                self.tabla_planilla.setItem(i, j, QtWidgets.QTableWidgetItem(str(var.iat[i, j])))
