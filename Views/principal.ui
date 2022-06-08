@@ -1518,7 +1518,7 @@ p, li { white-space: pre-wrap; }
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Ventas_2">
        <attribute name="title">
@@ -2023,7 +2023,7 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="Compras_2">
        <attribute name="title">
-        <string>Nomina</string>
+        <string>Planilla</string>
        </attribute>
        <widget class="QLabel" name="label_29">
         <property name="geometry">
@@ -2078,7 +2078,7 @@ p, li { white-space: pre-wrap; }
          <rect>
           <x>10</x>
           <y>80</y>
-          <width>421</width>
+          <width>531</width>
           <height>192</height>
          </rect>
         </property>
