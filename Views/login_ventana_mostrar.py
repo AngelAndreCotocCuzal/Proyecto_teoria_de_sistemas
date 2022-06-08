@@ -20,7 +20,7 @@ class MainView_login(QMainWindow):
         # Load Ui
         self.transaparente = uic.loadUi('Views/nuevo_login.ui', self)
 
-        self.label.setStyleSheet("border-image: url(:/fondo_imagen/background.png);\n""border-radius:20px;")
+
         self.btn_login.clicked.connect(self.abrir)
         self.btn_crear.clicked.connect(self.crear)
         self.ventana_principal = MainView_principal()
