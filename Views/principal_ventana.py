@@ -8,6 +8,7 @@ from Views.crear_producto import Ui_CreateProduct
 from PyQt5 import QtCore, QtGui, QtWidgets
 from segunda import Ui_segunda, d
 import pandas as pd
+from tkinter import *
 myDir = os.getcwd()
 
 
@@ -31,6 +32,7 @@ class MainView_principal(QMainWindow):
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
         self.btn_contratar.clicked.connect(self.contrataciones)
+        self.btn_cal.clicked.connect(self.total)
         # eliminar datos
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
@@ -82,15 +84,17 @@ class MainView_principal(QMainWindow):
         mayoreo = self.cb_ma.currentText()
         monto = self.text_monto_venta.text()
         cantidad = self.text_cantidad_venta.text()
+        dinero = int(self.text_dinero_venta.text())
         fecha = self.text_fecha_venta.text()
         a = int(self.text_monto_venta.text())
         b = int(self.text_cantidad_venta.text())
-        total = a * b
+        sub_total = a * b
+        total = dinero - sub_total
 
-        registro_2 = [(nombre, codigo, nit, mayoreo, monto, cantidad, fecha, total)]
+        registro_2 = [(nombre, codigo, nit, mayoreo, monto, cantidad, fecha, sub_total, total)]
 
         df1 = pd.DataFrame(registro_2, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
-                                                'Total'])
+                                                'Sub_total', 'Vuelto'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -102,6 +106,17 @@ class MainView_principal(QMainWindow):
             for j in range(len(df.columns)):
                 self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
         QMessageBox.about(self, 'Aviso', 'Vendido')
+
+    def total(self):
+        root = Tk()
+        a = int(self.text_monto_venta.text())
+        b = int(self.text_cantidad_venta.text())
+        sub_total = a * b
+        Label(root, text='Total a pagar: ').pack()
+        Label(root, text=sub_total).pack()
+
+        root.mainloop()
+
 
     def compras_inicio(self):
         df = pd.read_csv('inver.csv')

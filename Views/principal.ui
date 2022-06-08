@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -846,6 +846,19 @@ p, li { white-space: pre-wrap; }
          <string>Dinero</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_cal">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>310</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
        <zorder>label_20</zorder>
        <zorder>btn_guardar_venta</zorder>
        <zorder>text_nombre_venta</zorder>
@@ -869,6 +882,7 @@ p, li { white-space: pre-wrap; }
        <zorder>tabla_ventas_2</zorder>
        <zorder>text_dinero_venta</zorder>
        <zorder>label_16</zorder>
+       <zorder>btn_cal</zorder>
       </widget>
       <widget class="QWidget" name="Compras">
        <attribute name="title">
