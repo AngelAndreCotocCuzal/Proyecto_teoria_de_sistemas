@@ -26,9 +26,11 @@ class MainView_principal(QMainWindow):
 
         self.l = self.btn_list.clicked.connect(lambda: self.principal_controller.listar_productos())
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
+        # Guardar informacion
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
+        self.btn_contratar.clicked.connect(self.contrataciones)
         # eliminar datos
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
@@ -51,7 +53,7 @@ class MainView_principal(QMainWindow):
     def ver_datos(self):
         # https://www.youtube.com/watch?v=HDjc3w1W9oA
         codigo_ver = self.text_codigo_venta.text()
-
+        # codigo_ver = int(self.text_codigo_venta.text())
         df = pd.read_csv('inver.csv')
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -59,7 +61,7 @@ class MainView_principal(QMainWindow):
         # para monstrar el codigo de solo codigo
         # problemas con el str
         # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
-        # var = df.loc[[3], ['Codigo', 'Costo', 'Existencia', 'Publico']]
+        # var = df.loc[[codigo_ver], ['Codigo', 'Costo', 'Existencias', 'Publico']]
         var = df[(df['Codigo'] == codigo_ver)]
         # df2 = df.copy()
         # var = df2['Codigo'] = ['ACA0009']
@@ -127,7 +129,6 @@ class MainView_principal(QMainWindow):
             for j in range(len(df.columns)):
                 self.tabla.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
 
-
     def contrataciones(self):
         df = pd.read_csv('empleo.csv')
         nombre_empleado = self.text_nombre_venta.text()
@@ -145,21 +146,21 @@ class MainView_principal(QMainWindow):
         emergencia= self.text_fecha_venta.text
         labor = self.text_fecha_venta.text
 
-        registro_empleados = [(nombre_empleado,edad ,nacimiento,genero,dpi,nit_empleado,direccion,telefono,sangre, alergico,puesto,sueldo,emergencia,labor)]
+        registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono, sangre, alergico, puesto, sueldo, emergencia, labor)]
 
         df1 = pd.DataFrame(registro_empleados, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
                                                 'Total'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
-        df.to_csv('factura.csv')
-        self.tabla_ventas.setColumnCount(len(df.columns))
-        self.tabla_ventas.setRowCount(len(df))
-        self.tabla_ventas.setHorizontalHeaderLabels(df.columns)
+        df.to_csv('empleo.csv')
+        self.tabla_contratacion.setColumnCount(len(df.columns))
+        self.tabla_contratacion.setRowCount(len(df))
+        self.tabla_contratacion.setHorizontalHeaderLabels(df.columns)
         for i in range(len(df)):
             for j in range(len(df.columns)):
-                self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
-        QMessageBox.about(self, 'Aviso', 'Vendido')
+                self.tabla_contratacion.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+        QMessageBox.about(self, 'Aviso', 'Contratado')
 
     def elimina_compras(self):
         df = pd.read_csv('inver.csv')
