@@ -170,7 +170,8 @@ class MainView_principal(QMainWindow):
 
         df1 = pd.DataFrame(registro_empleados, columns=['Nombre_Empleado', 'Edad', 'Nacimiento', 'Genero', 'Dpi',
                                                         'Nit_Empleado',
-                                                        'Direccion', 'Telefono', 'Sangre', 'Alergico', 'Puesto', 'Sueldo',
+                                                        'Direccion', 'Telefono', 'Sangre', 'Alergico', 'Puesto',
+                                                        'Sueldo',
                                                         'Emergencia', 'Labor'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
