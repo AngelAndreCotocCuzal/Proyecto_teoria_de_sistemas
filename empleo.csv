@@ -1,4 +1,5 @@
 ,Nombre_Empleado,Edad,Nacimiento,Genero,Dpi,Nit_Empleado,Direccion,Telefono,Sangre,Alergico,Puesto,Sueldo,Emergencia,Labor
-0,,18,,Femenino,15,,,15,,,,500,500,
-1,diana,18,,Femenino,1234567,147895.0,,56312814,,,,400,319215027,
-2,diana,18,,Femenino,3141561,454646.0,,32,,,,54,25,
+0,Diana Morales,17,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Gerente,6000,51406895,08/06/2022
+1,Anderson Hernandez,19,28/04/2004,Masculino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Gerente,60000,51406895,08/06/2022
+2,Esther Soloj,19,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Secretaria,6000,51406895,08/06/2022
+3,Angel Cotic,19,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Secretaria,7000,51406895,08/06/2022

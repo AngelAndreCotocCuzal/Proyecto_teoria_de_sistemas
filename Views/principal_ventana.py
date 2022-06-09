@@ -38,10 +38,12 @@ class MainView_principal(QMainWindow):
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
         self.btn_eliminar_venta.clicked.connect(self.elimina_ventas)
         self.btn_eliminar_empleo.clicked.connect(self.elimina_empleado)
+        self.btn_eliminar_planilla.clicked.connect(self.eliminar_planilla)
         # ver sobre consummo
         self.btn_cotizar_ventas.clicked.connect(self.ver_datos)
         # recursos humanos
         self.btn_contratar.clicked.connect(self.contrataciones)
+        self.ingreso_planilla_2.clicked.connect(self.guardar_planilla)
         # self.btn_op.clicked.connect(self.opc)
         # self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
         # self.calendarDateChanged()
@@ -217,10 +219,11 @@ class MainView_principal(QMainWindow):
 
     def ver_planilla(self):
         df = pd.read_csv('empleo.csv')
+        codigo_empleado = int(self.text_ver_empleado.text())
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
         df.to_csv('empleo.csv')
-        var = df.loc[[1], ['Nombre_Empleado', 'Sueldo', 'Puesto']]
+        var = df.loc[[codigo_empleado], ['Nombre_Empleado', 'Sueldo', 'Puesto']]
         self.tabla_planilla.setColumnCount(len(var.columns))
         self.tabla_planilla.setRowCount(len(var))
         self.tabla_planilla.setHorizontalHeaderLabels(var.columns)
@@ -233,4 +236,40 @@ class MainView_principal(QMainWindow):
         filas = len(df.index)
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('empleo.csv')
+        QMessageBox.about(self, 'Aviso', 'Eliminado')
+
+    def guardar_planilla(self):
+        df = pd.read_csv('planilla.csv')
+        clave = int(self.text_clave.text())
+        x = int(self.text_sueldo_planilla.text())
+        iggs = 0.0483
+        sueldo = x * iggs
+        anticipo = int(self.text_anticipo_planilla.text())
+        extras = int(self.text_extras.text())
+        dinero = 60
+        y = extras * dinero
+        vacaciones = int(self.text_vacaciones.text())
+        bonificaciones = self.cb_bonoficaciones.currentText()
+        total = (((x-sueldo) - anticipo) + y)
+        # 4.83
+
+        guardar = [(clave, sueldo, anticipo, extras, vacaciones, bonificaciones, total)]
+        df1 = pd.DataFrame(guardar, columns=['Clave', 'Sueldo_IGSS', 'Anticipo', 'Extras', 'Vacaciones', 'Bonificaciones', 'Total'])
+        df = df.append(df1, ignore_index=True)
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('planilla.csv')
+        self.tabla_planilla_2.setColumnCount(len(df.columns))
+        self.tabla_planilla_2.setRowCount(len(df))
+        self.tabla_planilla_2.setHorizontalHeaderLabels(df.columns)
+        for i in range(len(df)):
+            for j in range(len(df.columns)):
+                self.tabla_planilla_2.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+        QMessageBox.about(self, 'Aviso', 'Guardado')
+
+    def eliminar_planilla(self):
+        df = pd.read_csv('planilla.csv')
+        filas = len(df.index)
+        df.drop(df.index[[filas - 1]], inplace=True)
+        df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
