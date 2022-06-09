@@ -1,2 +1,4 @@
 ,Nombre_Empleado,Edad,Nacimiento,Genero,Dpi,Nit_Empleado,Direccion,Telefono,Sangre,Alergico,Puesto,Sueldo,Emergencia,Labor
 0,,18,,Femenino,15,,,15,,,,500,500,
+1,diana,18,,Femenino,1234567,147895.0,,56312814,,,,400,319215027,
+2,diana,18,,Femenino,3141561,454646.0,,32,,,,54,25,
