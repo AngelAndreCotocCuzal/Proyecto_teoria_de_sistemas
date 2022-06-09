@@ -1,5 +1,2 @@
-,Nombre,Codigo,NIT,Consumo,Monto,Cantidad,Fecha,Total
-0,Esther,ADH0026,3209778-6,Minorista,50,4,02/06/2022,200
-1,Diana,ADH0024,CF,Minorista,90,5,02/06/2022,450
-2,diana,ACA0005,32097786,Mayoreo,300,2,06/06/2022,600
-3,diana,ACA0005,32097786,Mayoreo,30,2,06/06/2022,60
+,Nombre,Codigo,NIT,Consumo,Monto,Cantidad,Fecha,Sub_total,Vuelto
+0,Diana,ACA0005,C.F,Minorista,2,1,07/06/2022,2,1

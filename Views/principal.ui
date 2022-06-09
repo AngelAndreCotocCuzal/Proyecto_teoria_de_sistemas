@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1096</width>
-    <height>681</height>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -388,7 +388,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>400</y>
+          <y>350</y>
           <width>91</width>
           <height>31</height>
          </rect>
@@ -447,7 +447,7 @@
         <property name="geometry">
          <rect>
           <x>130</x>
-          <y>400</y>
+          <y>350</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -717,7 +717,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>300</y>
+          <y>310</y>
           <width>121</width>
           <height>31</height>
          </rect>
@@ -817,33 +817,27 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="text_dinero_venta">
+       <widget class="QPushButton" name="btn_cal">
         <property name="geometry">
          <rect>
-          <x>130</x>
-          <y>350</y>
-          <width>161</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_16">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>350</y>
-          <width>91</width>
-          <height>31</height>
+          <x>310</x>
+          <y>250</y>
+          <width>31</width>
+          <height>33</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Modern No. 20</family>
-          <pointsize>20</pointsize>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
-         <string>Dinero</string>
+         <string>.</string>
         </property>
        </widget>
        <zorder>label_20</zorder>
@@ -867,8 +861,7 @@ p, li { white-space: pre-wrap; }
        <zorder>label_21</zorder>
        <zorder>btn_cotizar_ventas</zorder>
        <zorder>tabla_ventas_2</zorder>
-       <zorder>text_dinero_venta</zorder>
-       <zorder>label_16</zorder>
+       <zorder>btn_cal</zorder>
       </widget>
       <widget class="QWidget" name="Compras">
        <attribute name="title">
@@ -1418,14 +1411,132 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Recursos Humanos</string>
      </attribute>
-     <widget class="QTabWidget" name="contratacion">
+     <widget class="QTabWidget" name="ingreso">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1071</width>
-        <height>651</height>
+        <width>1091</width>
+        <height>601</height>
        </rect>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>198</red>
+            <green>190</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="LinkVisited">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>198</red>
+            <green>190</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="LinkVisited">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Base">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>198</red>
+            <green>190</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Window">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>198</red>
+            <green>190</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="LinkVisited">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>127</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
       </property>
       <property name="autoFillBackground">
        <bool>false</bool>
@@ -1768,8 +1879,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLineEdit" name="alergico">
         <property name="geometry">
          <rect>
-          <x>760</x>
-          <y>160</y>
+          <x>770</x>
+          <y>280</y>
           <width>281</width>
           <height>31</height>
          </rect>
@@ -1797,8 +1908,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="label_36">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>150</y>
+          <x>550</x>
+          <y>280</y>
           <width>151</width>
           <height>41</height>
          </rect>
@@ -1845,8 +1956,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="label_38">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>220</y>
+          <x>570</x>
+          <y>340</y>
           <width>351</width>
           <height>41</height>
          </rect>
@@ -1864,8 +1975,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLineEdit" name="puesto_2">
         <property name="geometry">
          <rect>
-          <x>760</x>
-          <y>230</y>
+          <x>770</x>
+          <y>330</y>
           <width>271</width>
           <height>31</height>
          </rect>
@@ -1874,8 +1985,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLineEdit" name="sueldo">
         <property name="geometry">
          <rect>
-          <x>760</x>
-          <y>300</y>
+          <x>860</x>
+          <y>400</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -1884,8 +1995,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="label_39">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>290</y>
+          <x>580</x>
+          <y>390</y>
           <width>141</width>
           <height>41</height>
          </rect>
@@ -1897,7 +2008,7 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="text">
-         <string>Sueldo</string>
+         <string>Sueldo (Q)</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="cel_empleado">
@@ -1910,36 +2021,49 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
        </widget>
+       <widget class="QTableWidget" name="tabla_contratacion">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>30</y>
+          <width>531</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
        <widget class="QPushButton" name="btn_contratar">
         <property name="geometry">
          <rect>
-          <x>880</x>
-          <y>30</y>
-          <width>131</width>
-          <height>33</height>
+          <x>530</x>
+          <y>240</y>
+          <width>93</width>
+          <height>28</height>
          </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="text">
          <string>Contratar</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_40">
+       <widget class="QPushButton" name="btn_eliminar_empleo">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>240</y>
+          <width>131</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Borrar de empleado</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>1061</width>
-          <height>581</height>
+          <width>1081</width>
+          <height>571</height>
          </rect>
         </property>
         <property name="palette">
@@ -2164,7 +2288,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <zorder>label_40</zorder>
+       <zorder>label_29</zorder>
        <zorder>nombre_empleado</zorder>
        <zorder>nombre_contratacion</zorder>
        <zorder>label_19</zorder>
@@ -2196,31 +2320,14 @@ p, li { white-space: pre-wrap; }
        <zorder>sueldo</zorder>
        <zorder>label_39</zorder>
        <zorder>cel_empleado</zorder>
+       <zorder>tabla_contratacion</zorder>
        <zorder>btn_contratar</zorder>
+       <zorder>btn_eliminar_empleo</zorder>
       </widget>
       <widget class="QWidget" name="Compras_2">
        <attribute name="title">
-        <string>Nonima</string>
+        <string>Planilla</string>
        </attribute>
-       <widget class="QLabel" name="label_29">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>100</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Modern No. 20</family>
-          <pointsize>20</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Codigo</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_30">
         <property name="geometry">
          <rect>
@@ -2237,29 +2344,583 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="text">
-         <string>Compras de Productos</string>
+         <string>Planilla</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="text_media_compra_2">
+       <widget class="QLineEdit" name="text_clave">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>90</y>
+          <x>770</x>
+          <y>220</y>
           <width>161</width>
           <height>31</height>
          </rect>
         </property>
        </widget>
-       <widget class="QTableWidget" name="tabla_contratacion">
+       <widget class="QTableWidget" name="tabla_planilla">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>200</y>
-          <width>641</width>
+          <x>10</x>
+          <y>120</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>410</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Horas Extras</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>340</y>
+          <width>221</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string> Anticipo de Sueldo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>490</y>
+          <width>231</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dias de Vacaciones</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_extras">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>410</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_anticipo_planilla">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>340</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ingreso_planilla">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ingreso</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_43">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1081</width>
+          <height>571</height>
+         </rect>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Light">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="BrightText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="NoRole">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ToolTipBase">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Light">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="BrightText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="NoRole">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ToolTipBase">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="WindowText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Light">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="BrightText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="NoRole">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="ToolTipBase">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>141</red>
+              <green>244</green>
+              <blue>158</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Modern No. 20'; font-size:20pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_ver_empleado">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>80</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Serif</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ingrese la clave del empleado</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_47">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>630</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Serif</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ingrese la clave del empleado</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_48">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>171</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Serif</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Finalito:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ingreso_planilla_2">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>270</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ingreso</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_vacaciones">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>500</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_44">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>230</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Clave:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="text_sueldo_planilla">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>280</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="clave1">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>280</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Sueldo(IGGS)</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tabla_planilla_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>330</y>
+          <width>381</width>
           <height>192</height>
          </rect>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_eliminar_planilla">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>270</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Eliminar</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cb_bonoficaciones">
+        <property name="geometry">
+         <rect>
+          <x>770</x>
+          <y>450</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>--Seleccione--</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bono 14</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Aguinaldo</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ninguno</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_45">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>450</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Modern No. 20</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Bonificaciones</string>
+        </property>
+       </widget>
+       <zorder>label_43</zorder>
+       <zorder>label_30</zorder>
+       <zorder>text_clave</zorder>
+       <zorder>tabla_planilla</zorder>
+       <zorder>label_40</zorder>
+       <zorder>label_41</zorder>
+       <zorder>label_42</zorder>
+       <zorder>text_extras</zorder>
+       <zorder>text_anticipo_planilla</zorder>
+       <zorder>ingreso_planilla</zorder>
+       <zorder>text_ver_empleado</zorder>
+       <zorder>label_16</zorder>
+       <zorder>label_47</zorder>
+       <zorder>label_48</zorder>
+       <zorder>ingreso_planilla_2</zorder>
+       <zorder>text_vacaciones</zorder>
+       <zorder>label_44</zorder>
+       <zorder>text_sueldo_planilla</zorder>
+       <zorder>clave1</zorder>
+       <zorder>tabla_planilla_2</zorder>
+       <zorder>btn_eliminar_planilla</zorder>
+       <zorder>cb_bonoficaciones</zorder>
+       <zorder>label_45</zorder>
       </widget>
      </widget>
     </widget>

@@ -1,2 +1,5 @@
-,Codigo,Descripcion,Cantidad,Existencias,Costo,Publico
-0,16,asd,asd,51,21,31
+,Nombre_Empleado,Edad,Nacimiento,Genero,Dpi,Nit_Empleado,Direccion,Telefono,Sangre,Alergico,Puesto,Sueldo,Emergencia,Labor
+0,Diana Morales,17,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Gerente,6000,51406895,08/06/2022
+1,Anderson Hernandez,19,28/04/2004,Masculino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Gerente,60000,51406895,08/06/2022
+2,Esther Soloj,19,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Secretaria,6000,51406895,08/06/2022
+3,Angel Cotic,19,28/04/2004,Femenino,1512321,15321,Quetzaltenango,51536048,O+,Nada,Secretaria,7000,51406895,08/06/2022
