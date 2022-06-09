@@ -31,7 +31,7 @@ class MainView_principal(QMainWindow):
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
         self.btn_guardar_venta.clicked.connect(self.ventas_inicio)
-        self.btn_contratar.clicked.connect(self.contrataciones)
+        # self.btn_contratar.clicked.connect(self.contrataciones)
         self.btn_cal.clicked.connect(self.total)
         self.ingreso_planilla.clicked.connect(self.ver_planilla)
         # eliminar datos
@@ -152,10 +152,10 @@ class MainView_principal(QMainWindow):
         nombre_empleado = self.nombre_empleado.text()
         edad = int(self.edad.text())
         nacimiento = self.nacimiento.text()
-        genero= self.genero.currentText()
+        genero = self.genero.currentText()
         dpi = int(self.dpi.text())
         nit_empleado = self.nit_empleado.text()
-        direccion= self.direccion.text()
+        direccion = self.direccion.text()
         telefono = int(self.cel_empleado.text())
         sangre = self.sangre.text()
         alergico = self.alergico.text()
@@ -164,9 +164,14 @@ class MainView_principal(QMainWindow):
         emergencia = int(self.contacto.text())
         labor = self.inicio_laboral.text()
 
-        registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono, sangre, alergico, puesto, sueldo, emergencia, labor)]
+        registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono,
+                               sangre,
+                               alergico, puesto, sueldo, emergencia, labor)]
 
-        df1 = pd.DataFrame(registro_empleados, columns=['Nombre_Empleado', 'Edad', 'Nacimiento', 'Genero', 'Dpi', 'Nit_Empleado', 'Direccion', 'Telefono', 'Sangre','Alergico','Puesto','Sueldo','Emergencia','Labor'])
+        df1 = pd.DataFrame(registro_empleados, columns=['Nombre_Empleado', 'Edad', 'Nacimiento', 'Genero', 'Dpi',
+                                                        'Nit_Empleado',
+                                                        'Direccion', 'Telefono', 'Sangre', 'Alergico', 'Puesto', 'Sueldo',
+                                                        'Emergencia', 'Labor'])
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -184,12 +189,14 @@ class MainView_principal(QMainWindow):
         filas = len(df.index)
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('inver.csv')
+        QMessageBox.about(self, 'Aviso', 'Eliminado')
 
     def elimina_ventas(self):
         df = pd.read_csv('factura.csv')
         filas = len(df.index)
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('factura.csv')
+        QMessageBox.about(self, 'Aviso', 'Eliminado')
 
     def eliminar_producto(self):
         table = self.principal.tabla
@@ -199,6 +206,7 @@ class MainView_principal(QMainWindow):
             if product:
                 self.product.eliminar_producto(cod)
         self.listar_productos()
+        QMessageBox.about(self, 'Aviso', 'Eliminado')
 
     def calendarDateChanged(self):
         print("The calendar date was changed.")
@@ -224,3 +232,4 @@ class MainView_principal(QMainWindow):
         filas = len(df.index)
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('empleo.csv')
+        QMessageBox.about(self, 'Aviso', 'Eliminado')
