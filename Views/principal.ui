@@ -1542,7 +1542,7 @@ p, li { white-space: pre-wrap; }
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Ventas_2">
        <attribute name="title">
@@ -2029,6 +2029,9 @@ p, li { white-space: pre-wrap; }
           <width>531</width>
           <height>192</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_contratar">

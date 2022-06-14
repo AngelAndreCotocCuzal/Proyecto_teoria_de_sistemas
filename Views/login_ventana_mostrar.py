@@ -10,6 +10,7 @@ from segunda import Ui_segunda, d
 from .principal import Ui_Principal
 from PyQt5 import uic
 from Views import MainView_principal
+from Views.nueva_ventana_principal import Ventana_principal
 from imagenes import imagenes
 
 
@@ -23,7 +24,7 @@ class MainView_login(QMainWindow):
 
         self.btn_login.clicked.connect(self.abrir)
         self.btn_crear.clicked.connect(self.crear)
-        self.ventana_principal = MainView_principal()
+        self.ventana_principal = Ventana_principal()
         self.transaparente.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.transaparente.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 

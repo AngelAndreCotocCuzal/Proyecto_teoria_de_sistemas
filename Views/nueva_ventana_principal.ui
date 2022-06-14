@@ -1,0 +1,2792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1101</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);</string>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1096</width>
+      <height>655</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,8">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame_superior">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>42</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QFrame{
+background-color: rgb(0, 0, 0);
+}
+
+QPushButton{
+background-color:#000000ff;
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+background-color: rgb(55, 53, 79);
+border-radius:20px;
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">font: 87 12pt&quot;Arial Black&quot;;
+color:  rgb(20,200,220);
+</string>
+          </property>
+          <property name="text">
+           <string>Menú de proyecto</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="spacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>706</width>
+            <height>13</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_minimizar">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/minus (2).svg</normaloff>../../../Downloads/minus (2).svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>38</width>
+            <height>38</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_restaurar">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/arrow-down-left (1).svg</normaloff>../../../Downloads/arrow-down-left (1).svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>38</width>
+            <height>38</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_maximizar">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/arrow-up-right (1).svg</normaloff>../../../Downloads/arrow-up-right (1).svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>38</width>
+            <height>38</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_cerrar">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../Downloads/x (4).svg</normaloff>../../../Downloads/x (4).svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>38</width>
+            <height>38</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="menu_mover">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>0</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+background-color: rgb(53, 53, 79);
+}
+
+QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(20,200,220);
+border-radius:5px;
+border:1px solid white;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QPushButton" name="btn_inicio">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string> INICIO  </string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../Imágenes/imagen_proyecto/logo.png</normaloff>../../Imágenes/imagen_proyecto/logo.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_inventario">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string> INVENTARIO </string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../Imágenes/imagen_proyecto/prueba_3_color.png</normaloff>../../Imágenes/imagen_proyecto/prueba_3_color.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ventas">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>  VENTAS </string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../Imágenes/imagen_proyecto/venta_espero.png</normaloff>../../Imágenes/imagen_proyecto/venta_espero.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_rh">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>R/H  </string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../Imágenes/imagen_proyecto/rh_fin.png</normaloff>../../Imágenes/imagen_proyecto/rh_fin.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_Financiero">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>  FINANCIERO </string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../Imágenes/imagen_proyecto/finanzas_fin.png</normaloff>../../Imágenes/imagen_proyecto/finanzas_fin.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_4">
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+background-color: rgb(53, 53, 79);
+}
+
+QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="styleSheet">
+              <string notr="true">QFrame{
+background-color:rgb(55, 53, 79);
+}
+
+QPushButton{
+font:87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20, 200, 220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color: black;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QPushButton" name="btn_menu_iz">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../../../Downloads/chevrons-left.svg</normaloff>../../../Downloads/chevrons-left.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_menu_der">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../../../Downloads/chevrons-right.svg</normaloff>../../../Downloads/chevrons-right.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_menu_mover_lateral">
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+background-color:rgb(55, 53, 79);
+}
+
+QPushButton{
+font:87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20, 200, 220);
+border-radius:5px;
+border:0px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color: black;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../../../Downloads/align-justify.svg</normaloff>../../../Downloads/align-justify.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_principa_pagina">
+             <property name="maximumSize">
+              <size>
+               <width>1500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>1500</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+font: 30 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(0, 206, 151);
+border:0px solid #14C8DC;
+}</string>
+                </property>
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <widget class="QWidget" name="pagina_inventario">
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QFrame" name="frame_2">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                     <item>
+                      <widget class="QPushButton" name="btn_list">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>10</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>Listar</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btn_update">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>10</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>Actualizar</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btn_read">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>10</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>Seleccionar</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btn_delete">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>10</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>Eliminar</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_5">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel{
+font: 30 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(0, 206, 151);
+border:0px solid #14C8DC;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <item>
+                      <widget class="QLabel" name="label_6">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Codigo:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_cod">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="placeholderText">
+                        <string>codigo</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_7">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Descripcion :</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_name">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Descripcion</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_8">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Medida: </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_media">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Media</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_9">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Existencias: </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_existencia">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Categoria</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_10">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Precio(costo)</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_precio_costo">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Costo</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_11">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>3</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Precio(publico)</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="input_precio_publico">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>12</pointsize>
+                         <weight>9</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="dragEnabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="readOnly">
+                        <bool>false</bool>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Publico</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btn_create">
+                       <property name="font">
+                        <font>
+                         <family>Arial Black</family>
+                         <pointsize>12</pointsize>
+                         <weight>10</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>Crear</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="pagina_inicio">
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string>Estas en inicio</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="pagina_ventas">
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <item>
+                   <widget class="QToolBox" name="toolBox">
+                    <property name="maximumSize">
+                     <size>
+                      <width>950</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QToolBox::tab{
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	color: rgb(0, 0, 0);
+	font: 75 8pt&quot;MS Shell Dig 2&quot;;
+}
+
+QToolBox::tab:selected{
+	background-color: rgb(20, 200, 220);
+	font: 75 12pt&quot;MS Shell Dig 2&quot;;
+	color: rgb(0, 0, 0);
+}
+
+</string>
+                    </property>
+                    <property name="currentIndex">
+                     <number>1</number>
+                    </property>
+                    <widget class="QWidget" name="page">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>-293</y>
+                       <width>929</width>
+                       <height>705</height>
+                      </rect>
+                     </property>
+                     <attribute name="icon">
+                      <iconset>
+                       <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
+                     </attribute>
+                     <attribute name="label">
+                      <string>Ventas</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_21">
+                      <item>
+                       <widget class="QFrame" name="frame_12">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>130</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>150</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}
+
+QTableWidget{
+color: rgb(255, 255, 255);
+gridline-color:rgb(0, 0, 0);
+font-size:12pt;
+color:#000000;
+}
+
+QHeaderView::section{
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 127);
+	font-size: 12pt
+}
+
+QTableWidgetQTableCornerButton::section{
+	background-color: rgb(0, 0, 0);
+	borde: 1px solid rgb(0, 206, 151)
+}
+</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QFrame" name="frame_13">
+                         <property name="geometry">
+                          <rect>
+                           <x>12</x>
+                           <y>12</y>
+                           <width>261</width>
+                           <height>151</height>
+                          </rect>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>300</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QLabel" name="label_18">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>-10</y>
+                            <width>281</width>
+                            <height>41</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Arial Black</family>
+                            <pointsize>12</pointsize>
+                            <weight>3</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Ingrese la clave del</string>
+                          </property>
+                         </widget>
+                         <widget class="QLabel" name="label_19">
+                          <property name="geometry">
+                           <rect>
+                            <x>50</x>
+                            <y>10</y>
+                            <width>281</width>
+                            <height>41</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Arial Black</family>
+                            <pointsize>12</pointsize>
+                            <weight>3</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>producto</string>
+                          </property>
+                         </widget>
+                         <widget class="QLineEdit" name="text_codigo_venta">
+                          <property name="geometry">
+                           <rect>
+                            <x>140</x>
+                            <y>50</y>
+                            <width>111</width>
+                            <height>31</height>
+                           </rect>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="btn_cotizar_ventas">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>50</y>
+                            <width>101</width>
+                            <height>31</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Arial Black</family>
+                            <pointsize>12</pointsize>
+                            <weight>10</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="text">
+                           <string>Ver</string>
+                          </property>
+                         </widget>
+                        </widget>
+                        <widget class="QFrame" name="frame_14">
+                         <property name="geometry">
+                          <rect>
+                           <x>280</x>
+                           <y>10</y>
+                           <width>611</width>
+                           <height>131</height>
+                          </rect>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>900</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QTableWidget" name="tabla_ventas_2">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>601</width>
+                            <height>111</height>
+                           </rect>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: white;</string>
+                          </property>
+                         </widget>
+                        </widget>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QFrame" name="frame_15">
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_22">
+                         <item>
+                          <widget class="QLabel" name="label_3">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Nombre</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_nombre_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_21">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>NIT/C. F.</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_nit_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="cb_ma">
+                           <property name="styleSheet">
+                            <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+</string>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Mayoreo</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Minorista</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_20">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Monto</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_monto_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_22">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Cantidad</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_cantidad_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_29">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Dinero</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_dinero_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_15">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Fecha</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_fecha_venta"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_cal">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>10</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
+                           <property name="text">
+                            <string>.</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_guardar_venta">
+                           <property name="minimumSize">
+                            <size>
+                             <width>100</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>100</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>10</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
+                           <property name="text">
+                            <string>Guardar</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="page_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>929</width>
+                       <height>496</height>
+                      </rect>
+                     </property>
+                     <attribute name="icon">
+                      <iconset>
+                       <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
+                     </attribute>
+                     <attribute name="label">
+                      <string>Compras</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_24">
+                      <item>
+                       <widget class="QFrame" name="frame_16">
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_26">
+                         <item>
+                          <widget class="QLabel" name="label_12">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Codigo</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_codigo_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_13">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Descripcion</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_descripcion_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_14">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Medida</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_media_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_30">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Cantidad</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_existencia_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_32">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Precio costo</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_precio_costo_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_35">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Precio publico</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_precio_publico_compra"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_guardar_compra">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>10</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
+                           <property name="text">
+                            <string>Guardar</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="pagina_rh">
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QToolBox" name="toolBox_2">
+                    <property name="styleSheet">
+                     <string notr="true">QToolBox::tab{
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	color: rgb(0, 0, 0);
+	font: 75 8pt&quot;MS Shell Dig 2&quot;;
+}
+
+QToolBox::tab:selected{
+	background-color: rgb(20, 200, 220);
+	font: 75 12pt&quot;MS Shell Dig 2&quot;;
+	color: rgb(0, 0, 0);
+}
+
+</string>
+                    </property>
+                    <property name="currentIndex">
+                     <number>0</number>
+                    </property>
+                    <widget class="QWidget" name="page_7">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>951</width>
+                       <height>1056</height>
+                      </rect>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                     </property>
+                     <attribute name="icon">
+                      <iconset>
+                       <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
+                     </attribute>
+                     <attribute name="label">
+                      <string>Contratacion </string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_18">
+                      <item>
+                       <widget class="QFrame" name="frame_8">
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_17">
+                         <item>
+                          <widget class="QLabel" name="nombre_contratacion">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Nombre</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="nombre_empleado">
+                           <property name="styleSheet">
+                            <string notr="true"/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_34">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Teléfono</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="cel_empleado"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_23">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Genero</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="genero">
+                           <property name="styleSheet">
+                            <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+</string>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Femenino</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Masculino</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_31">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Tipo de sangre</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="sangre"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_24">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Edad</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="edad"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_36">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Alérgico a</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="alergico"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_25">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Fecha de Nacimiento</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="nacimiento"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_38">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Puesto</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="puesto_2"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_26">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>DPI</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="dpi"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_39">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Sueldo (Q)</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="sueldo"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_27">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>NIT</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="nit_empleado"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_28">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Dirección</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="direccion"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_33">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Contacto de emergencia</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="contacto"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_37">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Fecha de inicio laboral</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="inicio_laboral"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="btn_contratar">
+                           <property name="text">
+                            <string>Contratar</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                    <widget class="QWidget" name="page_8">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>951</width>
+                       <height>653</height>
+                      </rect>
+                     </property>
+                     <attribute name="icon">
+                      <iconset>
+                       <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
+                     </attribute>
+                     <attribute name="label">
+                      <string>Planilla</string>
+                     </attribute>
+                     <layout class="QVBoxLayout" name="verticalLayout_16">
+                      <item>
+                       <widget class="QFrame" name="frame_7">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>150</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>150</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}
+
+QTableWidget{
+color: rgb(255, 255, 255);
+gridline-color:rgb(0, 0, 0);
+font-size:12pt;
+color:#000000;
+}
+
+QHeaderView::section{
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 127);
+	font-size: 12pt
+}
+
+QTableWidgetQTableCornerButton::section{
+	background-color: rgb(0, 0, 0);
+	borde: 1px solid rgb(0, 206, 151)
+}
+</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <widget class="QFrame" name="frame_10">
+                         <property name="geometry">
+                          <rect>
+                           <x>12</x>
+                           <y>12</y>
+                           <width>261</width>
+                           <height>151</height>
+                          </rect>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>300</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QLabel" name="label_16">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>0</y>
+                            <width>281</width>
+                            <height>41</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Arial Black</family>
+                            <pointsize>12</pointsize>
+                            <weight>3</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>Ingrese la clave del</string>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="ingreso_planilla">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>80</y>
+                            <width>131</width>
+                            <height>31</height>
+                           </rect>
+                          </property>
+                          <property name="text">
+                           <string>Ingreso</string>
+                          </property>
+                         </widget>
+                         <widget class="QLineEdit" name="text_ver_empleado">
+                          <property name="geometry">
+                           <rect>
+                            <x>160</x>
+                            <y>80</y>
+                            <width>81</width>
+                            <height>31</height>
+                           </rect>
+                          </property>
+                         </widget>
+                         <widget class="QLabel" name="label_17">
+                          <property name="geometry">
+                           <rect>
+                            <x>50</x>
+                            <y>20</y>
+                            <width>281</width>
+                            <height>41</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Arial Black</family>
+                            <pointsize>12</pointsize>
+                            <weight>3</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>empleado</string>
+                          </property>
+                         </widget>
+                        </widget>
+                        <widget class="QFrame" name="frame_11">
+                         <property name="geometry">
+                          <rect>
+                           <x>277</x>
+                           <y>12</y>
+                           <width>411</width>
+                           <height>168</height>
+                          </rect>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>500</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QTableWidget" name="tabla_planilla">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>0</y>
+                            <width>391</width>
+                            <height>131</height>
+                           </rect>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: white;</string>
+                          </property>
+                         </widget>
+                        </widget>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QFrame" name="frame_9">
+                        <property name="styleSheet">
+                         <string notr="true">QLineEdit{
+border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+}</string>
+                        </property>
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_19">
+                         <item>
+                          <widget class="QLabel" name="label_44">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Clave:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_clave"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="clave1">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Sueldo(IGGS)</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_sueldo_planilla"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_41">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string> Anticipo de Sueldo</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_anticipo_planilla"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_40">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Horas Extras</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_extras"/>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_45">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Bonificaciones</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="cb_bonoficaciones">
+                           <property name="styleSheet">
+                            <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+</string>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>--Seleccione--</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Bono 14</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Aguinaldo</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Ninguno</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_42">
+                           <property name="font">
+                            <font>
+                             <family>Arial Black</family>
+                             <pointsize>12</pointsize>
+                             <weight>3</weight>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Dias de Vacaciones</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="text_vacaciones"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="ingreso_planilla_2">
+                           <property name="text">
+                            <string>Ingreso</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="pagina_financiero">
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <item>
+                   <widget class="QPushButton" name="pushButton_5">
+                    <property name="text">
+                     <string>Financiero</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_lateral">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>0</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame{
+background-color: rgb(53, 53, 79);
+}
+
+QLabel{
+font: 30 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(0, 206, 151);
+border:0px solid #14C8DC;
+
+}
+
+QTableWidget{
+color: rgb(255, 255, 255);
+gridline-color:rgb(0, 0, 0);
+font-size:12pt;
+color:#000000;
+}
+
+QHeaderView::section{
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 127);
+	font-size: 12pt
+}
+
+QTableWidgetQTableCornerButton::section{
+	background-color: rgb(0, 0, 0);
+	borde: 1px solid rgb(0, 206, 151)
+}
+
+QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QStackedWidget" name="stackedWidget">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>900</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::DefaultContextMenu</enum>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="currentIndex">
+              <number>2</number>
+             </property>
+             <widget class="QWidget" name="page_lateral_inicio">
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>Inicio</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_lateral_inventario">
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QTableWidget" name="table_product">
+                 <property name="maximumSize">
+                  <size>
+                   <width>900</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="rowCount">
+                  <number>10</number>
+                 </property>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <row/>
+                 <column>
+                  <property name="text">
+                   <string>CODIGO</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>DESCRIPCION</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>MEDIA</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>EXISTENCIA</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>PRECIO(costo)</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>PRECIO(publico)</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_lateral_ventas">
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <widget class="QStackedWidget" name="stackedWidget_4">
+                 <property name="currentIndex">
+                  <number>1</number>
+                 </property>
+                 <widget class="QWidget" name="conectar_tabla_ventas">
+                  <layout class="QVBoxLayout" name="verticalLayout_23">
+                   <item>
+                    <widget class="QTableWidget" name="tabla_ventas">
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_eliminar_venta">
+                     <property name="font">
+                      <font>
+                       <family>Arial Black</family>
+                       <pointsize>12</pointsize>
+                       <weight>10</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="text">
+                      <string>Eliminar</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="conectar_tablade_compras">
+                  <layout class="QVBoxLayout" name="verticalLayout_25">
+                   <item>
+                    <widget class="QTableWidget" name="tabla">
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_eliminar_compra">
+                     <property name="font">
+                      <font>
+                       <family>Arial Black</family>
+                       <pointsize>12</pointsize>
+                       <weight>10</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="text">
+                      <string>Eliminar</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_lateral_rh">
+              <property name="styleSheet">
+               <string notr="true">QFrame{
+background-color: rgb(53, 53, 79);
+}
+
+QLabel{
+font: 30 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(0, 206, 151);
+border:0px solid #14C8DC;
+
+}
+
+QTableWidget{
+color: rgb(255, 255, 255);
+gridline-color:rgb(0, 0, 0);
+font-size:12pt;
+color:#000000;
+}
+
+QHeaderView::section{
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 127);
+	font-size: 12pt
+}
+
+QTableWidgetQTableCornerButton::section{
+	background-color: rgb(0, 0, 0);
+	borde: 1px solid rgb(0, 206, 151)
+}
+
+QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QStackedWidget" name="stackedWidget_3">
+                 <property name="styleSheet">
+                  <string notr="true">QFrame{
+background-color: rgb(53, 53, 79);
+}
+
+QLabel{
+font: 30 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color: rgb(0, 206, 151);
+border:0px solid #14C8DC;
+
+}
+
+QTableWidget{
+color: rgb(255, 255, 255);
+gridline-color:rgb(0, 0, 0);
+font-size:12pt;
+color:#000000;
+}
+
+QHeaderView::section{
+	background-color: rgb(0, 0, 0);
+	border: 1px solid rgb(0, 0, 127);
+	font-size: 12pt
+}
+
+QTableWidgetQTableCornerButton::section{
+	background-color: rgb(0, 0, 0);
+	borde: 1px solid rgb(0, 206, 151)
+}
+
+QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+                 </property>
+                 <widget class="QWidget" name="tabla_contratacion_conectar">
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <widget class="QTableWidget" name="tabla_contratacion">
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_eliminar_empleo">
+                     <property name="text">
+                      <string>Borrar de empleado</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="tabla_planilla_conectar">
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <item>
+                    <widget class="QTableWidget" name="tabla_planilla_2">
+                     <property name="layoutDirection">
+                      <enum>Qt::LeftToRight</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_eliminar_planilla">
+                     <property name="text">
+                      <string>Eliminar Planilla</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_lateral_financiero">
+              <layout class="QVBoxLayout" name="verticalLayout_15">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>Financiero</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

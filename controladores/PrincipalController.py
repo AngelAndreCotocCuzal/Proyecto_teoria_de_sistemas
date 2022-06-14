@@ -66,7 +66,8 @@ class PrincipalController():
 
         if len(products) > 0:
             for prod in products:
-                self.product.updateProduct(prod[0], prod[1], prod[2], prod[3])
+
+                self.product.updateProduct(prod[0], prod[1], prod[2], prod[3], prod[4], prod[5])
 
         self.listar_productos()
 
@@ -82,5 +83,6 @@ class PrincipalController():
     def openCreate(self, Ui_CreateProduct):
         self.ventana = Ui_CreateProduct
         self.ventana.show()
+
 
 

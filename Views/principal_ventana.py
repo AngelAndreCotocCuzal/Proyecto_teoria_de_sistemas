@@ -3,10 +3,13 @@ import os
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5 import uic
+
+import controladores.CreateProductController
 from controladores.PrincipalController import PrincipalController
 from Views.crear_producto import Ui_CreateProduct
 from PyQt5 import QtCore, QtGui, QtWidgets
 from segunda import Ui_segunda, d
+from controladores.CreateProductController import CreateProductController
 import pandas as pd
 from tkinter import *
 myDir = os.getcwd()
@@ -24,9 +27,11 @@ class MainView_principal(QMainWindow):
 
         # Load Ui
         self.principal_controller = PrincipalController(self)
+        self.create_product = CreateProductController(self)
 
         self.l = self.btn_list.clicked.connect(lambda: self.principal_controller.listar_productos())
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
+        self.u = self.btn_update.clicked.connect(lambda: self.principal_controller.updateProducs())
         # Guardar informacion
         self.d = self.btn_delete.clicked.connect(lambda: self.principal_controller.eliminar_producto())
         self.btn_guardar_compra.clicked.connect(self.compras_inicio)
@@ -47,6 +52,8 @@ class MainView_principal(QMainWindow):
         # self.btn_op.clicked.connect(self.opc)
         # self.calendarWidget.selectionChanged.connect(self.calendarDateChanged)
         # self.calendarDateChanged()
+        self.btn_create.clicked.connect(lambda: self.create_product.createProduct("licuado", "licuado de banano",
+                                                                                  "2lt", "2","7", "8"))
 
     def deshabilitar(self):
         if self.puesto == 'Gerente':
