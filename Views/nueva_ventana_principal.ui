@@ -570,7 +570,7 @@ border:0px solid #14C8DC;
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>2</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="pagina_inventario">
                  <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1006,7 +1006,7 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>751</width>
+                       <width>929</width>
                        <height>705</height>
                       </rect>
                      </property>
@@ -2460,7 +2460,7 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_lateral_inicio">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
