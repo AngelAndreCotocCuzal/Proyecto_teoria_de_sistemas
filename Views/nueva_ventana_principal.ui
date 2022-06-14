@@ -146,7 +146,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../Downloads/minus (2).svg</normaloff>../../../../Downloads/minus (2).svg</iconset>
+            <normaloff>../imagenes/minus (2).svg</normaloff>../imagenes/minus (2).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -172,7 +172,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../Downloads/arrow-down-left (1).svg</normaloff>../../../../Downloads/arrow-down-left (1).svg</iconset>
+            <normaloff>../imagenes/arrow-down-left (1).svg</normaloff>../imagenes/arrow-down-left (1).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -198,7 +198,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../Downloads/arrow-up-right (1).svg</normaloff>../../../../Downloads/arrow-up-right (1).svg</iconset>
+            <normaloff>../imagenes/arrow-up-right (1).svg</normaloff>../imagenes/arrow-up-right (1).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -309,7 +309,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/logo.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/logo.png</iconset>
+               <normaloff>../imagenes/logo.png</normaloff>../imagenes/logo.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -325,11 +325,11 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="text">
-              <string>INVENTARIO</string>
+              <string>INVENTARIO  </string>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/prueba_2_color.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/prueba_2_color.png</iconset>
+               <normaloff>../imagenes/prueba_2_color.png</normaloff>../imagenes/prueba_2_color.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -349,7 +349,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/venta_espero.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/venta_espero.png</iconset>
+               <normaloff>../imagenes/venta_espero.png</normaloff>../imagenes/venta_espero.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -369,7 +369,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/rh_fin.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/rh_fin.png</iconset>
+               <normaloff>../imagenes/rh_fin.png</normaloff>../imagenes/rh_fin.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -385,11 +385,11 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="text">
-              <string>FINANCIERO</string>
+              <string>FINANCIERO  </string>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/finanzas_fin.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/finanzas_fin.png</iconset>
+               <normaloff>../imagenes/finanzas_fin.png</normaloff>../imagenes/finanzas_fin.png</iconset>
              </property>
              <property name="iconSize">
               <size>
