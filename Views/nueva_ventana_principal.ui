@@ -265,7 +265,7 @@ color:  rgb(20,200,220);
          <widget class="QFrame" name="menu_mover">
           <property name="minimumSize">
            <size>
-            <width>200</width>
+            <width>0</width>
             <height>0</height>
            </size>
           </property>
@@ -1430,7 +1430,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>751</width>
+                       <width>929</width>
                        <height>496</height>
                       </rect>
                      </property>
