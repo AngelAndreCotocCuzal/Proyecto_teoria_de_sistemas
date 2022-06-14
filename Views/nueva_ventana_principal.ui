@@ -146,7 +146,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/minus (2).svg</normaloff>../../../Downloads/minus (2).svg</iconset>
+            <normaloff>../../../../Downloads/minus (2).svg</normaloff>../../../../Downloads/minus (2).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -172,7 +172,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/arrow-down-left (1).svg</normaloff>../../../Downloads/arrow-down-left (1).svg</iconset>
+            <normaloff>../../../../Downloads/arrow-down-left (1).svg</normaloff>../../../../Downloads/arrow-down-left (1).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -198,7 +198,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/arrow-up-right (1).svg</normaloff>../../../Downloads/arrow-up-right (1).svg</iconset>
+            <normaloff>../../../../Downloads/arrow-up-right (1).svg</normaloff>../../../../Downloads/arrow-up-right (1).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -224,7 +224,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../Downloads/x (4).svg</normaloff>../../../Downloads/x (4).svg</iconset>
+            <normaloff>../../../../Downloads/x (4).svg</normaloff>../../../../Downloads/x (4).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -265,7 +265,7 @@ color:  rgb(20,200,220);
          <widget class="QFrame" name="menu_mover">
           <property name="minimumSize">
            <size>
-            <width>0</width>
+            <width>200</width>
             <height>0</height>
            </size>
           </property>
@@ -309,7 +309,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../Imágenes/imagen_proyecto/logo.png</normaloff>../../Imágenes/imagen_proyecto/logo.png</iconset>
+               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/logo.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/logo.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -325,11 +325,11 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="text">
-              <string> INVENTARIO </string>
+              <string>INVENTARIO</string>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../Imágenes/imagen_proyecto/prueba_3_color.png</normaloff>../../Imágenes/imagen_proyecto/prueba_3_color.png</iconset>
+               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/prueba_2_color.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/prueba_2_color.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -349,7 +349,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../Imágenes/imagen_proyecto/venta_espero.png</normaloff>../../Imágenes/imagen_proyecto/venta_espero.png</iconset>
+               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/venta_espero.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/venta_espero.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -369,7 +369,7 @@ background-color:black;
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../Imágenes/imagen_proyecto/rh_fin.png</normaloff>../../Imágenes/imagen_proyecto/rh_fin.png</iconset>
+               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/rh_fin.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/rh_fin.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -385,15 +385,15 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="text">
-              <string>  FINANCIERO </string>
+              <string>FINANCIERO</string>
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../Imágenes/imagen_proyecto/finanzas_fin.png</normaloff>../../Imágenes/imagen_proyecto/finanzas_fin.png</iconset>
+               <normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/finanzas_fin.png</normaloff>../../../../OneDrive - Universidad Rafael Landivar/Imágenes/imagen_proyecto/finanzas_fin.png</iconset>
              </property>
              <property name="iconSize">
               <size>
-               <width>32</width>
+               <width>30</width>
                <height>32</height>
               </size>
              </property>
@@ -461,7 +461,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../Downloads/chevrons-left.svg</normaloff>../../../Downloads/chevrons-left.svg</iconset>
+                  <normaloff>../../../../Downloads/chevrons-left.svg</normaloff>../../../../Downloads/chevrons-left.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -478,7 +478,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../Downloads/chevrons-right.svg</normaloff>../../../Downloads/chevrons-right.svg</iconset>
+                  <normaloff>../../../../Downloads/chevrons-right.svg</normaloff>../../../../Downloads/chevrons-right.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -525,7 +525,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../Downloads/align-justify.svg</normaloff>../../../Downloads/align-justify.svg</iconset>
+                  <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -1005,8 +1005,8 @@ QToolBox::tab:selected{
                      <property name="geometry">
                       <rect>
                        <x>0</x>
-                       <y>-293</y>
-                       <width>929</width>
+                       <y>0</y>
+                       <width>751</width>
                        <height>705</height>
                       </rect>
                      </property>
@@ -1430,7 +1430,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>929</width>
+                       <width>751</width>
                        <height>496</height>
                       </rect>
                      </property>
@@ -1630,7 +1630,7 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>951</width>
+                       <width>313</width>
                        <height>1056</height>
                       </rect>
                      </property>
@@ -1975,7 +1975,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>951</width>
+                       <width>259</width>
                        <height>653</height>
                       </rect>
                      </property>
