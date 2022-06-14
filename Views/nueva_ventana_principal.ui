@@ -224,7 +224,7 @@ color:  rgb(20,200,220);
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../../../Downloads/x (4).svg</normaloff>../../../../Downloads/x (4).svg</iconset>
+            <normaloff>../imagenes/x (4).svg</normaloff>../imagenes/x (4).svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -461,7 +461,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../../Downloads/chevrons-left.svg</normaloff>../../../../Downloads/chevrons-left.svg</iconset>
+                  <normaloff>../imagenes/chevrons-left.svg</normaloff>../imagenes/chevrons-left.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -478,7 +478,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../../Downloads/chevrons-right.svg</normaloff>../../../../Downloads/chevrons-right.svg</iconset>
+                  <normaloff>../imagenes/chevrons-right.svg</normaloff>../imagenes/chevrons-right.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -525,7 +525,7 @@ background-color: black;
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
+                  <normaloff>../imagenes/align-justify.svg</normaloff>../imagenes/align-justify.svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
