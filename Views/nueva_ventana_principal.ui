@@ -1430,7 +1430,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>929</width>
+                       <width>201</width>
                        <height>496</height>
                       </rect>
                      </property>
@@ -1630,7 +1630,7 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>951</width>
+                       <width>313</width>
                        <height>1056</height>
                       </rect>
                      </property>
@@ -2366,8 +2366,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>472</width>
-                       <height>412</height>
+                       <width>233</width>
+                       <height>329</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2585,8 +2585,8 @@ background-color:black;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>972</width>
-                       <height>412</height>
+                       <width>182</width>
+                       <height>294</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2868,7 +2868,7 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>4</number>
              </property>
              <widget class="QWidget" name="page_lateral_inicio">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -2952,7 +2952,7 @@ background-color:black;
                <item>
                 <widget class="QStackedWidget" name="stackedWidget_4">
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <widget class="QWidget" name="conectar_tabla_ventas">
                   <layout class="QVBoxLayout" name="verticalLayout_23">
@@ -3208,7 +3208,7 @@ QToolBox::tab:selected{
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-986</y>
+                    <y>0</y>
                     <width>445</width>
                     <height>1501</height>
                    </rect>
@@ -3669,8 +3669,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>526</width>
-                    <height>515</height>
+                    <width>201</width>
+                    <height>496</height>
                    </rect>
                   </property>
                   <attribute name="icon">
