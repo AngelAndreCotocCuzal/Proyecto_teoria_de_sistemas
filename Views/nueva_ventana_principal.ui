@@ -570,7 +570,7 @@ border:0px solid #14C8DC;
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>4</number>
                 </property>
                 <widget class="QWidget" name="pagina_inventario">
                  <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1430,7 +1430,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>201</width>
+                       <width>451</width>
                        <height>496</height>
                       </rect>
                      </property>
@@ -1630,7 +1630,7 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>313</width>
+                       <width>451</width>
                        <height>1056</height>
                       </rect>
                      </property>
@@ -2359,15 +2359,15 @@ QToolBox::tab:selected{
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="page_3">
                      <property name="geometry">
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>233</width>
-                       <height>329</height>
+                       <width>972</width>
+                       <height>412</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2431,6 +2431,9 @@ QToolBox::tab:selected{
                           <widget class="QLineEdit" name="monto_gastos_financiero">
                            <property name="styleSheet">
                             <string notr="true">color: rgb(255, 255, 255);</string>
+                           </property>
+                           <property name="text">
+                            <string/>
                            </property>
                           </widget>
                          </item>
@@ -2585,8 +2588,8 @@ background-color:black;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>182</width>
-                       <height>294</height>
+                       <width>472</width>
+                       <height>412</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2868,7 +2871,7 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>4</number>
              </property>
              <widget class="QWidget" name="page_lateral_inicio">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3334,7 +3337,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <item>
                        <widget class="QLabel" name="btn_rh_cuetas_cobrar">
                         <property name="text">
-                         <string>Q</string>
+                         <string/>
                         </property>
                        </widget>
                       </item>
@@ -3669,8 +3672,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>201</width>
-                    <height>496</height>
+                    <width>526</width>
+                    <height>515</height>
                    </rect>
                   </property>
                   <attribute name="icon">

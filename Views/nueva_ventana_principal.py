@@ -95,6 +95,13 @@ class Ventana_principal(QMainWindow):
         self.btn_guardar_compra.clicked.connect(self.ventana_compra)
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
 
+        # probando financiero
+        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+
+    def onChanged(self, text):
+        self.btn_rh_cuetas_cobrar.setText(text)
+        self.btn_rh_cuetas_cobrar.adjustSize()
+
     def control_bt_minimizar(self):
         self.showMinimized()
 
@@ -426,3 +433,9 @@ class Ventana_principal(QMainWindow):
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
+
+    def escribir_en_label(self):
+        pass
+
+
+
