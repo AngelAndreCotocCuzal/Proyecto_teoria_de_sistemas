@@ -570,7 +570,7 @@ border:0px solid #14C8DC;
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>4</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="pagina_inventario">
                  <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1430,7 +1430,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>201</width>
+                       <width>929</width>
                        <height>496</height>
                       </rect>
                      </property>
@@ -1630,7 +1630,7 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>313</width>
+                       <width>951</width>
                        <height>1056</height>
                       </rect>
                      </property>
@@ -2868,7 +2868,7 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="currentIndex">
-              <number>4</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_lateral_inicio">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3208,9 +3208,9 @@ QToolBox::tab:selected{
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
+                    <y>-986</y>
                     <width>445</width>
-                    <height>1537</height>
+                    <height>1501</height>
                    </rect>
                   </property>
                   <attribute name="icon">
@@ -3332,7 +3332,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_cuentas_por_cobrar">
+                       <widget class="QLabel" name="btn_rh_cuetas_cobrar">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3346,7 +3346,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_inentarios">
+                       <widget class="QLabel" name="btn_rh_inentarios">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3360,7 +3360,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_caja">
+                       <widget class="QLabel" name="btn_rh_caja">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3374,7 +3374,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_banco">
+                       <widget class="QLabel" name="btn_rh_bancos">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3393,7 +3393,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_activos_corriete">
+                       <widget class="QLabel" name="btn_rh_activos_corriete">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3414,7 +3414,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_vehiculos">
+                       <widget class="QLabel" name="btn_rh_vehiculos">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3428,7 +3428,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_computo">
+                       <widget class="QLabel" name="btn_rh_computo">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3447,7 +3447,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_activos_no_corriente">
+                       <widget class="QLabel" name="btn_rh_activos_no_corriente">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3468,7 +3468,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_pendeintes_pago">
+                       <widget class="QLabel" name="btn_rh_pendeintes_pago">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3482,7 +3482,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_proveedores">
+                       <widget class="QLabel" name="btn_rh_proveedores">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3496,7 +3496,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_cuentas_pagar">
+                       <widget class="QLabel" name="btn_rh_cuentas_por_pagar">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3510,7 +3510,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_prestamos_bancarios">
+                       <widget class="QLabel" name="btn_rh_prestamos_bancarios">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3529,7 +3529,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_pasivos_corrientes">
+                       <widget class="QLabel" name="btn_rh_pasivos_corrientes">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3550,7 +3550,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_pagar_socios">
+                       <widget class="QLabel" name="btn_rh_pagar_socios">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3569,7 +3569,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_pasivos_no_corrientes">
+                       <widget class="QLabel" name="btn_rh_pasivos_no_corrientes">
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3579,7 +3579,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        <widget class="QLabel" name="label_70">
                         <property name="styleSheet">
                          <string notr="true">QFrame{
-	color: rgb(2, 155, 163);
+	color: rgb(0, 255, 255);
 }</string>
                         </property>
                         <property name="text">
@@ -3600,7 +3600,12 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_total_activos">
+                       <widget class="QLabel" name="btn_rh_total_activos">
+                        <property name="styleSheet">
+                         <string notr="true">QFrame{
+	color: rgb(0, 255, 255);
+}</string>
+                        </property>
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3619,7 +3624,12 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_total_pasivos">
+                       <widget class="QLabel" name="btn_rh_total_pasivos">
+                        <property name="styleSheet">
+                         <string notr="true">QFrame{
+	color: rgb(0, 255, 255);
+}</string>
+                        </property>
                         <property name="text">
                          <string>Q</string>
                         </property>
@@ -3638,7 +3648,12 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_rh_total_patrimonio">
+                       <widget class="QLabel" name="btn_rh_total_patrimonio">
+                        <property name="styleSheet">
+                         <string notr="true">QFrame{
+	color: rgb(0, 255, 255);
+}</string>
+                        </property>
                         <property name="text">
                          <string>Q</string>
                         </property>
