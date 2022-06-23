@@ -966,7 +966,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                   <item>
                    <widget class="QPushButton" name="pushButton">
                     <property name="text">
-                     <string>Estas en inicio</string>
+                     <string>Estas en inici</string>
                     </property>
                    </widget>
                   </item>
