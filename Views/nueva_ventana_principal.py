@@ -185,7 +185,7 @@ class Ventana_principal(QMainWindow):
             x1 = self.frame_principa_pagina.rect().right()
             normal = 50
             if width == 50:
-                extender = x1
+                extender = 550
             else:
                 extender = normal
 
