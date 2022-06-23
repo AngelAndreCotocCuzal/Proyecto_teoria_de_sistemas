@@ -98,6 +98,8 @@ class Ventana_principal(QMainWindow):
         # probando financiero
         self.monto_gastos_financiero.textChanged.connect(self.onChanged)
 
+        self.btn_anadir_gastos.clicked.connect(self.guardar_financiero)
+
     def onChanged(self, text):
         print(text)
         monto = 100 + 10
@@ -439,17 +441,22 @@ class Ventana_principal(QMainWindow):
     def escribir_en_label(self):
         pass
 
-
     def anadir(self):
         try:
             if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
-                text = 300
-                total = text - self.monto_gastos_financiero.Text()
-                def onChanged(self, total):
-                    self.btn_rh_cuetas_cobrar.setText(total)
-                    self.btn_rh_cuetas_cobrar.adjustSize()
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+                def onChanged(self, text):
+                    print(text)
+                    monto = 100 + 10
+                    self.btn_rh_proveedores.setText(text)
+                    self.btn_rh_proveedores.adjustSize()
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-                pass
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+                def onChanged(self, text):
+                    print(text)
+                    monto = 100 + 10
+                    self.btn_rh_proveedores.setText(text)
+                    self.btn_rh_proveedores.adjustSize()
             elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
                 pass
             elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
@@ -459,3 +466,19 @@ class Ventana_principal(QMainWindow):
         except Exception as error:
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
+
+    def guardar_financiero(self):
+        df = pd.read_csv('gastos.csv')
+        descripcion_financiero = self.text_descripcion_gasto.text()
+        monto_financiero = self.monto_gastos_financiero.text()
+        fecha_financiero = self.text_fecha_gastos.text()
+        tipo_financiero = self.cv_gastos_financiero.currentText()
+
+        registro_3 = [(descripcion_financiero, monto_financiero, fecha_financiero, tipo_financiero)]
+
+        df1 = pd.DataFrame(registro_3, columns=['Descripcion', 'Monto', 'Fecha', 'Tipo'])
+        df = df.append(df1, ignore_index=True)
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('gastos.csv')
+        QMessageBox.about(self, 'Aviso', 'Guardado Gasto')

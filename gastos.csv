@@ -1,1 +1,3 @@
-,Descripcion, Monto, Fecha, Tipo
+,Descripcion, Monto, Fecha, Tipo,Monto,Fecha,Tipo
+0,,,,,15,,Proveedores
+1,Pablo,,,,300,,Proveedores
