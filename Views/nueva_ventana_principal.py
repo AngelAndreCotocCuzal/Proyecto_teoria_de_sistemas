@@ -99,6 +99,8 @@ class Ventana_principal(QMainWindow):
         self.monto_gastos_financiero.textChanged.connect(self.onChanged)
 
     def onChanged(self, text):
+        print(text)
+        monto = 100 + 10
         self.btn_rh_cuetas_cobrar.setText(text)
         self.btn_rh_cuetas_cobrar.adjustSize()
 
@@ -438,4 +440,22 @@ class Ventana_principal(QMainWindow):
         pass
 
 
-
+    def anadir(self):
+        try:
+            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                text = 300
+                total = text - self.monto_gastos_financiero.Text()
+                def onChanged(self, total):
+                    self.btn_rh_cuetas_cobrar.setText(total)
+                    self.btn_rh_cuetas_cobrar.adjustSize()
+            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
+                pass
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
