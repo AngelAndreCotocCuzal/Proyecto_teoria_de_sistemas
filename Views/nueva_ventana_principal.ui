@@ -570,7 +570,7 @@ border:0px solid #14C8DC;
 }</string>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>4</number>
                 </property>
                 <widget class="QWidget" name="pagina_inventario">
                  <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1006,8 +1006,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>146</width>
-                       <height>705</height>
+                       <width>138</width>
+                       <height>621</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -1430,8 +1430,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>929</width>
-                       <height>496</height>
+                       <width>950</width>
+                       <height>437</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -1630,8 +1630,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>951</width>
-                       <height>1056</height>
+                       <width>967</width>
+                       <height>903</height>
                       </rect>
                      </property>
                      <property name="styleSheet">
@@ -1975,8 +1975,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>259</width>
-                       <height>653</height>
+                       <width>211</width>
+                       <height>579</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -2366,8 +2366,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>972</width>
-                       <height>412</height>
+                       <width>984</width>
+                       <height>437</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2395,12 +2395,12 @@ QToolBox::tab:selected{
                             </font>
                            </property>
                            <property name="text">
-                            <string>Describcio </string>
+                            <string>Descripcion </string>
                            </property>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="nombre_empleado_6">
+                          <widget class="QLineEdit" name="text_descripcion_gasto">
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
@@ -2446,7 +2446,7 @@ QToolBox::tab:selected{
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="monto_ingresos_financiero_3">
+                          <widget class="QLineEdit" name="text_fecha_gastos">
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
@@ -2463,12 +2463,32 @@ font: 75 12pt&quot;Times New Roman&quot;;</string>
                            </property>
                            <item>
                             <property name="text">
+                             <string>--Seleccione--</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Remuneraciones</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
                              <string>Proveedores</string>
                             </property>
                            </item>
                            <item>
                             <property name="text">
-                             <string>Pasivo</string>
+                             <string>Cuentas por Pagar</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Prestamos Bancarios</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Pagar Socio</string>
                             </property>
                            </item>
                           </widget>
@@ -2511,7 +2531,7 @@ background-color:black;
                         </property>
                         <layout class="QHBoxLayout" name="horizontalLayout_8">
                          <item>
-                          <widget class="QPushButton" name="agregar_ingreso_financiero_2">
+                          <widget class="QPushButton" name="btn_anadir_gastos">
                            <property name="styleSheet">
                             <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2531,7 +2551,7 @@ background-color:black;
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="borrar_ingresos_financiero_2">
+                          <widget class="QPushButton" name="btn_borrar_gastos">
                            <property name="styleSheet">
                             <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2560,8 +2580,8 @@ background-color:black;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>169</width>
-                       <height>294</height>
+                       <width>984</width>
+                       <height>437</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2589,12 +2609,12 @@ background-color:black;
                             </font>
                            </property>
                            <property name="text">
-                            <string>Describcio </string>
+                            <string>Descripcion </string>
                            </property>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="nombre_empleado_2">
+                          <widget class="QLineEdit" name="text_descripcion_ingresos">
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
@@ -2617,7 +2637,7 @@ background-color:black;
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="monto_ingresos_financiero">
+                          <widget class="QLineEdit" name="text_fecha_ingresos">
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
@@ -2640,7 +2660,7 @@ background-color:black;
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="nombre_empleado_4">
+                          <widget class="QLineEdit" name="text_monto_ingresos">
                            <property name="styleSheet">
                             <string notr="true"/>
                            </property>
@@ -2684,7 +2704,7 @@ background-color:black;
                         </property>
                         <layout class="QHBoxLayout" name="horizontalLayout_4">
                          <item>
-                          <widget class="QPushButton" name="agregar_ingreso_financiero">
+                          <widget class="QPushButton" name="btn_anadir_ingresos">
                            <property name="styleSheet">
                             <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2704,7 +2724,7 @@ background-color:black;
                           </widget>
                          </item>
                          <item>
-                          <widget class="QPushButton" name="borrar_ingresos_financiero">
+                          <widget class="QPushButton" name="btn_borrar_ingresos">
                            <property name="styleSheet">
                             <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2843,7 +2863,7 @@ background-color:black;
               <enum>Qt::RightToLeft</enum>
              </property>
              <property name="currentIndex">
-              <number>0</number>
+              <number>4</number>
              </property>
              <widget class="QWidget" name="page_lateral_inicio">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3183,9 +3203,9 @@ QToolBox::tab:selected{
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
-                    <width>455</width>
-                    <height>1537</height>
+                    <y>-240</y>
+                    <width>367</width>
+                    <height>1289</height>
                    </rect>
                   </property>
                   <attribute name="icon">
@@ -3629,8 +3649,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>201</width>
-                    <height>496</height>
+                    <width>165</width>
+                    <height>518</height>
                    </rect>
                   </property>
                   <attribute name="icon">
