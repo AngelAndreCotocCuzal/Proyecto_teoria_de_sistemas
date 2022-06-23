@@ -55,6 +55,9 @@ class MainView_principal(QMainWindow):
         self.btn_create.clicked.connect(lambda: self.create_product.createProduct("licuado", "licuado de banano",
                                                                                   "2lt", "2","7", "8"))
 
+        # botones de finanzas
+        self.btn_anadir_gastos.clicked.connect(self.anadir)
+
     def deshabilitar(self):
         if self.puesto == 'Gerente':
             self.btn_read.setEnabled(False)
@@ -280,3 +283,23 @@ class MainView_principal(QMainWindow):
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
+
+    def anadir(self):
+        try:
+            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                text = 300
+                total = text - self.monto_gastos_financiero.Text()
+                def onChanged(self, total):
+                    self.btn_rh_cuetas_cobrar.setText(total)
+                    self.btn_rh_cuetas_cobrar.adjustSize()
+            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
+                pass
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
