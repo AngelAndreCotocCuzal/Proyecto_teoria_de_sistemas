@@ -48,7 +48,7 @@ class Ventana_principal(QMainWindow):
         self.btn_restaurar.clicked.connect(self.control_bt_normal)
         self.btn_maximizar.clicked.connect(self.control_bt_maximizar)
         self.btn_cerrar.clicked.connect(lambda: self.close())
-
+d
         # accion para redimezionar la applicacion
         self.gripSize = 10
         self.grip = QtWidgets.QSizeGrip(self)

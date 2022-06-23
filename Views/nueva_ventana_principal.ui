@@ -1006,8 +1006,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>138</width>
-                       <height>621</height>
+                       <width>146</width>
+                       <height>705</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -1430,8 +1430,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>950</width>
-                       <height>437</height>
+                       <width>201</width>
+                       <height>496</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -1630,8 +1630,8 @@ QToolBox::tab:selected{
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>967</width>
-                       <height>903</height>
+                       <width>313</width>
+                       <height>1056</height>
                       </rect>
                      </property>
                      <property name="styleSheet">
@@ -1975,8 +1975,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>211</width>
-                       <height>579</height>
+                       <width>259</width>
+                       <height>653</height>
                       </rect>
                      </property>
                      <attribute name="icon">
@@ -2359,15 +2359,15 @@ QToolBox::tab:selected{
 </string>
                     </property>
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <widget class="QWidget" name="page_3">
                      <property name="geometry">
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>984</width>
-                       <height>437</height>
+                       <width>472</width>
+                       <height>412</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2376,6 +2376,11 @@ QToolBox::tab:selected{
                      <layout class="QVBoxLayout" name="verticalLayout_31">
                       <item>
                        <widget class="QFrame" name="frame_20">
+                        <property name="styleSheet">
+                         <string notr="true">Qlabel{
+	color: rgb(255, 255, 255);
+}</string>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -2402,7 +2407,7 @@ QToolBox::tab:selected{
                          <item>
                           <widget class="QLineEdit" name="text_descripcion_gasto">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -2425,7 +2430,7 @@ QToolBox::tab:selected{
                          <item>
                           <widget class="QLineEdit" name="monto_gastos_financiero">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -2448,7 +2453,7 @@ QToolBox::tab:selected{
                          <item>
                           <widget class="QLineEdit" name="text_fecha_gastos">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -2580,8 +2585,8 @@ background-color:black;
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>984</width>
-                       <height>437</height>
+                       <width>972</width>
+                       <height>412</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -2616,7 +2621,7 @@ background-color:black;
                          <item>
                           <widget class="QLineEdit" name="text_descripcion_ingresos">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -2639,7 +2644,7 @@ background-color:black;
                          <item>
                           <widget class="QLineEdit" name="text_fecha_ingresos">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -2662,7 +2667,7 @@ background-color:black;
                          <item>
                           <widget class="QLineEdit" name="text_monto_ingresos">
                            <property name="styleSheet">
-                            <string notr="true"/>
+                            <string notr="true">color: rgb(255, 255, 255);</string>
                            </property>
                           </widget>
                          </item>
@@ -3203,9 +3208,9 @@ QToolBox::tab:selected{
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-240</y>
-                    <width>367</width>
-                    <height>1289</height>
+                    <y>0</y>
+                    <width>445</width>
+                    <height>1537</height>
                    </rect>
                   </property>
                   <attribute name="icon">
@@ -3649,8 +3654,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>165</width>
-                    <height>518</height>
+                    <width>526</width>
+                    <height>515</height>
                    </rect>
                   </property>
                   <attribute name="icon">
