@@ -1033,7 +1033,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>967</width>
+                         <width>435</width>
                          <height>767</height>
                         </rect>
                        </property>
@@ -1781,8 +1781,8 @@ QToolBox::tab:selected{
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-180</y>
-                         <width>456</width>
+                         <y>0</y>
+                         <width>313</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2152,7 +2152,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>456</width>
+                         <width>377</width>
                          <height>673</height>
                         </rect>
                        </property>
@@ -2596,6 +2596,53 @@ QToolBox::tab:selected{
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_30">
                            <item>
+                            <widget class="QComboBox" name="cv_gastos_financiero">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;</string>
+                             </property>
+                             <item>
+                              <property name="text">
+                               <string>--Seleccione--</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Remuneraciones</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Proveedores</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Cuentas por Pagar</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Prestamos Bancarios</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Pagar Socio</string>
+                              </property>
+                             </item>
+                            </widget>
+                           </item>
+                           <item>
                             <widget class="QLabel" name="nombre_contratacion_8">
                              <property name="font">
                               <font>
@@ -2615,13 +2662,6 @@ QToolBox::tab:selected{
                             <widget class="QLineEdit" name="text_descripcion_gasto">
                              <property name="styleSheet">
                               <string notr="true">color: rgb(255, 255, 255);</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QPushButton" name="btn_prueba_remu">
-                             <property name="text">
-                              <string>remuneracion</string>
                              </property>
                             </widget>
                            </item>
@@ -2672,47 +2712,6 @@ QToolBox::tab:selected{
                              <property name="styleSheet">
                               <string notr="true">color: rgb(255, 255, 255);</string>
                              </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QComboBox" name="cv_gastos_financiero">
-                             <property name="styleSheet">
-                              <string notr="true">border: 2px solid #14c8dc;
-border-radius: 8px;
-color: rgb(255, 255, 255);
-background-color:rgb(0,0,0);
-font: 75 12pt&quot;Times New Roman&quot;;</string>
-                             </property>
-                             <item>
-                              <property name="text">
-                               <string>--Seleccione--</string>
-                              </property>
-                             </item>
-                             <item>
-                              <property name="text">
-                               <string>Remuneraciones</string>
-                              </property>
-                             </item>
-                             <item>
-                              <property name="text">
-                               <string>Proveedores</string>
-                              </property>
-                             </item>
-                             <item>
-                              <property name="text">
-                               <string>Cuentas por Pagar</string>
-                              </property>
-                             </item>
-                             <item>
-                              <property name="text">
-                               <string>Prestamos Bancarios</string>
-                              </property>
-                             </item>
-                             <item>
-                              <property name="text">
-                               <string>Pagar Socio</string>
-                              </property>
-                             </item>
                             </widget>
                            </item>
                           </layout>
@@ -2809,7 +2808,7 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
+                         <width>477</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -3432,7 +3431,7 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>-29</y>
+                      <y>0</y>
                       <width>445</width>
                       <height>1501</height>
                      </rect>
@@ -3493,41 +3492,15 @@ QTableWidgetQTableCornerButton::section{
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <widget class="QFrame" name="frame_22">
-                        <property name="geometry">
-                         <rect>
-                          <x>0</x>
-                          <y>0</y>
-                          <width>431</width>
-                          <height>54</height>
-                         </rect>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>1500</width>
-                          <height>16777215</height>
-                         </size>
-                        </property>
-                        <property name="frameShape">
-                         <enum>QFrame::StyledPanel</enum>
-                        </property>
-                        <property name="frameShadow">
-                         <enum>QFrame::Raised</enum>
-                        </property>
-                        <widget class="QPushButton" name="pushButton_22">
-                         <property name="geometry">
-                          <rect>
-                           <x>12</x>
-                           <y>12</y>
-                           <width>401</width>
-                           <height>31</height>
-                          </rect>
-                         </property>
-                         <property name="text">
-                          <string>Actualizar</string>
-                         </property>
-                        </widget>
-                       </widget>
+                       <layout class="QVBoxLayout" name="verticalLayout_39">
+                        <item>
+                         <widget class="QPushButton" name="btn_acutalizar_finanzas">
+                          <property name="text">
+                           <string>Actualizar</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </widget>
                      </item>
                      <item>
@@ -3694,7 +3667,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_pendeintes_pago">
                           <property name="text">
-                           <string/>
+                           <string>100</string>
                           </property>
                          </widget>
                         </item>
@@ -3893,8 +3866,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>201</width>
-                      <height>496</height>
+                      <width>526</width>
+                      <height>515</height>
                      </rect>
                     </property>
                     <attribute name="icon">

@@ -107,31 +107,6 @@ class Ventana_principal(QMainWindow):
         # caja_finanzas
         self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
 
-    def anadir(self):
-        try:
-            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
-                self.btn_prueba_remu.setEnabled(False)
-                print("estas en remuneracion")
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-
-            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
-                self.btn_prueba_remu.setEnabled(True)
-
-
-            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
-                pass
-            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
-                pass
-            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
-                pass
-        except Exception as error:
-            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
-            QMessageBox.about(self, 'Error', str(error))
-
-
-
     def caja_finanzas(self, text):
         self.btn_rh_caja.setText(text)
         self.btn_rh_caja.adjustSize()
@@ -493,10 +468,49 @@ class Ventana_principal(QMainWindow):
         df.to_csv('gastos.csv')
         QMessageBox.about(self, 'Aviso', 'Guardado Gasto')
 
-    def onChanged(self, text):
-        monto = 100 + 10
-        self.btn_rh_pendeintes_pago.setText(text)
+    def anadir(self):
+        try:
+            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                self.btn_acutalizar_finanzas.clicked.connect(self.actualizar_remuneracion)
+
+            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
+
+
+            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
+                pass
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
+
+    def actualizar_remuneracion(self):
+        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+
+    def onChanged(self, text_new):
+
+        anterior = int(self.btn_rh_pendeintes_pago.text())
+        nuevo_dato = int(self.monto_gastos_financiero.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            print(f"este es nuevo dato: {nuevo_dato}")
+            print(f"este es dato anterior: {anterior}")
+            mostrar = nuevo_dato + anterior
+
+
+        else:
+            # si n existen datos en anterior
+            mostrar = nuevo_dato
+
+        self.btn_rh_pendeintes_pago.setText(str(mostrar))
         self.btn_rh_pendeintes_pago.adjustSize()
+        # self.monto_gastos_financiero.clear()
+
 
     def onChanged_provedor(self, text):
         print(text)
