@@ -585,7 +585,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>4</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1033,7 +1033,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>435</width>
+                         <width>967</width>
                          <height>767</height>
                         </rect>
                        </property>
@@ -1782,7 +1782,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>313</width>
+                         <width>956</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2808,7 +2808,7 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>477</width>
+                         <width>977</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -3091,7 +3091,7 @@ background-color:black;
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page_lateral_inicio">
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3866,8 +3866,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>526</width>
-                      <height>515</height>
+                      <width>201</width>
+                      <height>496</height>
                      </rect>
                     </property>
                     <attribute name="icon">
