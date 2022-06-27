@@ -37,6 +37,7 @@ class MainView_login(QMainWindow):
             # self.ui.setupUi(self.ventana)
             # self.ventana.show()
             self.ventana_principal.show()
+            self.hide()
         else:
             print("No coincide")
             print(self.email.text())

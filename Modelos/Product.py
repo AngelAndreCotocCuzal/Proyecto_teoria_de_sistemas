@@ -43,3 +43,15 @@ class Product():
             sql = """INSERT INTO inventario_proyecto (Codigo,Descripcion,Cantidad,Existencias,Costo,Publico) VALUES (%s,%s,%s,%s,%s,%s)"""
             cursor.execute(sql, (codigo, describcion, media, existencia, costo, publico))
             self.conn.commit()
+
+    def modificar_inventario(self, codigo, numero):
+        with self.conn.cursor() as cursor:
+            sql = """UPDATE inventario_proyecto SET Existencias = %s WHERE Codigo = %s """
+            cursor.execute(sql, (numero, codigo))
+            self.conn.commit()
+
+    # def modificar_inventario(self, codigo, numero):
+    #    with self.conn.cursor() as cursor:
+    #        sql = """UPDATE inventario_proyecto SET Publico = 200 WHERE Codigo = "ACA0005" """
+    #        cursor.execute(sql)
+    #        self.conn.commit()

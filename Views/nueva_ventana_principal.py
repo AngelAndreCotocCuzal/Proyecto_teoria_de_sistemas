@@ -19,6 +19,7 @@ class Ventana_principal(QMainWindow):
         super(Ventana_principal, self).__init__()
         # Usamos ui para leer el archivo
         self.transaparente = uic.loadUi('Views/nueva_ventana_principal.ui', self)
+        self.anadir()
         # declaramos una variable para quitar los bordes y tener una interfas mas limpia
         self.transaparente.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.transaparente.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -67,6 +68,7 @@ class Ventana_principal(QMainWindow):
         self.principal_controller = PrincipalController(self)
         self.create_product = CreateProductController(self)
 
+
         self.l = self.btn_list.clicked.connect(lambda: self.principal_controller.listar_productos())
         self.r = self.btn_read.clicked.connect(lambda: self.principal_controller.showProduct())
         self.u = self.btn_update.clicked.connect(lambda: self.principal_controller.updateProducs())
@@ -90,21 +92,21 @@ class Ventana_principal(QMainWindow):
         self.btn_guardar_venta.clicked.connect(self.ventana_ventas)
         self.btn_cotizar_ventas.clicked.connect(self.ver_datos)
         self.btn_cal.clicked.connect(self.total)
+        self.btn_actualizar_ventas.clicked.connect(self.actualizar_ventas)
 
         # botones de Compras
         self.btn_guardar_compra.clicked.connect(self.ventana_compra)
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
 
         # probando financiero
-        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
 
         self.btn_anadir_gastos.clicked.connect(self.guardar_financiero)
 
-    def onChanged(self, text):
-        print(text)
-        monto = 100 + 10
-        self.btn_rh_cuetas_cobrar.setText(text)
-        self.btn_rh_cuetas_cobrar.adjustSize()
+        # mostrar financiero
+        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+        # caja_finanzas
+        self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
+
 
     def control_bt_minimizar(self):
         self.showMinimized()
@@ -184,7 +186,14 @@ class Ventana_principal(QMainWindow):
 
     def ventana_ventas(self):
         self.stackedWidget_4.setCurrentWidget(self.conectar_tabla_ventas)
+        cod = self.text_codigo_producto.text()
+        cantidad = int(self.text_cantidad_venta.text())
+        self.principal_controller.modificar_existencias(cod, cantidad)
         self.ventas_inicio()
+
+    def actualizar_ventas(self):
+        self.stackedWidget_4.setCurrentWidget(self.conectar_tabla_ventas)
+        self.principal_controller.listar_productos()
 
     def ventana_compra(self):
         self.stackedWidget_4.setCurrentWidget(self.conectar_tablade_compras)
@@ -196,7 +205,7 @@ class Ventana_principal(QMainWindow):
             x1 = self.frame_principa_pagina.rect().right()
             normal = 50
             if width == 50:
-                extender = 550
+                extender = x1
             else:
                 extender = normal
 
@@ -247,7 +256,7 @@ class Ventana_principal(QMainWindow):
     def ventas_inicio(self):
         df = pd.read_csv('factura.csv')
         nombre = self.text_nombre_venta.text()
-        codigo = self.text_codigo_venta.text()
+        codigo = self.text_codigo_producto.text()
         nit = self.text_nit_venta.text()
         mayoreo = self.cb_ma.currentText()
         monto = self.text_monto_venta.text()
@@ -438,25 +447,17 @@ class Ventana_principal(QMainWindow):
         df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
 
-    def escribir_en_label(self):
-        pass
-
     def anadir(self):
         try:
             if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                print("estas en remuneracion")
                 self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-                def onChanged(self, text):
-                    print(text)
-                    monto = 100 + 10
-                    self.btn_rh_proveedores.setText(text)
-                    self.btn_rh_proveedores.adjustSize()
+
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-                def onChanged(self, text):
-                    print(text)
-                    monto = 100 + 10
-                    self.btn_rh_proveedores.setText(text)
-                    self.btn_rh_proveedores.adjustSize()
+
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
+
+
             elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
                 pass
             elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
@@ -482,3 +483,18 @@ class Ventana_principal(QMainWindow):
         df.drop(eliminar_colum, axis='columns', inplace=True)
         df.to_csv('gastos.csv')
         QMessageBox.about(self, 'Aviso', 'Guardado Gasto')
+
+    def onChanged(self, text):
+        monto = 100 + 10
+        self.btn_rh_pendeintes_pago.setText(text)
+        self.btn_rh_pendeintes_pago.adjustSize()
+
+    def onChanged_provedor(self, text):
+        print(text)
+        monto = 100 + 10
+        self.btn_rh_proveedores.setText(text)
+        self.btn_rh_proveedores.adjustSize()
+
+    def caja_finanzas(self, text):
+        self.btn_rh_caja.setText(text)
+        self.btn_rh_caja.adjustSize()

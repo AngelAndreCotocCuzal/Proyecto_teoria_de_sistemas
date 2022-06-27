@@ -1,2 +1,7 @@
 ,Nombre,Codigo,NIT,Consumo,Monto,Cantidad,Fecha,Sub_total,Vuelto
 0,Diana,ACA0005,C.F,Minorista,2,1,07/06/2022,2,1
+1,Juan guarnizo,ACA0005,54545,Minorista,100,2,25/5/22,200,-150
+2,Juan Guarnizo,ACA0005,5151516,Minorista,150,5,25/2/22,750,-650
+3,dasd,ACA0005,4555,Mayoreo,5515,5,22/2/22,27575,-27475
+4,dasd,ACA0002,4545,Mayoreo,100,10,22/2/22,1000,-900
+5,Angel,ACA0001,15151,Mayoreo,100,1,22/2/22,100,50

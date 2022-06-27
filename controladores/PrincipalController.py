@@ -15,6 +15,14 @@ class PrincipalController():
         self.product = Product(connection())
         self.principal = principal
 
+    def modificar_existencias(self, codigo, modificar: int):
+        product = self.product.getProduct(codigo)
+        producto_acutal: int = product[3]
+
+        nuevo_producto: int = producto_acutal - modificar
+        self.product.modificar_inventario(codigo, nuevo_producto)
+
+
     def listar_productos(self):
         table = self.principal.table_product
         productos = self.product.obtener_producto()
@@ -63,11 +71,6 @@ class PrincipalController():
             if len(fila) > 0:
                 products.append(fila)
             fila = []
-
-        if len(products) > 0:
-            for prod in products:
-
-                self.product.updateProduct(prod[0], prod[1], prod[2], prod[3], prod[4], prod[5])
 
         self.listar_productos()
 
