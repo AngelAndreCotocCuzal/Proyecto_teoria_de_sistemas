@@ -19,7 +19,7 @@ class Ventana_principal(QMainWindow):
         super(Ventana_principal, self).__init__()
         # Usamos ui para leer el archivo
         self.transaparente = uic.loadUi('Views/nueva_ventana_principal.ui', self)
-        self.anadir()
+        self.btn_actualizar_gastos.clicked.connect(self.anadir)
         # declaramos una variable para quitar los bordes y tener una interfas mas limpia
         self.transaparente.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.transaparente.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -106,6 +106,35 @@ class Ventana_principal(QMainWindow):
         self.monto_gastos_financiero.textChanged.connect(self.onChanged)
         # caja_finanzas
         self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
+
+    def anadir(self):
+        try:
+            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                self.btn_prueba_remu.setEnabled(False)
+                print("estas en remuneracion")
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+
+            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+
+                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
+                self.btn_prueba_remu.setEnabled(True)
+
+
+            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
+                pass
+            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
+                pass
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
+
+
+
+    def caja_finanzas(self, text):
+        self.btn_rh_caja.setText(text)
+        self.btn_rh_caja.adjustSize()
 
 
     def control_bt_minimizar(self):
@@ -447,26 +476,6 @@ class Ventana_principal(QMainWindow):
         df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
 
-    def anadir(self):
-        try:
-            if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
-                print("estas en remuneracion")
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-
-            elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
-
-
-            elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
-                pass
-            elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
-                pass
-            elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
-                pass
-        except Exception as error:
-            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
-            QMessageBox.about(self, 'Error', str(error))
 
     def guardar_financiero(self):
         df = pd.read_csv('gastos.csv')
@@ -495,6 +504,4 @@ class Ventana_principal(QMainWindow):
         self.btn_rh_proveedores.setText(text)
         self.btn_rh_proveedores.adjustSize()
 
-    def caja_finanzas(self, text):
-        self.btn_rh_caja.setText(text)
-        self.btn_rh_caja.adjustSize()
+

@@ -542,7 +542,7 @@ background-color: black;
               <widget class="QFrame" name="frame_principa_pagina">
                <property name="maximumSize">
                 <size>
-                 <width>1500</width>
+                 <width>16777215</width>
                  <height>16777215</height>
                 </size>
                </property>
@@ -585,7 +585,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>4</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1032,7 +1032,7 @@ QToolBox::tab:selected{
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-319</y>
+                         <y>0</y>
                          <width>967</width>
                          <height>767</height>
                         </rect>
@@ -1556,8 +1556,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-68</y>
-                         <width>467</width>
+                         <y>0</y>
+                         <width>256</width>
                          <height>516</height>
                         </rect>
                        </property>
@@ -1775,14 +1775,14 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="page_7">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-650</y>
-                         <width>956</width>
+                         <y>-180</y>
+                         <width>456</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2152,7 +2152,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>956</width>
+                         <width>456</width>
                          <height>673</height>
                         </rect>
                        </property>
@@ -2573,8 +2573,8 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>455</width>
-                         <height>412</height>
+                         <width>977</width>
+                         <height>434</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -2615,6 +2615,13 @@ QToolBox::tab:selected{
                             <widget class="QLineEdit" name="text_descripcion_gasto">
                              <property name="styleSheet">
                               <string notr="true">color: rgb(255, 255, 255);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_prueba_remu">
+                             <property name="text">
+                              <string>remuneracion</string>
                              </property>
                             </widget>
                            </item>
@@ -2785,6 +2792,13 @@ background-color:black;
                              </property>
                             </widget>
                            </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_actualizar_gastos">
+                             <property name="text">
+                              <string>Actualizar</string>
+                             </property>
+                            </widget>
+                           </item>
                           </layout>
                          </widget>
                         </item>
@@ -2795,8 +2809,8 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>955</width>
-                         <height>412</height>
+                         <width>977</width>
+                         <height>434</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -3078,7 +3092,7 @@ background-color:black;
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="page_lateral_inicio">
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3418,7 +3432,7 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>0</y>
+                      <y>-29</y>
                       <width>445</width>
                       <height>1501</height>
                      </rect>
