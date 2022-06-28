@@ -95,17 +95,23 @@ class Ventana_principal(QMainWindow):
         self.btn_actualizar_ventas.clicked.connect(self.actualizar_ventas)
 
         # botones de Compras
-        self.btn_guardar_compra.clicked.connect(self.ventana_compra)
+        self.btn_guardar_compra.clicked.connect(self.reabastecimiento)
+        self.btn_actualizar_compras.clicked.connect(self.actualizar_compras)
         self.btn_eliminar_compra.clicked.connect(self.elimina_compras)
+
+
+
+        # mostrar financiero
+        # self.monto_gastos_financiero.textChanged.connect(self.onChanged)
+        # caja_finanzas
+        self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
 
         # probando financiero
 
-        self.btn_anadir_gastos.clicked.connect(self.guardar_financiero)
+        # self.monto_gastos_financiero.textChanged.connect(self.onChanged)
 
-        # mostrar financiero
-        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-        # caja_finanzas
-        self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
+    def financiro_funcional(self):
+        print("hola")
 
     def caja_finanzas(self, text):
         self.btn_rh_caja.setText(text)
@@ -195,13 +201,25 @@ class Ventana_principal(QMainWindow):
         self.principal_controller.modificar_existencias(cod, cantidad)
         self.ventas_inicio()
 
+    def reabastecimiento(self):
+        cod = self.text_codigo_compra.text()
+        cantidad = int(self.text_existencias_nuevas.text())
+        self.principal_controller.reabastecer_existencias(cod, cantidad)
+        QMessageBox.about(self, 'Aviso', 'Comprado')
+
+    def actualizar_compras(self):
+        self.stackedWidget.setCurrentWidget(self.page_lateral_inventario)
+        self.principal_controller.updateProducs()
+
+
     def actualizar_ventas(self):
         self.stackedWidget_4.setCurrentWidget(self.conectar_tabla_ventas)
         self.principal_controller.listar_productos()
 
     def ventana_compra(self):
-        self.stackedWidget_4.setCurrentWidget(self.conectar_tablade_compras)
+        self.stackedWidget.setCurrentWidget(self.page_lateral_inventario)
         self.compras_inicio()
+        self.rebastecimiento()
 
     def animacion_paginas(self):
         if True:
@@ -219,19 +237,6 @@ class Ventana_principal(QMainWindow):
             self.animacion1.setDuration(500)
             self.animacion1.setEasingCurve(QEasingCurve.OutInBack)
             self.animacion1.start()
-
-    # metodos de inventario ----------------------------------------------------
-    # metodo en otras pestañas
-
-    def deshabilitar(self):
-        if self.puesto == 'Gerente':
-            self.btn_read.setEnabled(False)
-
-        elif self.puesto == 'Empleado':
-            self.btn_read.setEnabled(False)
-
-        else:
-            pass
 
     def ver_datos(self):
         # https://www.youtube.com/watch?v=HDjc3w1W9oA
@@ -471,11 +476,11 @@ class Ventana_principal(QMainWindow):
     def anadir(self):
         try:
             if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
-                self.btn_acutalizar_finanzas.clicked.connect(self.actualizar_remuneracion)
+                self.btn_anadir_gastos.clicked.connect(self.onChanged)
+
 
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-
-                self.monto_gastos_financiero.textChanged.connect(self.onChanged_provedor)
+                self.btn_anadir_gastos.clicked.connect(self.onChanged_provedor)
 
 
             elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
@@ -488,11 +493,7 @@ class Ventana_principal(QMainWindow):
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
 
-    def actualizar_remuneracion(self):
-        self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-
     def onChanged(self, text_new):
-
         anterior = int(self.btn_rh_pendeintes_pago.text())
         nuevo_dato = int(self.monto_gastos_financiero.text())
 
@@ -501,21 +502,40 @@ class Ventana_principal(QMainWindow):
             print(f"este es nuevo dato: {nuevo_dato}")
             print(f"este es dato anterior: {anterior}")
             mostrar = nuevo_dato + anterior
+            self.btn_rh_pendeintes_pago.setText(str(mostrar))
+            self.btn_rh_pendeintes_pago.adjustSize()
 
 
         else:
             # si n existen datos en anterior
             mostrar = nuevo_dato
+            self.btn_rh_pendeintes_pago.setText(str(mostrar))
+            self.btn_rh_pendeintes_pago.adjustSize()
 
-        self.btn_rh_pendeintes_pago.setText(str(mostrar))
-        self.btn_rh_pendeintes_pago.adjustSize()
+
         # self.monto_gastos_financiero.clear()
 
 
+
     def onChanged_provedor(self, text):
-        print(text)
-        monto = 100 + 10
-        self.btn_rh_proveedores.setText(text)
-        self.btn_rh_proveedores.adjustSize()
+        anterior = int(self.btn_rh_proveedores.text())
+        nuevo_dato = int(self.monto_gastos_financiero.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            print(f"este es nuevo dato: {nuevo_dato}")
+            print(f"este es dato anterior: {anterior}")
+            mostrar = nuevo_dato + anterior
+            print(f"la suma es : {mostrar}")
+            self.btn_rh_proveedores.setText(str(mostrar))
+            self.btn_rh_proveedores.adjustSize()
+
+
+        else:
+            # si n existen datos en anterior
+            mostrar = nuevo_dato
+            self.btn_rh_proveedores.setText(str(mostrar))
+            self.btn_rh_proveedores.adjustSize()
+
 
 

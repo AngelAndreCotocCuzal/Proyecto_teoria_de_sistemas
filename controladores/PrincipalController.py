@@ -22,6 +22,12 @@ class PrincipalController():
         nuevo_producto: int = producto_acutal - modificar
         self.product.modificar_inventario(codigo, nuevo_producto)
 
+    def reabastecer_existencias(self, codigo, modificar: int):
+        product = self.product.getProduct(codigo)
+        producto_acutal: int = product[3]
+
+        nuevo_producto: int = producto_acutal + modificar
+        self.product.modificar_inventario(codigo, nuevo_producto)
 
     def listar_productos(self):
         table = self.principal.table_product

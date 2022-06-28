@@ -1026,14 +1026,14 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="page">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>967</width>
+                         <width>467</width>
                          <height>767</height>
                         </rect>
                        </property>
@@ -1557,8 +1557,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>256</width>
-                         <height>516</height>
+                         <width>988</width>
+                         <height>448</height>
                         </rect>
                        </property>
                        <attribute name="icon">
@@ -1566,11 +1566,17 @@ font: 75 12pt&quot;Times New Roman&quot;;
                          <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
                        </attribute>
                        <attribute name="label">
-                        <string>Compras</string>
+                        <string>Reabastecimiento</string>
                        </attribute>
                        <layout class="QVBoxLayout" name="verticalLayout_24">
                         <item>
                          <widget class="QFrame" name="frame_16">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>365</height>
+                           </size>
+                          </property>
                           <property name="styleSheet">
                            <string notr="true">QLineEdit{
 border: 2px solid #14c8dc;
@@ -1607,82 +1613,6 @@ font: 75 12pt&quot;Times New Roman&quot;;
                             <widget class="QLineEdit" name="text_codigo_compra"/>
                            </item>
                            <item>
-                            <widget class="QLabel" name="label_13">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Descripcion</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_descripcion_compra"/>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="label_14">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Medida</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_media_compra"/>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="label_30">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Cantidad</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_existencia_compra"/>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="label_32">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Precio costo</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_precio_costo_compra"/>
-                           </item>
-                           <item>
                             <widget class="QLabel" name="label_35">
                              <property name="font">
                               <font>
@@ -1694,12 +1624,22 @@ font: 75 12pt&quot;Times New Roman&quot;;
                               </font>
                              </property>
                              <property name="text">
-                              <string>Precio publico</string>
+                              <string>Existencias</string>
                              </property>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="text_precio_publico_compra"/>
+                            <widget class="QLineEdit" name="text_existencias_nuevas"/>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_13">
+                             <property name="text">
+                              <string>Costo</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="lnx_costo_producto"/>
                            </item>
                           </layout>
                          </widget>
@@ -1709,7 +1649,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
-                            <height>50</height>
+                            <height>0</height>
                            </size>
                           </property>
                           <property name="frameShape">
@@ -2566,7 +2506,7 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>1</number>
                       </property>
                       <widget class="QWidget" name="page_3">
                        <property name="geometry">
@@ -3531,7 +3471,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_cuetas_cobrar">
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3545,7 +3485,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_inentarios">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3559,7 +3499,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_caja">
                           <property name="text">
-                           <string/>
+                           <string>10000</string>
                           </property>
                          </widget>
                         </item>
@@ -3573,7 +3513,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_bancos">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3592,7 +3532,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_activos_corriete">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3613,7 +3553,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_vehiculos">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3627,7 +3567,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_computo">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3646,7 +3586,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_activos_no_corriente">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3681,7 +3621,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_proveedores">
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3695,7 +3635,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_cuentas_por_pagar">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3709,7 +3649,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_prestamos_bancarios">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3728,7 +3668,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_pasivos_corrientes">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3749,7 +3689,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_pagar_socios">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3768,7 +3708,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_pasivos_no_corrientes">
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3804,7 +3744,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3828,7 +3768,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3852,7 +3792,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Q</string>
+                           <string>0</string>
                           </property>
                          </widget>
                         </item>
@@ -3866,8 +3806,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>201</width>
-                      <height>496</height>
+                      <width>526</width>
+                      <height>515</height>
                      </rect>
                     </property>
                     <attribute name="icon">
