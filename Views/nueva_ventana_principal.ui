@@ -1557,7 +1557,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>488</width>
+                         <width>988</width>
                          <height>448</height>
                         </rect>
                        </property>
@@ -1722,7 +1722,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>456</width>
+                         <width>956</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2513,7 +2513,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
+                         <width>477</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -2748,7 +2748,7 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>477</width>
+                         <width>977</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -2932,7 +2932,7 @@ background-color:black;
            <widget class="QFrame" name="frame_lateral">
             <property name="minimumSize">
              <size>
-              <width>50</width>
+              <width>550</width>
               <height>0</height>
              </size>
             </property>
@@ -3372,7 +3372,7 @@ QToolBox::tab:selected{
                      <rect>
                       <x>0</x>
                       <y>-552</y>
-                      <width>445</width>
+                      <width>505</width>
                       <height>1501</height>
                      </rect>
                     </property>
@@ -3806,8 +3806,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>526</width>
-                      <height>515</height>
+                      <width>201</width>
+                      <height>496</height>
                      </rect>
                     </property>
                     <attribute name="icon">
