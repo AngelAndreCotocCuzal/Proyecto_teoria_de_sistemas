@@ -476,10 +476,12 @@ class Ventana_principal(QMainWindow):
     def anadir(self):
         try:
             if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
+                print("estas en remuneraciones")
                 self.btn_anadir_gastos.clicked.connect(self.onChanged)
 
 
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+                print("estas en provedores")
                 self.btn_anadir_gastos.clicked.connect(self.onChanged_provedor)
 
 
@@ -493,7 +495,7 @@ class Ventana_principal(QMainWindow):
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
 
-    def onChanged(self, text_new):
+    def onChanged(self):
         anterior = int(self.btn_rh_pendeintes_pago.text())
         nuevo_dato = int(self.monto_gastos_financiero.text())
 
@@ -515,9 +517,7 @@ class Ventana_principal(QMainWindow):
 
         # self.monto_gastos_financiero.clear()
 
-
-
-    def onChanged_provedor(self, text):
+    def onChanged_provedor(self):
         anterior = int(self.btn_rh_proveedores.text())
         nuevo_dato = int(self.monto_gastos_financiero.text())
 
