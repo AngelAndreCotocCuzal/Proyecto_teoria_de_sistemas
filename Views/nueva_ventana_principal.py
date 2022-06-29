@@ -475,11 +475,10 @@ class Ventana_principal(QMainWindow):
                 print("estas en remuneraciones")
                 self.btn_anadir_gastos.clicked.connect(self.onChanged)
 
-
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
+
                 print("estas en provedores")
                 self.btn_anadir_gastos.clicked.connect(self.onChanged_provedor)
-
 
             elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
                 pass
@@ -503,16 +502,6 @@ class Ventana_principal(QMainWindow):
             self.btn_rh_pendeintes_pago.setText(str(mostrar))
             self.btn_rh_pendeintes_pago.adjustSize()
 
-
-        else:
-            # si n existen datos en anterior
-            mostrar = nuevo_dato
-            self.btn_rh_pendeintes_pago.setText(str(mostrar))
-            self.btn_rh_pendeintes_pago.adjustSize()
-
-
-        # self.monto_gastos_financiero.clear()
-
     def onChanged_provedor(self):
         anterior_provedor = int(self.btn_rh_proveedores.text())
         nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
@@ -525,13 +514,3 @@ class Ventana_principal(QMainWindow):
             print(f"la suma es : {mostrar_provedor}")
             self.btn_rh_proveedores.setText(str(mostrar_provedor))
             self.btn_rh_proveedores.adjustSize()
-
-
-        else:
-            # si n existen datos en anterior
-            mostrar_provedor = nuevo_dato_provedor
-            self.btn_rh_proveedores.setText(str(mostrar_provedor))
-            self.btn_rh_proveedores.adjustSize()
-
-
-

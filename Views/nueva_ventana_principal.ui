@@ -2712,6 +2712,13 @@ background-color:black;
                             </widget>
                            </item>
                            <item>
+                            <widget class="QPushButton" name="btn_angel_provedor">
+                             <property name="text">
+                              <string>Añadir provedores</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
                             <widget class="QPushButton" name="btn_borrar_gastos">
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
@@ -2748,7 +2755,7 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
+                         <width>477</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -3371,7 +3378,7 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>-552</y>
+                      <y>-540</y>
                       <width>505</width>
                       <height>1501</height>
                      </rect>
@@ -3806,8 +3813,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>201</width>
-                      <height>496</height>
+                      <width>526</width>
+                      <height>515</height>
                      </rect>
                     </property>
                     <attribute name="icon">
