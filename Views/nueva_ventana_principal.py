@@ -109,10 +109,6 @@ class Ventana_principal(QMainWindow):
         # probando financiero
 
         # self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-
-    def financiro_funcional(self):
-        print("hola")
-
     def caja_finanzas(self, text):
         self.btn_rh_caja.setText(text)
         self.btn_rh_caja.adjustSize()
@@ -501,8 +497,8 @@ class Ventana_principal(QMainWindow):
 
         if anterior > 0:
             # si en anterior existen datos
-            print(f"este es nuevo dato: {nuevo_dato}")
-            print(f"este es dato anterior: {anterior}")
+            print(f"este es nuevo dato_empleados: {nuevo_dato}")
+            print(f"este es dato anterior_empleados: {anterior}")
             mostrar = nuevo_dato + anterior
             self.btn_rh_pendeintes_pago.setText(str(mostrar))
             self.btn_rh_pendeintes_pago.adjustSize()
@@ -518,23 +514,23 @@ class Ventana_principal(QMainWindow):
         # self.monto_gastos_financiero.clear()
 
     def onChanged_provedor(self):
-        anterior = int(self.btn_rh_proveedores.text())
-        nuevo_dato = int(self.monto_gastos_financiero.text())
+        anterior_provedor = int(self.btn_rh_proveedores.text())
+        nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
 
-        if anterior > 0:
+        if anterior_provedor > 0:
             # si en anterior existen datos
-            print(f"este es nuevo dato: {nuevo_dato}")
-            print(f"este es dato anterior: {anterior}")
-            mostrar = nuevo_dato + anterior
-            print(f"la suma es : {mostrar}")
-            self.btn_rh_proveedores.setText(str(mostrar))
+            print(f"este es nuevo dato: {nuevo_dato_provedor}")
+            print(f"este es dato anterior: {anterior_provedor}")
+            mostrar_provedor = nuevo_dato_provedor + anterior_provedor
+            print(f"la suma es : {mostrar_provedor}")
+            self.btn_rh_proveedores.setText(str(mostrar_provedor))
             self.btn_rh_proveedores.adjustSize()
 
 
         else:
             # si n existen datos en anterior
-            mostrar = nuevo_dato
-            self.btn_rh_proveedores.setText(str(mostrar))
+            mostrar_provedor = nuevo_dato_provedor
+            self.btn_rh_proveedores.setText(str(mostrar_provedor))
             self.btn_rh_proveedores.adjustSize()
 
 
