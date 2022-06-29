@@ -585,7 +585,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>4</number>
+                   <number>2</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1026,14 +1026,14 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="page">
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>0</y>
-                         <width>435</width>
+                         <y>-319</y>
+                         <width>967</width>
                          <height>767</height>
                         </rect>
                        </property>
@@ -1320,6 +1320,25 @@ font: 75 12pt&quot;Times New Roman&quot;;
                             <widget class="QLineEdit" name="text_nit_venta"/>
                            </item>
                            <item>
+                            <widget class="QLabel" name="label_49">
+                             <property name="font">
+                              <font>
+                               <family>Arial Black</family>
+                               <pointsize>12</pointsize>
+                               <weight>3</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Codigo</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="text_codigo_producto"/>
+                           </item>
+                           <item>
                             <widget class="QComboBox" name="cb_ma">
                              <property name="styleSheet">
                               <string notr="true">border: 2px solid #14c8dc;
@@ -1359,25 +1378,6 @@ font: 75 12pt&quot;Times New Roman&quot;;
                            </item>
                            <item>
                             <widget class="QLineEdit" name="text_monto_venta"/>
-                           </item>
-                           <item>
-                            <widget class="QLabel" name="label_49">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Codigo</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_codigo_producto"/>
                            </item>
                            <item>
                             <widget class="QLabel" name="label_22">
@@ -1557,7 +1557,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>988</width>
+                         <width>488</width>
                          <height>448</height>
                         </rect>
                        </property>
@@ -1722,7 +1722,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>956</width>
+                         <width>456</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2693,6 +2693,12 @@ background-color:black;
                           <layout class="QHBoxLayout" name="horizontalLayout_8">
                            <item>
                             <widget class="QPushButton" name="btn_anadir_gastos">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>0</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2707,16 +2713,74 @@ background-color:black;
 }background-color: rgb(96, 226, 255);</string>
                              </property>
                              <property name="text">
-                              <string>Añadir</string>
+                              <string>Añadir_remuneraciones</string>
                              </property>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QPushButton" name="btn_angel_provedor">
+                            <widget class="QPushButton" name="btn_anadir_provedores">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>0</height>
+                              </size>
+                             </property>
                              <property name="text">
-                              <string>Añadir provedores</string>
+                              <string>Añadir_provedores</string>
                              </property>
                             </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_cuentas">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir_cuentas_pagar</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_prestamo">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>añadir prestamo bancario</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_pagar_socio">
+                             <property name="minimumSize">
+                              <size>
+                               <width>80</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Pagar socio</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <spacer name="horizontalSpacer">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>40</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                            </spacer>
                            </item>
                            <item>
                             <widget class="QPushButton" name="btn_borrar_gastos">
@@ -2773,6 +2837,32 @@ background-color:black;
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_28">
                            <item>
+                            <widget class="QComboBox" name="combox_ingresos">
+                             <property name="styleSheet">
+                              <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;</string>
+                             </property>
+                             <item>
+                              <property name="text">
+                               <string>Cuentas por cobrar</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Caja</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Bancos</string>
+                              </property>
+                             </item>
+                            </widget>
+                           </item>
+                           <item>
                             <widget class="QLabel" name="nombre_contratacion_2">
                              <property name="font">
                               <font>
@@ -2796,29 +2886,6 @@ background-color:black;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLabel" name="nombre_contratacion_3">
-                             <property name="font">
-                              <font>
-                               <family>Arial Black</family>
-                               <pointsize>12</pointsize>
-                               <weight>3</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string>Fecha</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QLineEdit" name="text_fecha_ingresos">
-                             <property name="styleSheet">
-                              <string notr="true">color: rgb(255, 255, 255);</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
                             <widget class="QLabel" name="nombre_contratacion_4">
                              <property name="font">
                               <font>
@@ -2836,6 +2903,29 @@ background-color:black;
                            </item>
                            <item>
                             <widget class="QLineEdit" name="text_monto_ingresos">
+                             <property name="styleSheet">
+                              <string notr="true">color: rgb(255, 255, 255);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="nombre_contratacion_3">
+                             <property name="font">
+                              <font>
+                               <family>Arial Black</family>
+                               <pointsize>12</pointsize>
+                               <weight>3</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Fecha</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="text_fecha_ingresos">
                              <property name="styleSheet">
                               <string notr="true">color: rgb(255, 255, 255);</string>
                              </property>
@@ -2879,7 +2969,13 @@ background-color:black;
                           </property>
                           <layout class="QHBoxLayout" name="horizontalLayout_4">
                            <item>
-                            <widget class="QPushButton" name="btn_anadir_ingresos">
+                            <widget class="QPushButton" name="btn_anadir_cuentas_por_cobrar">
+                             <property name="minimumSize">
+                              <size>
+                               <width>85</width>
+                               <height>0</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2899,7 +2995,52 @@ background-color:black;
                             </widget>
                            </item>
                            <item>
+                            <widget class="QPushButton" name="btn_anadir_caja">
+                             <property name="minimumSize">
+                              <size>
+                               <width>85</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_bancos">
+                             <property name="minimumSize">
+                              <size>
+                               <width>85</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <spacer name="horizontalSpacer_2">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>706</width>
+                               <height>13</height>
+                              </size>
+                             </property>
+                            </spacer>
+                           </item>
+                           <item>
                             <widget class="QPushButton" name="btn_borrar_ingresos">
+                             <property name="minimumSize">
+                              <size>
+                               <width>85</width>
+                               <height>0</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">QPushButton{
 font: 87 12pt&quot;Arial Black&quot;;
@@ -2915,6 +3056,19 @@ background-color:black;
                              </property>
                              <property name="text">
                               <string>Borrar</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_actualizar_ingresos">
+                             <property name="minimumSize">
+                              <size>
+                               <width>125</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Actualizar</string>
                              </property>
                             </widget>
                            </item>
@@ -2939,7 +3093,7 @@ background-color:black;
            <widget class="QFrame" name="frame_lateral">
             <property name="minimumSize">
              <size>
-              <width>550</width>
+              <width>50</width>
               <height>0</height>
              </size>
             </property>
@@ -3378,9 +3532,9 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>-540</y>
-                      <width>505</width>
-                      <height>1501</height>
+                      <y>0</y>
+                      <width>445</width>
+                      <height>1439</height>
                      </rect>
                     </property>
                     <attribute name="icon">
@@ -3391,65 +3545,6 @@ QToolBox::tab:selected{
                      <string>Finanzas</string>
                     </attribute>
                     <layout class="QVBoxLayout" name="verticalLayout_29">
-                     <item>
-                      <widget class="QFrame" name="frame_21">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>55</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>150</height>
-                        </size>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">QLineEdit{
-border: 2px solid #14c8dc;
-border-radius: 8px;
-color: rgb(255, 255, 255);
-background-color:rgb(0,0,0);
-font: 75 12pt&quot;Times New Roman&quot;;
-}
-
-QTableWidget{
-color: rgb(255, 255, 255);
-gridline-color:rgb(0, 0, 0);
-font-size:12pt;
-color:#000000;
-}
-
-QHeaderView::section{
-	background-color: rgb(0, 0, 0);
-	border: 1px solid rgb(0, 0, 127);
-	font-size: 12pt
-}
-
-QTableWidgetQTableCornerButton::section{
-	background-color: rgb(0, 0, 0);
-	borde: 1px solid rgb(0, 206, 151)
-}
-</string>
-                       </property>
-                       <property name="frameShape">
-                        <enum>QFrame::StyledPanel</enum>
-                       </property>
-                       <property name="frameShadow">
-                        <enum>QFrame::Raised</enum>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_39">
-                        <item>
-                         <widget class="QPushButton" name="btn_acutalizar_finanzas">
-                          <property name="text">
-                           <string>Actualizar</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QFrame" name="frame_24">
                        <property name="styleSheet">
@@ -3763,7 +3858,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
 }</string>
                           </property>
                           <property name="text">
-                           <string>Total Pasibos</string>
+                           <string>Total Pasivos</string>
                           </property>
                          </widget>
                         </item>
@@ -3822,7 +3917,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                       <normaloff>../../../../Downloads/align-justify.svg</normaloff>../../../../Downloads/align-justify.svg</iconset>
                     </attribute>
                     <attribute name="label">
-                     <string>Graficas</string>
+                     <string>Tablas</string>
                     </attribute>
                     <layout class="QVBoxLayout" name="verticalLayout_33">
                      <item>

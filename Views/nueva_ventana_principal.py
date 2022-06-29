@@ -19,7 +19,6 @@ class Ventana_principal(QMainWindow):
         super(Ventana_principal, self).__init__()
         # Usamos ui para leer el archivo
         self.transaparente = uic.loadUi('Views/nueva_ventana_principal.ui', self)
-        self.btn_actualizar_gastos.clicked.connect(self.anadir)
         # declaramos una variable para quitar los bordes y tener una interfas mas limpia
         self.transaparente.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.transaparente.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -32,6 +31,12 @@ class Ventana_principal(QMainWindow):
         # ocultar botones para una mejor interfas
         self.btn_restaurar.hide()
         self.btn_menu_iz.hide()
+        self.btn_anadir_provedores.hide()  # para ocultar el boton
+        self.btn_anadir_cuentas.hide()
+        self.btn_anadir_prestamo.hide()
+        self.btn_anadir_pagar_socio.hide()
+        self.btn_anadir_caja.hide()
+        self.btn_anadir_bancos.hide()
 
         # Creando sombras
         self.sombra_frame(self.stackedWidget)
@@ -104,14 +109,9 @@ class Ventana_principal(QMainWindow):
         # mostrar financiero
         # self.monto_gastos_financiero.textChanged.connect(self.onChanged)
         # caja_finanzas
-        self.text_monto_ingresos.textChanged.connect(self.caja_finanzas)
-
-        # probando financiero
-
-        # self.monto_gastos_financiero.textChanged.connect(self.onChanged)
-    def caja_finanzas(self, text):
-        self.btn_rh_caja.setText(text)
-        self.btn_rh_caja.adjustSize()
+        self.btn_actualizar_gastos.clicked.connect(self.anadir_gastos)
+        self.btn_actualizar_ingresos.clicked.connect(self.anadir_ingresos)
+        self.total_activos_corrientes()
 
 
     def control_bt_minimizar(self):
@@ -195,6 +195,7 @@ class Ventana_principal(QMainWindow):
         cod = self.text_codigo_producto.text()
         cantidad = int(self.text_cantidad_venta.text())
         self.principal_controller.modificar_existencias(cod, cantidad)
+        self.ingresos_inventario()
         self.ventas_inicio()
 
     def reabastecimiento(self):
@@ -287,6 +288,8 @@ class Ventana_principal(QMainWindow):
         for i in range(len(df)):
             for j in range(len(df.columns)):
                 self.tabla_ventas.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+
+
         QMessageBox.about(self, 'Aviso', 'Vendido')
 
     def total(self):
@@ -469,23 +472,73 @@ class Ventana_principal(QMainWindow):
         df.to_csv('gastos.csv')
         QMessageBox.about(self, 'Aviso', 'Guardado Gasto')
 
-    def anadir(self):
+    def anadir_gastos(self):
         try:
             if self.cv_gastos_financiero.currentText() == 'Remuneraciones':
-                print("estas en remuneraciones")
+                self.btn_anadir_gastos.show() # para mostrar el boton
+                self.btn_anadir_provedores.hide() # para ocultar el boton
+                self.btn_anadir_cuentas.hide()
+                self.btn_anadir_prestamo.hide()
+                self.btn_anadir_pagar_socio.hide()
                 self.btn_anadir_gastos.clicked.connect(self.onChanged)
 
             elif self.cv_gastos_financiero.currentText() == 'Proveedores':
-
-                print("estas en provedores")
-                self.btn_anadir_gastos.clicked.connect(self.onChanged_provedor)
+                # show es para mostrar
+                # hide para ocultar
+                self.btn_anadir_gastos.hide()
+                self.btn_anadir_provedores.show()
+                self.btn_anadir_cuentas.hide()
+                self.btn_anadir_prestamo.hide()
+                self.btn_anadir_pagar_socio.hide()
+                self.btn_anadir_provedores.clicked.connect(self.onChanged_provedor)
 
             elif self.cv_gastos_financiero.currentText() == 'Cuentas por Pagar':
-                pass
+                self.btn_anadir_gastos.hide()  # para mostrar el boton
+                self.btn_anadir_provedores.hide()  # para ocultar el boton
+                self.btn_anadir_cuentas.show()
+                self.btn_anadir_prestamo.hide()
+                self.btn_anadir_pagar_socio.hide()
+
             elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
-                pass
+                self.btn_anadir_gastos.hide() # para mostrar el boton
+                self.btn_anadir_provedores.hide() # para ocultar el boton
+                self.btn_anadir_cuentas.hide()
+                self.btn_anadir_prestamo.show()
+                self.btn_anadir_pagar_socio.hide()
+
             elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
-                pass
+                self.btn_anadir_gastos.hide() # para mostrar el boton
+                self.btn_anadir_provedores.hide() # para ocultar el boton
+                self.btn_anadir_cuentas.hide()
+                self.btn_anadir_prestamo.hide()
+                self.btn_anadir_pagar_socio.show()
+
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
+
+    def anadir_ingresos(self):
+        try:
+            if self.combox_ingresos.currentText() == 'Cuentas por cobrar':
+                self.btn_anadir_cuentas_por_cobrar.show()
+                self.btn_anadir_caja.hide()
+                self.btn_anadir_bancos.hide()
+                self.btn_anadir_cuentas_por_cobrar.clicked.connect(self.ingresos_cuentas)
+
+            elif self.combox_ingresos.currentText() == 'Caja':
+                self.btn_anadir_cuentas_por_cobrar.hide()
+                self.btn_anadir_caja.show()
+                self.btn_anadir_bancos.hide()
+                self.btn_anadir_caja.clicked.connect(self.ingresos_caja)
+
+
+            elif self.combox_ingresos.currentText() == 'Bancos':
+                self.btn_anadir_cuentas_por_cobrar.hide()
+                self.btn_anadir_caja.hide()
+                self.btn_anadir_bancos.show()
+                self.btn_anadir_bancos.clicked.connect(self.ingresos_banco)
+
+
         except Exception as error:
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
@@ -496,9 +549,12 @@ class Ventana_principal(QMainWindow):
 
         if anterior > 0:
             # si en anterior existen datos
-            print(f"este es nuevo dato_empleados: {nuevo_dato}")
-            print(f"este es dato anterior_empleados: {anterior}")
             mostrar = nuevo_dato + anterior
+            self.btn_rh_pendeintes_pago.setText(str(mostrar))
+            self.btn_rh_pendeintes_pago.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
             self.btn_rh_pendeintes_pago.setText(str(mostrar))
             self.btn_rh_pendeintes_pago.adjustSize()
 
@@ -508,9 +564,93 @@ class Ventana_principal(QMainWindow):
 
         if anterior_provedor > 0:
             # si en anterior existen datos
-            print(f"este es nuevo dato: {nuevo_dato_provedor}")
-            print(f"este es dato anterior: {anterior_provedor}")
             mostrar_provedor = nuevo_dato_provedor + anterior_provedor
-            print(f"la suma es : {mostrar_provedor}")
             self.btn_rh_proveedores.setText(str(mostrar_provedor))
             self.btn_rh_proveedores.adjustSize()
+
+        elif anterior_provedor == 0:
+            mostrar = nuevo_dato_provedor
+            self.btn_rh_proveedores.setText(str(mostrar))
+            self.btn_rh_proveedores.adjustSize()
+
+    # ingresos
+    def ingresos_cuentas(self):
+        anterior = int(self.btn_rh_cuetas_cobrar.text())
+        nuevo_dato = int(self.text_monto_ingresos.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato + anterior
+            self.btn_rh_cuetas_cobrar.setText(str(mostrar))
+            self.btn_rh_cuetas_cobrar.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_cuetas_cobrar.setText(str(mostrar))
+            self.btn_rh_cuetas_cobrar.adjustSize()
+
+        self.text_monto_ingresos.clear()
+        self.total_activos_corrientes()
+
+    def ingresos_inventario(self):
+        print("ejecutando")
+        precio = int(self.text_monto_venta.text())
+        cantidad = int(self.text_cantidad_venta.text())
+
+        resultado = precio * cantidad
+        resultado = resultado * 0.5
+        print(f"resulrado con descuento mayoreo: {resultado}")
+        self.btn_rh_inentarios.setText(str(resultado))
+        self.btn_rh_inentarios.adjustSize()
+        self.total_activos_corrientes()
+
+
+
+    def ingresos_caja(self):
+        anterior = int(self.btn_rh_caja.text())
+        nuevo_dato = int(self.text_monto_ingresos.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato + anterior
+            self.btn_rh_caja.setText(str(mostrar))
+            self.btn_rh_caja.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_caja.setText(str(mostrar))
+            self.btn_rh_caja.adjustSize()
+
+        self.text_monto_ingresos.clear()
+        self.total_activos_corrientes()
+
+    def ingresos_banco(self):
+        anterior = int(self.btn_rh_bancos.text())
+        nuevo_dato = int(self.text_monto_ingresos.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato + anterior
+            self.btn_rh_bancos.setText(str(mostrar))
+            self.btn_rh_bancos.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_bancos.setText(str(mostrar))
+            self.btn_rh_bancos.adjustSize()
+
+        self.text_monto_ingresos.clear()
+        self.total_activos_corrientes()
+
+    def total_activos_corrientes(self):
+        cuentas_cobrar = int(self.btn_rh_cuetas_cobrar.text())
+        inventario = int(self.btn_rh_inentarios.text())
+        caja = int(self.btn_rh_caja.text())
+        bancos = int(self.btn_rh_bancos.text())
+
+        suma = cuentas_cobrar + inventario + caja + bancos
+
+        self.btn_rh_activos_corriete.setText(str(suma))
+        self.btn_rh_activos_corriete.adjustSize()
+
+
