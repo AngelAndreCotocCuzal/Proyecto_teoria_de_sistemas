@@ -594,11 +594,12 @@ class Ventana_principal(QMainWindow):
 
     def ingresos_inventario(self):
         print("ejecutando")
+        anterior = int(self.btn_rh_inentarios.text())
         precio = int(self.text_monto_venta.text())
         cantidad = int(self.text_cantidad_venta.text())
 
         resultado = precio * cantidad
-        resultado = resultado * 0.5
+        resultado = resultado + anterior
         print(f"resulrado con descuento mayoreo: {resultado}")
         self.btn_rh_inentarios.setText(str(resultado))
         self.btn_rh_inentarios.adjustSize()

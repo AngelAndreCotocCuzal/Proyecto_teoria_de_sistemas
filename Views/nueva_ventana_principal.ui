@@ -3587,7 +3587,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <item>
                          <widget class="QLabel" name="btn_rh_inentarios">
                           <property name="text">
-                           <string>0</string>
+                           <string>100</string>
                           </property>
                          </widget>
                         </item>
