@@ -573,7 +573,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>3</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1748,7 +1748,7 @@ QToolBox::tab:selected{
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>0</y>
+                         <y>-240</y>
                          <width>956</width>
                          <height>1076</height>
                         </rect>
@@ -3720,7 +3720,7 @@ QToolBox::tab:selected{
 </string>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="page_5">
                     <property name="geometry">
@@ -4102,8 +4102,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>201</width>
-                      <height>496</height>
+                      <width>133</width>
+                      <height>494</height>
                      </rect>
                     </property>
                     <attribute name="icon">
@@ -4133,137 +4133,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_34">
                         <item>
-                         <widget class="QLabel" name="label_52">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Codigo</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_codigo_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_53">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Descripcion</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_descripcion_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_54">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Medida</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_media_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_55">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Cantidad</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_existencia_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_56">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Precio costo</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_precio_costo_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_57">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>3</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="text">
-                           <string>Precio publico</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="text_precio_publico_compra_2"/>
-                        </item>
-                        <item>
-                         <widget class="QPushButton" name="btn_guardar_compra_2">
-                          <property name="font">
-                           <font>
-                            <family>Arial Black</family>
-                            <pointsize>12</pointsize>
-                            <weight>10</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="cursor">
-                           <cursorShape>PointingHandCursor</cursorShape>
-                          </property>
-                          <property name="text">
-                           <string>Guardar</string>
-                          </property>
-                         </widget>
+                         <widget class="QTableWidget" name="tabla_anderson"/>
                         </item>
                        </layout>
                       </widget>
