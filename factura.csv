@@ -1,3 +1,5 @@
 ,Nombre,Codigo,NIT,Consumo,Monto,Cantidad,Fecha,Sub_total,Vuelto
-0,Angel Cotoc,ACA0004,CF,200.0,100,2,22/2/22,200,50.0
-1,Angel Cotoc,ACA0004,CF,10.0,100,2,22/2/22,200,240.0
+0,Angel Cotoc,ACA0004,CF,200.0,100,2,22/2/22,200.0,50.0
+1,Angel Cotoc,ACA0004,CF,10.0,100,2,22/2/22,200.0,240.0
+2,Maria Salanic,ACA0005,CF,5.0,10,10,22/2/22,95.0,15.0
+3,Maria Salanic,ACA0005,CF,100.0,10,10,22/2/22,100.0,10.0

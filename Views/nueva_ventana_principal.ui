@@ -573,7 +573,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>4</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -3145,8 +3145,8 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
-                         <height>403</height>
+                         <width>98</width>
+                         <height>32</height>
                         </rect>
                        </property>
                        <attribute name="label">

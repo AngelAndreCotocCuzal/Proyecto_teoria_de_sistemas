@@ -278,11 +278,15 @@ class Ventana_principal(QMainWindow):
         sub_total = a * b
         try:
             if self.cb_ma.currentText() == 'Mayoreo':
-                mayoreo = sub_total * 0.05
-                total = dinero - mayoreo
+                sub_total = a * b
+                mayoreo = sub_total * 0.07
+                total = (dinero - (sub_total - mayoreo))
+                sub_total = sub_total - mayoreo
             elif self.cb_ma.currentText() == 'Minorista':
+                sub_total = a * b
                 mayoreo = sub_total * 1
                 total = dinero - mayoreo
+                sub_total = a * b
         except Exception as error:
             QMessageBox.about(self, 'Error', str(error))
 
@@ -309,9 +313,20 @@ class Ventana_principal(QMainWindow):
         root = Tk()
         a = int(self.text_monto_venta.text())
         b = int(self.text_cantidad_venta.text())
-        sub_total = a * b
-        Label(root, text='Total a pagar: ').pack()
-        Label(root, text=sub_total).pack()
+        try:
+            if self.cb_ma.currentText() == 'Mayoreo':
+                sub_total = a * b
+                mayoreo = sub_total * 0.05
+                total = sub_total - mayoreo
+                Label(root, text='Total a pagar: ').pack()
+                Label(root, text=total).pack()
+            elif self.cb_ma.currentText() == 'Minorista':
+                sub_total = a * b
+                mayoreo = sub_total * 1
+                Label(root, text='Total a pagar: ').pack()
+                Label(root, text=mayoreo).pack()
+        except Exception as error:
+            QMessageBox.about(self, 'Error', str(error))
 
         root.mainloop()
 
