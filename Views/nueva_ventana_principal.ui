@@ -968,9 +968,9 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    <widget class="QPushButton" name="pushButton_2">
                     <property name="geometry">
                      <rect>
-                      <x>30</x>
-                      <y>170</y>
-                      <width>281</width>
+                      <x>10</x>
+                      <y>10</y>
+                      <width>261</width>
                       <height>171</height>
                      </rect>
                     </property>
@@ -988,6 +988,31 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      </size>
                     </property>
                    </widget>
+                   <widget class="QPushButton" name="pushButton_5">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>991</width>
+                      <height>511</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../imagenes/logo.png</normaloff>../imagenes/logo.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>550</width>
+                      <height>350</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <zorder>pushButton_5</zorder>
+                   <zorder>pushButton_2</zorder>
                   </widget>
                   <widget class="QWidget" name="pagina_ventas">
                    <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1559,7 +1584,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>988</width>
+                         <width>488</width>
                          <height>448</height>
                         </rect>
                        </property>
@@ -2508,7 +2533,7 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>2</number>
                       </property>
                       <widget class="QWidget" name="page_3">
                        <property name="geometry">
@@ -2821,8 +2846,8 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>477</width>
-                         <height>434</height>
+                         <width>977</width>
+                         <height>403</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -3075,6 +3100,23 @@ background-color:black;
                             </widget>
                            </item>
                           </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="page_9">
+                       <attribute name="label">
+                        <string>Página</string>
+                       </attribute>
+                       <layout class="QVBoxLayout" name="verticalLayout_39">
+                        <item>
+                         <widget class="QFrame" name="frame_21">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
                          </widget>
                         </item>
                        </layout>

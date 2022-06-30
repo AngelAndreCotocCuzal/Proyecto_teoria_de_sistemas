@@ -196,12 +196,12 @@ class Ventana_principal(QMainWindow):
         self.guardar_planilla()
 
     def ventana_ventas(self):
-        self.stackedWidget_4.setCurrentWidget(self.conectar_tabla_ventas)
         cod = self.text_codigo_producto.text()
         cantidad = int(self.text_cantidad_venta.text())
         self.principal_controller.modificar_existencias(cod, cantidad)
         self.ingresos_inventario()
         self.ventas_inicio()
+        self.stackedWidget_4.setCurrentWidget(self.conectar_tabla_ventas)
 
     def reabastecimiento(self):
         cod = self.text_codigo_compra.text()
@@ -269,7 +269,6 @@ class Ventana_principal(QMainWindow):
         nombre = self.text_nombre_venta.text()
         codigo = self.text_codigo_producto.text()
         nit = self.text_nit_venta.text()
-        mayoreo = self.cb_ma.currentText()
         monto = self.text_monto_venta.text()
         cantidad = self.text_cantidad_venta.text()
         dinero = int(self.text_dinero_venta.text())
@@ -277,12 +276,21 @@ class Ventana_principal(QMainWindow):
         a = int(self.text_monto_venta.text())
         b = int(self.text_cantidad_venta.text())
         sub_total = a * b
-        total = dinero - sub_total
+        try:
+            if self.cb_ma.currentText() == 'Mayoreo':
+                mayoreo = sub_total * 0.05
+                total = dinero - mayoreo
+            elif self.cb_ma.currentText() == 'Minorista':
+                mayoreo = sub_total * 1
+                total = dinero - mayoreo
+        except Exception as error:
+            QMessageBox.about(self, 'Error', str(error))
 
         registro_2 = [(nombre, codigo, nit, mayoreo, monto, cantidad, fecha, sub_total, total)]
 
         df1 = pd.DataFrame(registro_2, columns=['Nombre', 'Codigo', 'NIT', 'Consumo', 'Monto', 'Cantidad', 'Fecha',
                                                 'Sub_total', 'Vuelto'])
+
         df = df.append(df1, ignore_index=True)
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
@@ -792,7 +800,3 @@ class Ventana_principal(QMainWindow):
         total = a + p
         self.btn_rh_total_patrimonio.setText(str(total))
         self.btn_rh_total_patrimonio.adjustSize()
-
-
-
-
