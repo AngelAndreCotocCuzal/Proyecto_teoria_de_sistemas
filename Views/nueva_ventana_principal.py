@@ -112,7 +112,12 @@ class Ventana_principal(QMainWindow):
         self.btn_actualizar_gastos.clicked.connect(self.anadir_gastos)
         self.btn_actualizar_ingresos.clicked.connect(self.anadir_ingresos)
         self.total_activos_corrientes()
-
+        self.total_activos_no_corrientes()
+        self.pasivo_corriente()
+        self.pasivo_no_corriente()
+        self.total_activo()
+        self.total_pasivos()
+        self.patrimonio()
 
     def control_bt_minimizar(self):
         self.showMinimized()
@@ -498,6 +503,7 @@ class Ventana_principal(QMainWindow):
                 self.btn_anadir_cuentas.show()
                 self.btn_anadir_prestamo.hide()
                 self.btn_anadir_pagar_socio.hide()
+                self.btn_anadir_cuentas.clicked.connect(self.gastos_cuentas)
 
             elif self.cv_gastos_financiero.currentText() == 'Prestamos Bancarios':
                 self.btn_anadir_gastos.hide() # para mostrar el boton
@@ -505,6 +511,7 @@ class Ventana_principal(QMainWindow):
                 self.btn_anadir_cuentas.hide()
                 self.btn_anadir_prestamo.show()
                 self.btn_anadir_pagar_socio.hide()
+                self.btn_anadir_prestamo.clicked.connect(self.gastos_prestamos)
 
             elif self.cv_gastos_financiero.currentText() == 'Pagar Socio':
                 self.btn_anadir_gastos.hide() # para mostrar el boton
@@ -517,6 +524,8 @@ class Ventana_principal(QMainWindow):
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
 
+    # gastos
+    # gastos corrientes
     def anadir_ingresos(self):
         try:
             if self.combox_ingresos.currentText() == 'Cuentas por cobrar':
@@ -558,6 +567,9 @@ class Ventana_principal(QMainWindow):
             self.btn_rh_pendeintes_pago.setText(str(mostrar))
             self.btn_rh_pendeintes_pago.adjustSize()
 
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
     def onChanged_provedor(self):
         anterior_provedor = int(self.btn_rh_proveedores.text())
         nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
@@ -573,7 +585,71 @@ class Ventana_principal(QMainWindow):
             self.btn_rh_proveedores.setText(str(mostrar))
             self.btn_rh_proveedores.adjustSize()
 
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def gastos_cuentas(self):
+        anterior_provedor = int(self.btn_rh_cuentas_por_pagar.text())
+        nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
+
+        if anterior_provedor > 0:
+            # si en anterior existen datos
+            mostrar_provedor = nuevo_dato_provedor + anterior_provedor
+            self.btn_rh_cuentas_por_pagar.setText(str(mostrar_provedor))
+            self.btn_rh_cuentas_por_pagar.adjustSize()
+
+        elif anterior_provedor == 0:
+            mostrar = nuevo_dato_provedor
+            self.btn_rh_cuentas_por_pagar.setText(str(mostrar))
+            self.btn_rh_cuentas_por_pagar.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def gastos_prestamos(self):
+        anterior = int(self.btn_rh_prestamos_bancarios.text())
+        nuevo_dato = int(self.monto_gastos_financiero.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato + anterior
+            self.btn_rh_prestamos_bancarios.setText(str(mostrar))
+            self.btn_rh_prestamos_bancarios.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_prestamos_bancarios.setText(str(mostrar))
+            self.btn_rh_prestamos_bancarios.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def pasivo_corriente(self):
+        remuneraciones = int(self.btn_rh_pendeintes_pago.text())
+        provedores = int(self.btn_rh_proveedores.text())
+        cuentas = int(self.btn_rh_cuentas_por_pagar.text())
+        prestamos = int(self.btn_rh_prestamos_bancarios.text())
+
+        suma = remuneraciones + provedores + cuentas + prestamos
+        self.btn_rh_pasivos_corrientes.setText(str(suma))
+        self.btn_rh_pasivos_corrientes.adjustSize()
+        return suma
+
+    # gastos no corrientes
+
+    def pasivo_no_corriente(self):
+        pagar_socios = int(self.btn_rh_pagar_socios.text())
+
+        suma = pagar_socios
+
+        self.btn_rh_pasivos_no_corrientes.setText(str(suma))
+        self.btn_rh_pasivos_no_corrientes.adjustSize()
+        return suma
+
+
+
     # ingresos
+    # ingresos corrientes
     def ingresos_cuentas(self):
         anterior = int(self.btn_rh_cuetas_cobrar.text())
         nuevo_dato = int(self.text_monto_ingresos.text())
@@ -604,8 +680,6 @@ class Ventana_principal(QMainWindow):
         self.btn_rh_inentarios.setText(str(resultado))
         self.btn_rh_inentarios.adjustSize()
         self.total_activos_corrientes()
-
-
 
     def ingresos_caja(self):
         anterior = int(self.btn_rh_caja.text())
@@ -653,5 +727,50 @@ class Ventana_principal(QMainWindow):
 
         self.btn_rh_activos_corriete.setText(str(suma))
         self.btn_rh_activos_corriete.adjustSize()
+        self.total_activo()
+        return suma
+
+    # ingresos no corrientes
+
+    def total_activos_no_corrientes(self):
+        vehiculo = int(self.btn_rh_vehiculos.text())
+        computo = int(self.btn_rh_computo.text())
+
+        suma = vehiculo + computo
+
+        self.btn_rh_activos_no_corriente.setText(str(suma))
+        self.btn_rh_activos_no_corriente.adjustSize()
+        self.total_activo()
+        return suma
+    #
+    def total_activo(self):
+        a_corriente = int(self.btn_rh_activos_corriete.text())
+        a_no_corriente = int(self.btn_rh_activos_no_corriente.text())
+
+        total = a_corriente + a_no_corriente
+
+        self.btn_rh_total_activos.setText(str(total))
+        self.btn_rh_total_activos.adjustSize()
+        self.patrimonio()
+
+    def total_pasivos(self):
+        p_corriente = self.pasivo_corriente()
+        p_no_corriente = self.pasivo_no_corriente()
+
+        total = p_corriente + p_no_corriente
+
+        self.btn_rh_total_pasivos.setText(str(total))
+        self.btn_rh_total_pasivos.adjustSize()
+        self.patrimonio()
+
+    def patrimonio(self):
+        a = int(self.btn_rh_total_activos.text())
+        p = int(self.btn_rh_total_pasivos.text())
+
+        total = a + p
+        self.btn_rh_total_patrimonio.setText(str(total))
+        self.btn_rh_total_patrimonio.adjustSize()
+
+
 
 

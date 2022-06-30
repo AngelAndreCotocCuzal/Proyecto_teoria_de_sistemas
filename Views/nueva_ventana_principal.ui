@@ -365,7 +365,7 @@ background-color:black;
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="text">
-                <string>R/H  </string>
+                <string>RRHH </string>
                </property>
                <property name="icon">
                 <iconset>
@@ -585,7 +585,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1557,7 +1557,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>488</width>
+                         <width>988</width>
                          <height>448</height>
                         </rect>
                        </property>
@@ -1722,7 +1722,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>456</width>
+                         <width>956</width>
                          <height>1076</height>
                         </rect>
                        </property>
@@ -2513,7 +2513,7 @@ QToolBox::tab:selected{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>477</width>
+                         <width>977</width>
                          <height>434</height>
                         </rect>
                        </property>
@@ -2695,7 +2695,7 @@ background-color:black;
                             <widget class="QPushButton" name="btn_anadir_gastos">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>90</width>
                                <height>0</height>
                               </size>
                              </property>
@@ -2713,7 +2713,7 @@ background-color:black;
 }background-color: rgb(96, 226, 255);</string>
                              </property>
                              <property name="text">
-                              <string>Añadir_remuneraciones</string>
+                              <string>Añadir</string>
                              </property>
                             </widget>
                            </item>
@@ -2721,12 +2721,12 @@ background-color:black;
                             <widget class="QPushButton" name="btn_anadir_provedores">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>90</width>
                                <height>0</height>
                               </size>
                              </property>
                              <property name="text">
-                              <string>Añadir_provedores</string>
+                              <string>Añadir</string>
                              </property>
                             </widget>
                            </item>
@@ -2734,12 +2734,12 @@ background-color:black;
                             <widget class="QPushButton" name="btn_anadir_cuentas">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>90</width>
                                <height>0</height>
                               </size>
                              </property>
                              <property name="text">
-                              <string>Añadir_cuentas_pagar</string>
+                              <string>Añadir</string>
                              </property>
                             </widget>
                            </item>
@@ -2747,12 +2747,12 @@ background-color:black;
                             <widget class="QPushButton" name="btn_anadir_prestamo">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>90</width>
                                <height>0</height>
                               </size>
                              </property>
                              <property name="text">
-                              <string>añadir prestamo bancario</string>
+                              <string>Añadir</string>
                              </property>
                             </widget>
                            </item>
@@ -2760,12 +2760,12 @@ background-color:black;
                             <widget class="QPushButton" name="btn_anadir_pagar_socio">
                              <property name="minimumSize">
                               <size>
-                               <width>80</width>
+                               <width>90</width>
                                <height>0</height>
                               </size>
                              </property>
                              <property name="text">
-                              <string>Pagar socio</string>
+                              <string>Añadir</string>
                              </property>
                             </widget>
                            </item>
@@ -3192,7 +3192,7 @@ background-color:black;
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page_lateral_inicio">
                 <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -3532,7 +3532,7 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>0</y>
+                      <y>-240</y>
                       <width>445</width>
                       <height>1439</height>
                      </rect>
