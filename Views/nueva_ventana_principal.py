@@ -349,7 +349,6 @@ class Ventana_principal(QMainWindow):
         sueldo = int(self.sueldo.text())
         emergencia = int(self.contacto.text())
         labor = self.inicio_laboral.text()
-        print("hola")
         registro_empleados = [(nombre_empleado, edad, nacimiento, genero, dpi, nit_empleado, direccion, telefono,
                                sangre,
                                alergico, puesto, sueldo, emergencia, labor)]
@@ -429,13 +428,20 @@ class Ventana_principal(QMainWindow):
         iggs = 0.0483
         sueldo = x * iggs
         anticipo = int(self.text_anticipo_planilla.text())
-        extras = int(self.text_extras.text())
+        horas = int(self.text_extras.text())
         dinero = 60
-        y = extras * dinero
+        y = horas * dinero
         vacaciones = int(self.text_vacaciones.text())
         bonificaciones = self.cb_bonoficaciones.currentText()
         total = (((x - sueldo) - anticipo) + y)
         # 4.83
+        extras = sueldo / 30
+        extras = extras * 7
+        extras = extras / 48
+        extras = extras * 1.5
+        extras = extras * horas
+
+        # extras = ((((sueldo / 30) * 7) / 48) * 1.5)
 
         guardar = [(clave, sueldo, anticipo, extras, vacaciones, bonificaciones, total)]
         df1 = pd.DataFrame(guardar,
