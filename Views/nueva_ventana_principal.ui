@@ -573,7 +573,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1885,7 +1885,56 @@ font: 75 12pt&quot;Times New Roman&quot;;
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLineEdit" name="sangre"/>
+                            <widget class="QComboBox" name="sangre">
+                             <property name="styleSheet">
+                              <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;
+</string>
+                             </property>
+                             <item>
+                              <property name="text">
+                               <string>A+</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>O+</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>B+</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>AB+</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>A-</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>O-</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>B-</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>AB-</string>
+                              </property>
+                             </item>
+                            </widget>
                            </item>
                            <item>
                             <widget class="QLabel" name="label_24">
@@ -2119,7 +2168,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>377</width>
+                         <width>956</width>
                          <height>673</height>
                         </rect>
                        </property>
@@ -2533,7 +2582,7 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>0</number>
+                       <number>2</number>
                       </property>
                       <widget class="QWidget" name="page_3">
                        <property name="geometry">
@@ -3145,12 +3194,12 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>98</width>
-                         <height>32</height>
+                         <width>977</width>
+                         <height>403</height>
                         </rect>
                        </property>
                        <attribute name="label">
-                        <string>Página</string>
+                        <string>Pagos</string>
                        </attribute>
                        <layout class="QVBoxLayout" name="verticalLayout_39">
                         <item>

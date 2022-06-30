@@ -366,7 +366,7 @@ class Ventana_principal(QMainWindow):
         nit_empleado = self.nit_empleado.text()
         direccion = self.direccion.text()
         telefono = int(self.cel_empleado.text())
-        sangre = self.sangre.text()
+        sangre = self.sangre.currentText()
         alergico = self.alergico.text()
         puesto = self.puesto_2.text()
         sueldo = int(self.sueldo.text())
@@ -454,7 +454,7 @@ class Ventana_principal(QMainWindow):
         anticipo = int(self.text_anticipo_planilla.text())
         horas = int(self.text_extras.text())
         dinero = 60
-        y = horas * dinero
+        y = horas * 0
         vacaciones = int(self.text_vacaciones.text())
         #bonificaciones = self.cb_bonoficaciones.currentText()
 
@@ -466,20 +466,30 @@ class Ventana_principal(QMainWindow):
         extras = extras * horas
 
         # extras = ((((sueldo / 30) * 7) / 48) * 1.5)
+        if vacaciones > 15:
+            vacaciones = x / 30
+            vacaciones = vacaciones * 7
+            vacaciones = vacaciones / 48
+
+        elif vacaciones <= 15:
+            vacaciones = 0
+
         try:
             if self.cb_bonoficaciones.currentText() == 'Bono 14':
                 bonificaciones = x * 1
-                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+                total = (((((x - sueldo) - anticipo) + y) + bonificaciones) - vacaciones)
 
             elif self.cb_bonoficaciones.currentText() == 'Aguinaldo':
                 bonificaciones = x * 1
-                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+                total = (((((x - sueldo) - anticipo) + y) + bonificaciones) - vacaciones)
             elif self.cb_bonoficaciones.currentText() == 'Ninguno':
                 bonificaciones = 0
-                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+                total = (((((x - sueldo) - anticipo) + y) + bonificaciones) - vacaciones)
         except Exception as error:
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
+
+
 
 
         guardar = [(clave, sueldo, anticipo, extras, vacaciones, bonificaciones, total)]
