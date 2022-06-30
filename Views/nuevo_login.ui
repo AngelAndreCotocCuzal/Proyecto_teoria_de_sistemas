@@ -278,29 +278,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477,
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>80</y>
-      <width>361</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgba(255, 255, 255, 210);</string>
-    </property>
-    <property name="text">
-     <string>LA ESPERANZA</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn_crear">
     <property name="geometry">
      <rect>
@@ -655,7 +632,6 @@ border-radius:15px;</string>
    <zorder>contrasenia</zorder>
    <zorder>btn_login</zorder>
    <zorder>horizontalLayoutWidget</zorder>
-   <zorder>label_6</zorder>
    <zorder>btn_crear</zorder>
   </widget>
  </widget>

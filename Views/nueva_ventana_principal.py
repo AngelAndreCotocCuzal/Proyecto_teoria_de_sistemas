@@ -402,7 +402,8 @@ class Ventana_principal(QMainWindow):
 
     def ver_planilla(self):
         df = pd.read_csv('empleo.csv')
-        codigo_empleado = int(self.text_ver_empleado.text())
+        x = int(self.text_ver_empleado.text())
+        codigo_empleado = x - 1
         eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
         df.drop(eliminar_colum, axis='columns', inplace=True)
         df.to_csv('empleo.csv')
@@ -432,16 +433,31 @@ class Ventana_principal(QMainWindow):
         dinero = 60
         y = horas * dinero
         vacaciones = int(self.text_vacaciones.text())
-        bonificaciones = self.cb_bonoficaciones.currentText()
-        total = (((x - sueldo) - anticipo) + y)
+        #bonificaciones = self.cb_bonoficaciones.currentText()
+
         # 4.83
-        extras = sueldo / 30
+        extras = x / 30
         extras = extras * 7
         extras = extras / 48
         extras = extras * 1.5
         extras = extras * horas
 
         # extras = ((((sueldo / 30) * 7) / 48) * 1.5)
+        try:
+            if self.cb_bonoficaciones.currentText() == 'Bono 14':
+                bonificaciones = x * 1
+                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+
+            elif self.cb_bonoficaciones.currentText() == 'Aguinaldo':
+                bonificaciones = x * 1
+                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+            elif self.cb_bonoficaciones.currentText() == 'Ninguno':
+                bonificaciones = 0
+                total = ((((x - sueldo) - anticipo) + y) + bonificaciones)
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
+
 
         guardar = [(clave, sueldo, anticipo, extras, vacaciones, bonificaciones, total)]
         df1 = pd.DataFrame(guardar,

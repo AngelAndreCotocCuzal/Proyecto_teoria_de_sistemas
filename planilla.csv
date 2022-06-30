@@ -1,9 +1,5 @@
-,Clave,Sueldo_IGSS,Anticipo,Extras,Vacaciones,Bonificaciones,Total
-0,1,2898.0,0,0.0,0,Ninguno,57102.0
-1,0,289.8,300,3.0,15,Ninguno,5590.2
-2,1,2898.0,0,3.0,2,Ninguno,57282.0
-3,0,289.8,300,3.0,2,Ninguno,5590.2
-4,3,338.1,300,0.0,15,Ninguno,6361.9
-5,3,338.1,0,2.4653125000000005,15,Ninguno,6721.9
-6,3,338.1,0,2.4653125000000005,12,Ninguno,6721.9
-7,3,338.1,0,1.5,12,Ninguno,6721.9
+,Unnamed: 0.1,Unnamed: 0,Clave,Sueldo_IGSS,Anticipo,Extras,Vacaciones,Bonificaciones,Total
+0,0,0,1,2898.0,0,0.0,0,Ninguno,57102.0
+1,1,1,0,289.8,300,3.0,15,Ninguno,5590.2
+2,2,2,1,2898.0,0,3.0,2,Ninguno,57282.0
+3,3,3,0,289.8,300,3.0,2,Ninguno,5590.2

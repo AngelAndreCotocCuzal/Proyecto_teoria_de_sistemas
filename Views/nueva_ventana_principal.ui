@@ -26,7 +26,7 @@
    <property name="styleSheet">
     <string notr="true">background-color: rgb(0, 0, 0);</string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_9">
+   <layout class="QVBoxLayout" name="verticalLayout_9">
     <item>
      <widget class="QFrame" name="frame">
       <property name="frameShape">
@@ -105,18 +105,6 @@ border-radius:20px;
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="styleSheet">
-             <string notr="true">font: 87 12pt&quot;Arial Black&quot;;
-color:  rgb(20,200,220);
-</string>
-            </property>
-            <property name="text">
-             <string>Menú de proyecto</string>
-            </property>
-           </widget>
-          </item>
           <item>
            <spacer name="spacer">
             <property name="orientation">
@@ -977,15 +965,29 @@ font: 75 12pt&quot;Times New Roman&quot;;
                    </layout>
                   </widget>
                   <widget class="QWidget" name="pagina_inicio">
-                   <layout class="QVBoxLayout" name="verticalLayout_9">
-                    <item>
-                     <widget class="QPushButton" name="pushButton">
-                      <property name="text">
-                       <string>Estas en inicio</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>30</x>
+                      <y>170</y>
+                      <width>281</width>
+                      <height>171</height>
+                     </rect>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../imagenes/logo_empresa.PNG</normaloff>../imagenes/logo_empresa.PNG</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>15000</width>
+                      <height>15000</height>
+                     </size>
+                    </property>
+                   </widget>
                   </widget>
                   <widget class="QWidget" name="pagina_ventas">
                    <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2091,8 +2093,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>0</y>
-                         <width>377</width>
+                         <y>-240</y>
+                         <width>956</width>
                          <height>673</height>
                         </rect>
                        </property>
@@ -3195,18 +3197,75 @@ background-color:black;
                 <number>0</number>
                </property>
                <widget class="QWidget" name="page_lateral_inicio">
-                <layout class="QHBoxLayout" name="horizontalLayout_5">
-                 <item>
-                  <widget class="QLabel" name="label_2">
-                   <property name="layoutDirection">
-                    <enum>Qt::RightToLeft</enum>
-                   </property>
-                   <property name="text">
-                    <string>Inicio</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>310</y>
+                   <width>501</width>
+                   <height>271</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../imagenes/vista_cultivos.jpeg</normaloff>../imagenes/vista_cultivos.jpeg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>500</width>
+                   <height>500</height>
+                  </size>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pushButton_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>20</y>
+                   <width>251</width>
+                   <height>251</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../imagenes/melones.jpeg</normaloff>../imagenes/melones.jpeg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>250</width>
+                   <height>250</height>
+                  </size>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="pushButton_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>280</x>
+                   <y>30</y>
+                   <width>261</width>
+                   <height>201</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../imagenes/milpa_fin.jpg</normaloff>../imagenes/milpa_fin.jpg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>500</width>
+                   <height>200</height>
+                  </size>
+                 </property>
+                </widget>
                </widget>
                <widget class="QWidget" name="page_lateral_inventario">
                 <layout class="QVBoxLayout" name="verticalLayout_7">
