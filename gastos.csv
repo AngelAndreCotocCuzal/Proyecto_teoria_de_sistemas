@@ -1,18 +1,1 @@
-,Descripcion, Monto, Fecha, Tipo,Monto,Fecha,Tipo
-0,,,,,15.0,,Proveedores
-1,Pablo,,,,300.0,,Proveedores
-2,,,,,,,Proveedores
-3,,,,,,,Remuneraciones
-4,,,,,300.0,,Remuneraciones
-5,,,,,300.0,,Proveedores
-6,,,,,,,Remuneraciones
-7,,,,,dasddasd,,Proveedores
-8,,,,,,,Remuneraciones
-9,,,,,,,Remuneraciones
-10,,,,,dasdasd,,Remuneraciones
-11,,,,,,,Remuneraciones
-12,,,,,sas,,Remuneraciones
-13,,,,,231,,Proveedores
-14,Sueldo a Angel,,,,231,23/6/22,Remuneraciones
-15,Pago a Angel Cotoc,,,,150,23/6/22,Remuneraciones
-16,Pago a Diana Morales,,,,3000,23/6/22,Remuneraciones
+,Tipo,Descripcion, Monto, Fecha
