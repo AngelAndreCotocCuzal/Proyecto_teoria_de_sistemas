@@ -573,7 +573,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>4</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -2582,7 +2582,7 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>2</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="page_3">
                        <property name="geometry">
@@ -2910,7 +2910,7 @@ background-color:black;
 }background-color: rgb(96, 226, 255);</string>
                              </property>
                              <property name="text">
-                              <string>Borrar</string>
+                              <string>Guardar</string>
                              </property>
                             </widget>
                            </item>
@@ -2931,8 +2931,8 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>219</width>
-                         <height>329</height>
+                         <width>477</width>
+                         <height>403</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -3194,7 +3194,7 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
+                         <width>477</width>
                          <height>403</height>
                         </rect>
                        </property>
@@ -3204,12 +3204,329 @@ background-color:black;
                        <layout class="QVBoxLayout" name="verticalLayout_39">
                         <item>
                          <widget class="QFrame" name="frame_21">
+                          <property name="styleSheet">
+                           <string notr="true">Qlabel{
+	color: rgb(255, 255, 255);
+}</string>
+                          </property>
                           <property name="frameShape">
                            <enum>QFrame::StyledPanel</enum>
                           </property>
                           <property name="frameShadow">
                            <enum>QFrame::Raised</enum>
                           </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_40">
+                           <item>
+                            <widget class="QComboBox" name="cv_gastos_financiero_2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">border: 2px solid #14c8dc;
+border-radius: 8px;
+color: rgb(255, 255, 255);
+background-color:rgb(0,0,0);
+font: 75 12pt&quot;Times New Roman&quot;;</string>
+                             </property>
+                             <item>
+                              <property name="text">
+                               <string>--Seleccione--</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Remuneraciones</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Proveedores</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Cuentas por Pagar</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Prestamos Bancarios</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Pagar Socio</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Vehiculos</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Equipo de computo</string>
+                              </property>
+                             </item>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="nombre_contratacion_11">
+                             <property name="font">
+                              <font>
+                               <family>Arial Black</family>
+                               <pointsize>12</pointsize>
+                               <weight>3</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Descripcion </string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="text_descripcion_gasto_2">
+                             <property name="styleSheet">
+                              <string notr="true">color: rgb(255, 255, 255);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="nombre_contratacion_12">
+                             <property name="font">
+                              <font>
+                               <family>Arial Black</family>
+                               <pointsize>12</pointsize>
+                               <weight>3</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Monto</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="monto_gastos_financiero_2">
+                             <property name="styleSheet">
+                              <string notr="true">color: rgb(255, 255, 255);</string>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="nombre_contratacion_13">
+                             <property name="font">
+                              <font>
+                               <family>Arial Black</family>
+                               <pointsize>12</pointsize>
+                               <weight>3</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Fecha</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="text_fecha_gastos_2">
+                             <property name="styleSheet">
+                              <string notr="true">color: rgb(255, 255, 255);</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_22">
+                          <property name="minimumSize">
+                           <size>
+                            <width>10</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_18">
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_gastos_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}background-color: rgb(96, 226, 255);</string>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_provedores_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_cuentas_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_prestamo_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_pagar_socio_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_anadir_vehiculo_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_equipo_computo_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <spacer name="horizontalSpacer_4">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                             <property name="sizeHint" stdset="0">
+                              <size>
+                               <width>40</width>
+                               <height>20</height>
+                              </size>
+                             </property>
+                            </spacer>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_borrar_gastos_3">
+                             <property name="styleSheet">
+                              <string notr="true">QPushButton{
+font: 87 12pt&quot;Arial Black&quot;;
+background-color:#000000ff;
+color:rgb(20,200,220);
+border-radius:5px;
+border:1px solid #14C8DC;
+}
+
+QPushButton:hover{
+background-color:black;
+}background-color: rgb(96, 226, 255);</string>
+                             </property>
+                             <property name="text">
+                              <string>Borrar</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_actualizar_gastos_3">
+                             <property name="text">
+                              <string>Actualizar</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
                          </widget>
                         </item>
                        </layout>
@@ -3329,7 +3646,7 @@ background-color:black;
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="page_lateral_inicio">
                 <widget class="QPushButton" name="pushButton">
@@ -3727,7 +4044,7 @@ QToolBox::tab:selected{
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>445</width>
+                      <width>505</width>
                       <height>1439</height>
                      </rect>
                     </property>
@@ -4133,7 +4450,11 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_34">
                         <item>
-                         <widget class="QTableWidget" name="tabla_anderson"/>
+                         <widget class="QTableWidget" name="tabla_anderson">
+                          <property name="styleSheet">
+                           <string notr="true">color: white;</string>
+                          </property>
+                         </widget>
                         </item>
                        </layout>
                       </widget>

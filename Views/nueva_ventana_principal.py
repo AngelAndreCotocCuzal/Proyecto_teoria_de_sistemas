@@ -37,6 +37,12 @@ class Ventana_principal(QMainWindow):
         self.btn_anadir_pagar_socio.hide()
         self.btn_anadir_caja.hide()
         self.btn_anadir_bancos.hide()
+        self.btn_anadir_vehiculo.hide()
+        self.btn_equipo_computo.hide()# para mostrar el boton
+        self.btn_anadir_provedores_3.hide()  # para ocultar el boton
+        self.btn_anadir_cuentas_3.hide()
+        self.btn_anadir_prestamo_3.hide()
+        self.btn_anadir_pagar_socio_3.hide()
 
         # Creando sombras
         self.sombra_frame(self.stackedWidget)
@@ -111,6 +117,7 @@ class Ventana_principal(QMainWindow):
         # caja_finanzas
         self.btn_actualizar_gastos.clicked.connect(self.anadir_gastos)
         self.btn_actualizar_ingresos.clicked.connect(self.anadir_ingresos)
+        self.btn_borrar_gastos.clicked.connect(self.guardar_datos_gastos)
         self.total_activos_corrientes()
         self.total_activos_no_corrientes()
         self.pasivo_corriente()
@@ -393,6 +400,30 @@ class Ventana_principal(QMainWindow):
                 self.tabla_contratacion.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
         QMessageBox.about(self, 'Aviso', 'Contratado')
 
+    def guardar_datos_gastos(self):
+        df = pd.read_csv('gastos.csv')
+        tipo_financiero = self.cv_gastos_financiero.currentText()
+        descripcion_financiero = self.text_descripcion_gasto.text()
+        monto_financiero = self.monto_gastos_financiero.text()
+        fecha_financiero = self.text_fecha_gastos.text()
+
+        registro_3 = [(tipo_financiero, descripcion_financiero, monto_financiero, fecha_financiero)]
+
+        df1 = pd.DataFrame(registro_3, columns=['Tipo', 'Descripcion', 'Monto', 'Fecha'])
+        df = df.append(df1, ignore_index=True)
+        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
+        df.drop(eliminar_colum, axis='columns', inplace=True)
+        df.to_csv('gastos.csv')
+        QMessageBox.about(self, 'Aviso', 'Guardado Gasto')
+
+        self.tabla_anderson.setColumnCount(len(df.columns))
+        self.tabla_anderson.setRowCount(len(df))
+        self.tabla_anderson.setHorizontalHeaderLabels(df.columns)
+        for i in range(len(df)):
+            for j in range(len(df.columns)):
+                self.tabla_anderson.setItem(i, j, QtWidgets.QTableWidgetItem(str(df.iat[i, j])))
+        QMessageBox.about(self, 'Aviso', 'Guardado')
+
     def elimina_compras(self):
         df = pd.read_csv('inver.csv')
         filas = len(df.index)
@@ -489,9 +520,6 @@ class Ventana_principal(QMainWindow):
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
 
-
-
-
         guardar = [(clave, sueldo, anticipo, extras, vacaciones, bonificaciones, total)]
         df1 = pd.DataFrame(guardar,
                            columns=['Clave', 'Sueldo_IGSS', 'Anticipo', 'Extras', 'Vacaciones', 'Bonificaciones',
@@ -514,23 +542,6 @@ class Ventana_principal(QMainWindow):
         df.drop(df.index[[filas - 1]], inplace=True)
         df.to_csv('planilla.csv')
         QMessageBox.about(self, 'Aviso', 'Eliminado')
-
-
-    def guardar_financiero(self):
-        df = pd.read_csv('gastos.csv')
-        descripcion_financiero = self.text_descripcion_gasto.text()
-        monto_financiero = self.monto_gastos_financiero.text()
-        fecha_financiero = self.text_fecha_gastos.text()
-        tipo_financiero = self.cv_gastos_financiero.currentText()
-
-        registro_3 = [(descripcion_financiero, monto_financiero, fecha_financiero, tipo_financiero)]
-
-        df1 = pd.DataFrame(registro_3, columns=['Descripcion', 'Monto', 'Fecha', 'Tipo'])
-        df = df.append(df1, ignore_index=True)
-        eliminar_colum = [col for col in df.columns if 'Unnamed' in col]
-        df.drop(eliminar_colum, axis='columns', inplace=True)
-        df.to_csv('gastos.csv')
-        QMessageBox.about(self, 'Aviso', 'Guardado Gasto')
 
     def anadir_gastos(self):
         try:
@@ -606,6 +617,54 @@ class Ventana_principal(QMainWindow):
         except Exception as error:
             # QMessageBox.about(self, 'Aviso', 'Usuario creado')
             QMessageBox.about(self, 'Error', str(error))
+
+    def anadir_pagos(self):
+        try:
+            if self.cv_gastos_financiero_2.currentText() == 'Remuneraciones':
+                self.btn_anadir_gastos_3.show() # para mostrar el boton
+                self.btn_anadir_provedores_3.hide() # para ocultar el boton
+                self.btn_anadir_cuentas_3.hide()
+                self.btn_anadir_prestamo_3.hide()
+                self.btn_anadir_pagar_socio_3.hide()
+                self.btn_anadir_gastos.clicked_2.connect(self.onChanged)
+
+            elif self.cv_gastos_financiero_2.currentText() == 'Proveedores':
+                # show es para mostrar
+                # hide para ocultar
+                self.btn_anadir_gastos_3.hide()
+                self.btn_anadir_provedores_3.show()
+                self.btn_anadir_cuentas_3.hide()
+                self.btn_anadir_prestamo_3.hide()
+                self.btn_anadir_pagar_socio_3.hide()
+                self.btn_anadir_provedores_2.clicked.connect(self.onChanged_provedor)
+
+            elif self.cv_gastos_financiero_2.currentText() == 'Cuentas por Pagar':
+                self.btn_anadir_gastos_3.hide()  # para mostrar el boton
+                self.btn_anadir_provedores_3.hide()  # para ocultar el boton
+                self.btn_anadir_cuentas_3.show()
+                self.btn_anadir_prestamo_3.hide()
+                self.btn_anadir_pagar_socio_3.hide()
+                self.btn_anadir_cuentas_2.clicked.connect(self.gastos_cuentas)
+
+            elif self.cv_gastos_financiero_2.currentText() == 'Prestamos Bancarios':
+                self.btn_anadir_gastos_3.hide() # para mostrar el boton
+                self.btn_anadir_provedores_3.hide() # para ocultar el boton
+                self.btn_anadir_cuentas_3.hide()
+                self.btn_anadir_prestamo_3.show()
+                self.btn_anadir_pagar_socio_3.hide()
+                self.btn_anadir_prestamo_2.clicked.connect(self.gastos_prestamos)
+
+            elif self.cv_gastos_financiero_2.currentText() == 'Pagar Socio':
+                self.btn_anadir_gastos_3.hide() # para mostrar el boton
+                self.btn_anadir_provedores_3.hide() # para ocultar el boton
+                self.btn_anadir_cuentas_3.hide()
+                self.btn_anadir_prestamo_3.hide()
+                self.btn_anadir_pagar_socio_2.show()
+
+        except Exception as error:
+            # QMessageBox.about(self, 'Aviso', 'Usuario creado')
+            QMessageBox.about(self, 'Error', str(error))
+
 
     def onChanged(self):
         anterior = int(self.btn_rh_pendeintes_pago.text())
@@ -700,8 +759,6 @@ class Ventana_principal(QMainWindow):
         self.btn_rh_pasivos_no_corrientes.setText(str(suma))
         self.btn_rh_pasivos_no_corrientes.adjustSize()
         return suma
-
-
 
     # ingresos
     # ingresos corrientes
@@ -825,3 +882,89 @@ class Ventana_principal(QMainWindow):
         total = a + p
         self.btn_rh_total_patrimonio.setText(str(total))
         self.btn_rh_total_patrimonio.adjustSize()
+
+    # gastos -------------------------------
+
+    def onChanged_1(self):
+        anterior = int(self.btn_rh_pendeintes_pago.text())
+        nuevo_dato = int(self.monto_gastos_financiero.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato - anterior
+            self.btn_rh_pendeintes_pago.setText(str(mostrar))
+            self.btn_rh_pendeintes_pago.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_pendeintes_pago.setText(str(mostrar))
+            self.btn_rh_pendeintes_pago.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def onChanged_provedor_1(self):
+        anterior_provedor = int(self.btn_rh_proveedores.text())
+        nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
+
+        if anterior_provedor > 0:
+            # si en anterior existen datos
+            mostrar_provedor = nuevo_dato_provedor + anterior_provedor
+            self.btn_rh_proveedores.setText(str(mostrar_provedor))
+            self.btn_rh_proveedores.adjustSize()
+
+        elif anterior_provedor == 0:
+            mostrar = nuevo_dato_provedor
+            self.btn_rh_proveedores.setText(str(mostrar))
+            self.btn_rh_proveedores.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def gastos_cuentas_1(self):
+        anterior_provedor = int(self.btn_rh_cuentas_por_pagar.text())
+        nuevo_dato_provedor = int(self.monto_gastos_financiero.text())
+
+        if anterior_provedor > 0:
+            # si en anterior existen datos
+            mostrar_provedor = nuevo_dato_provedor + anterior_provedor
+            self.btn_rh_cuentas_por_pagar.setText(str(mostrar_provedor))
+            self.btn_rh_cuentas_por_pagar.adjustSize()
+
+        elif anterior_provedor == 0:
+            mostrar = nuevo_dato_provedor
+            self.btn_rh_cuentas_por_pagar.setText(str(mostrar))
+            self.btn_rh_cuentas_por_pagar.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def gastos_prestamos_1(self):
+        anterior = int(self.btn_rh_prestamos_bancarios.text())
+        nuevo_dato = int(self.monto_gastos_financiero.text())
+
+        if anterior > 0:
+            # si en anterior existen datos
+            mostrar = nuevo_dato + anterior
+            self.btn_rh_prestamos_bancarios.setText(str(mostrar))
+            self.btn_rh_prestamos_bancarios.adjustSize()
+
+        elif anterior == 0:
+            mostrar = nuevo_dato
+            self.btn_rh_prestamos_bancarios.setText(str(mostrar))
+            self.btn_rh_prestamos_bancarios.adjustSize()
+
+        self.monto_gastos_financiero.clear()
+        self.pasivo_corriente()
+
+    def pasivo_corriente_1(self):
+        remuneraciones = int(self.btn_rh_pendeintes_pago.text())
+        provedores = int(self.btn_rh_proveedores.text())
+        cuentas = int(self.btn_rh_cuentas_por_pagar.text())
+        prestamos = int(self.btn_rh_prestamos_bancarios.text())
+
+        suma = remuneraciones + provedores + cuentas + prestamos
+        self.btn_rh_pasivos_corrientes.setText(str(suma))
+        self.btn_rh_pasivos_corrientes.adjustSize()
+        return suma
+
