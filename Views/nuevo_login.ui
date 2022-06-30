@@ -557,6 +557,42 @@ border-radius:15px;</string>
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>401</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:#000000ff;
+border-radius:20px;
+
+}
+
+QPushButton:hover{
+background-color: rgb(55, 53, 79);
+border-radius:20px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../imagenes/background.png</normaloff>../imagenes/background.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>550</width>
+      <height>780</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>pushButton_2</zorder>
    <zorder>pushButton</zorder>
    <zorder>label_3</zorder>
    <zorder>label</zorder>

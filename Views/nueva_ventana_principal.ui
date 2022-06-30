@@ -573,7 +573,7 @@ border:0px solid #14C8DC;
 }</string>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>4</number>
                   </property>
                   <widget class="QWidget" name="pagina_inventario">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1059,7 +1059,7 @@ QToolBox::tab:selected{
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-319</y>
+                         <y>0</y>
                          <width>967</width>
                          <height>767</height>
                         </rect>
@@ -1584,7 +1584,7 @@ font: 75 12pt&quot;Times New Roman&quot;;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>488</width>
+                         <width>256</width>
                          <height>448</height>
                         </rect>
                        </property>
@@ -2118,8 +2118,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                        <property name="geometry">
                         <rect>
                          <x>0</x>
-                         <y>-240</y>
-                         <width>956</width>
+                         <y>0</y>
+                         <width>377</width>
                          <height>673</height>
                         </rect>
                        </property>
@@ -2533,7 +2533,7 @@ QToolBox::tab:selected{
 </string>
                       </property>
                       <property name="currentIndex">
-                       <number>2</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="page_3">
                        <property name="geometry">
@@ -2541,7 +2541,7 @@ QToolBox::tab:selected{
                          <x>0</x>
                          <y>0</y>
                          <width>977</width>
-                         <height>434</height>
+                         <height>403</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -2605,6 +2605,16 @@ font: 75 12pt&quot;Times New Roman&quot;;</string>
                              <item>
                               <property name="text">
                                <string>Pagar Socio</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Vehiculos</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Equipo de computo</string>
                               </property>
                              </item>
                             </widget>
@@ -2797,6 +2807,32 @@ background-color:black;
                             </widget>
                            </item>
                            <item>
+                            <widget class="QPushButton" name="btn_anadir_vehiculo">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="btn_equipo_computo">
+                             <property name="minimumSize">
+                              <size>
+                               <width>90</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>Añadir</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
                             <spacer name="horizontalSpacer">
                              <property name="orientation">
                               <enum>Qt::Horizontal</enum>
@@ -2846,8 +2882,8 @@ background-color:black;
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>977</width>
-                         <height>403</height>
+                         <width>219</width>
+                         <height>329</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -3105,6 +3141,14 @@ background-color:black;
                        </layout>
                       </widget>
                       <widget class="QWidget" name="page_9">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>977</width>
+                         <height>403</height>
+                        </rect>
+                       </property>
                        <attribute name="label">
                         <string>Página</string>
                        </attribute>
@@ -3633,7 +3677,7 @@ QToolBox::tab:selected{
                     <property name="geometry">
                      <rect>
                       <x>0</x>
-                      <y>-240</y>
+                      <y>0</y>
                       <width>445</width>
                       <height>1439</height>
                      </rect>
@@ -4009,8 +4053,8 @@ font: 75 12pt&quot;Times New Roman&quot;;
                      <rect>
                       <x>0</x>
                       <y>0</y>
-                      <width>526</width>
-                      <height>515</height>
+                      <width>201</width>
+                      <height>496</height>
                      </rect>
                     </property>
                     <attribute name="icon">
