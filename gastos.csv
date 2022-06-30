@@ -1,6 +1,3 @@
-,Tipo,Descripcion, Monto, Fecha,Monto,Fecha
-0,Cuentas por Pagar,Pagar a mario,,,,22/2/22
-1,Cuentas por Pagar,Pagar a mario,,,100.0,22/2/22
-2,Cuentas por Pagar,Julian,,,500.0,22/2/22
-3,Prestamos Bancarios,Prestamo a banco banrural,,,15000.0,22/2/22
-4,Cuentas por Pagar,Pagar a diego,,,500,22/2/22
+,Tipo,Descripcion,Monto,Fecha
+0,Remuneraciones,a,16,29/06/2022
+1,Proveedores,Maquina,3000,29/06/2022
